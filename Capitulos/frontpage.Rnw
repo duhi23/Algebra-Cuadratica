@@ -1,0 +1,17 @@
+% Portada
+
+\newcommand*{\BOOKALG}{\begingroup
+\raggedleft
+%\centering
+\vspace*{\baselineskip}
+{\Huge\scshape Álgebra Lineal II \\[6mm]
+y Cuadrática}\\ [\baselineskip]
+{\itshape Con ejemplos e ilustraciones}\\[40mm]
+{\Large\bfseries Segunda Edición}\\[0.3 \textheight]
+{\Large Diego Huaraca}\\[3mm]
+{\Large Jaime Toaquiza}\\[4mm]
+{\large\scshape EPN, Ecuador.}\par
+\vfill
+\rule{\textwidth}{0.5pt}
+\vspace*{\baselineskip}
+\endgroup}
