@@ -1,0 +1,1146 @@
+\chapter{Espacio vectorial complejo}
+
+\begin{center}
+\shadowbox{
+\begin{minipage}{5in}
+{ %\fontfamily{calligra}\fontsize{12}{1}\selectfont{
+La mayor parte de los temas tratados en este capítulo ya han sido tratados en el curso de Algebra Lineal I visto como espacios vectoriales reales, en este capítulo haremos una extensión de dichos temas a los espacios vectoriales complejos, comenzaremos haciendo una breve revisión de los tipos de  matrices complejas así como la resolución de sistemas lineales complejos para luego adentrarnos en el estudio de los espacios vectoriales complejos.} 
+\end{minipage}}
+\end{center}
+
+\section{Matrices con elementos complejos}
+
+\defi {\em Se dice que una matriz $\displaystyle A=(a_{jk})_{n\times m}$ es compleja si sus entradas son números complejos, de modo que podemos realizar operaciones de adición y sustracción entre matrices, y  multiplicación y división por un escalar $\m{K}\in \{\m{R}, \m{C}\}$, de manera análoga al caso de las matrices reales.}\\
+
+\obs {\em Al conjunto de las matrices complejas se las denota como:  \[\C{M}(\m{C})=\{A=(a_{jk})_{n\times m}~/~ a_{jk}\in \mathbb{C}\}\]}
+
+{\bf Ejemplos:}\\[2mm]
+
+{\em Sean: 
+\begin{center} $\displaystyle A=\left[{2+i\atop 3+2i} \quad {-1+2i\atop -2i}\right]$\quad ;\qquad $\displaystyle B=\left[{2-i\atop 1-2i}\quad {3-4i\atop -2+3i}\right]$\end{center}}
+\vspace{3mm}
+\begin{itemize}
+	\item [a)] {\em $A+B=\displaystyle \left[{(2+i)+(2-i)\atop (3+2i)+(1-2i)}\quad {(-1+2i)+(3-4i)\atop (-2i)+(-2+3i)}\right]=\left[{4\atop 4}\quad {2-2i\atop -2+i}\right]$}\\[3mm]
+	\item [b)] {\em $A-B=\displaystyle \left[{(2+i)-(2-i)\atop (3+2i)-(1-2i)}\quad {(-1+2i)-(3-4i)\atop (-2i)-(-2+3i)}\right]=\left[{2i\atop 2+4i}\quad {-4+6i\atop 2-5i}\right]$}\\[3mm]
+	\item [c)] {\em $AB=\displaystyle \left[{2+i\atop 3+2i} \quad {-1+2i\atop -2i}\right].\left[{2-i\atop 1-2i}\quad {3-4i\atop -2+3i}\right]=\left[{8+4i \atop 4-i}\quad {6-12i\atop 23-2i}\right]$}\\[3mm]
+	\item [d)] {\em $(2+3i)A=\displaystyle \left[{(2+3i).(2+i)\atop (2+3i).(3+2i)} \quad {(2+3i).(-1+2i)\atop (2+3i).(-2i)}\right]=\left[{1+8i\atop 13i}\quad {-8+i\atop 6-4i}\right]$}\\[3mm]
+\end{itemize}
+	\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+
+
+\section{Tipos importantes de matrices}
+\begin{itemize}
+	\item [a)]{\bf Matriz Conjugada}
+\defi {\em Sea $A\in \mathcal{M}(\m{C})_{n\times m}$. Decimos que su \emph{conjugada} es la matriz $\overline{A}\in \mathcal{M}(\m{C})_{n\times m}$, tal que 
+	\[\overline{A}=(\overline{a_{jk}})_{n\times m}\] es decir, asignamos a $\overline{A}$ el conjugado de cada elemento de la matriz original $A$.} 	
+\end{itemize}
+
+
+{\bf Ejemplo:}\\[2mm]
+
+\qquad {\em Dada la matriz \[A=\left[{2-i\atop 3+2i}\quad {-1+3i\atop -2i}\right]\] 
+\indent por tanto, su matriz hermitiana es: \[\overline{A}=\left[{2+i\atop 3-2i}\quad {-1-3i\atop 2i}\right]\]}
+	\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+
+\begin{itemize}
+\item {\bf Propiedades:}\\[2mm]
+	{\em Sean $\displaystyle A,B\in \mathcal{M}(\m{C})_{m\times n}$, y $\displaystyle C\in \mathcal{M}(\m{C})_{n\times k}$, entonces:}
+\begin{itemize}{\em
+	\item $\overline{\overline{A}}=A$.
+	\item $\overline{A+B}=\overline{A}+\overline{B}$.
+	\item $\overline{AC}=\overline{A}~\overline{C}$.
+	\item Para cualquier número real $k$, $\overline{kA}=k~\overline{A}$.
+	\item Para cualquier número complejo $c$, $\overline{cA}=\overline{c}~\overline{A}$.
+	\item $(\overline{A})^T=\overline{A^T}$.
+	\item Si $A$ es no singular, entonces $(\overline{A})^{-1}=\overline{A^{-1}}$.}\\[3mm]
+\end{itemize}
+{\bf Demostración:}\\[2mm]
+
+%\psframebox[framearc=.1]{\begin{minipage}{5.5in}
+{\em  Probemos la segunda propiedad:\\[2mm]
+Consideremos la suma \[A+B=(a_{ij}+b_{ij})\] a su vez el conjugado de esta suma será \[\overline{A+B}=(\overline{a_{ij}+b_{ij}})\]
+sabemos de las propiedades de $\m{C}$ que \[\overline{a_{ij}+b_{ij}}=\overline{a_{ij}}+\overline{b_{ij}}\]
+Así que \[\overline{A+B}=(\overline{a_{ij}+b_{ij}})=(\overline{a_ij}+\overline{b_{ij}})\] Pero esto último es lo mismo que $\overline{A}+\overline{B}$, de modo que \[\overline{A+B}=\overline{A}+\overline{B}\]}
+\begin{flushright}
+$\blacksquare$
+\end{flushright}
+%\end{minipage}}
+
+%\psframebox[framearc=.1]{\begin{minipage}{5.5in} 
+{\em La sexta propiedad se demuestra similarmente; consideremos cualquier matriz $A\in \mathcal{M}(\m{C})_{n\times m}$, su matriz conjugada será \[\overline{A}=\overline{(a_{ij})}_{n\times m}=(\overline{a_{ij}})_{n\times m}\] y su matriz conjugada transpuesta será: \[\overline{A}^T=(\overline{a_{ji}})_{m\times n}\] Por otra parte, la transpuesta de $A$ será \[A^T=(a_{ji})_{m\times n}\] y su transpuesta conjugada es : \[\overline{A^T}=(\overline{a_{ji}})_{m\times n}\] como vemos $\overline{A}^T=\overline{A^T}$.}
+\begin{flushright}
+$\blacksquare$
+\end{flushright}
+%\end{minipage}}
+
+\end{itemize}
+
+\begin{itemize}
+	\item [b)] {\bf Matriz Hermitiana}
+\defi {\em Una matriz compleja $A$ de $n\times n$ se dice \emph{hermitiana} si: \[\overline{A^T}=A,\quad \mbox{ es decir } \quad \overline{a_{jk}}=a_{jk} \quad \mbox{ para } k=1,2,\ldots,n\quad j=1,2,\ldots,n\]}
+
+\obs {\em Toda matriz simétrica real es hermitiana, por tanto podemos considerar a las matrices hermitianas como análogas de las matrices simétricas reales.}
+  \item {\bf Ejemplo:}  
+\end{itemize}
+\qquad {\em La matriz \[A=\left[{3\atop 2+i}\quad {2-i\atop 4}\right]\] 
+\qquad es hermitiana, pues \[\overline{A^T}= \overline{\left[{3\atop 2-i}\quad {2+i\atop 4}\right]}=\left[{3\atop 2+i}\quad {2-i\atop 4}\right]=A\]}
+	\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+\begin{itemize}
+	\item {\bf Propiedades:}
+\begin{itemize}
+	\item {\em Los términos de la diagonal de una matriz hermitiana son reales
+	\item Toda matriz hermitiana $A$ puede escribirse en la forma $A=B+iC$, donde $B$ es una matriz simétrica \emph{($B=B^T$)} y $C$ es una matriz antisimétrica \emph{($C=-C^T$)}}
+\end{itemize}
+\end{itemize}
+\qquad{\bf Notación:}
+  {\em \[A^*=\overline{A^T}\quad;\qquad \mbox{A es hermitiana si } A^*=A\]}
+
+\vspace{2mm}
+
+\begin{itemize}
+	\item [c)] {\bf Matriz Unitaria}
+\defi {\em Una matriz compleja $A$ de $n\times n$ se dice \emph{unitaria} si: \[(\overline{A^T})A=A(\overline{A^T})=I_n.\] es decir $A$ es unitaria cuando $\overline{A^T}=A^{-1}$.}
+	
+\obs {\em Toda matriz ortogonal real es unitaria, por tanto podemos considerar las matrices unitarias como análogas de las matrices ortogonales reales.}
+	\item {\bf Ejemplo:}	
+\end{itemize}
+\qquad {\em La matriz \begin{center} $\displaystyle \left[{\frac{1}{\sqrt{3}}\atop \frac{1-i}{\sqrt{3}}}\quad {\frac{1+i}{\sqrt{3}}\atop -\frac{1}{\sqrt{3}}}\right]$\end{center}
+\qquad es unitaria, pues \[ (\overline{A^T})A= \left[{\frac{1}{\sqrt{3}}\atop \frac{1-i}{\sqrt{3}}}\quad {\frac{1+i}{\sqrt{3}}\atop -\frac{1}{\sqrt{3}}}\right].\left[{\frac{1}{\sqrt{3}}\atop \frac{1-i}{\sqrt{3}}}\quad {\frac{1+i}{\sqrt{3}}\atop -\frac{1}{\sqrt{3}}}\right]=I_2\]}
+	\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+
+\begin{itemize}
+	\item [d)] {\bf Matriz Normal}
+\defi {\em Una matriz compleja $A$ de $n\times n$ se dice \emph{normal} si: \[(\overline{A^T})A=A(\overline{A^T})\]}
+{\bf Ejemplo:}\\[2mm]	
+{\em La matriz \begin{center} $\displaystyle A=\left[{5-i\atop -1-i}\quad{-1+i\atop 3-i}\right]$ \end{center} es normal, pues \begin{center} $\displaystyle (\overline{A^T})A=A(\overline{A^T})=\left[{28\atop -8-8i}\quad {-8+8i\atop 12}\right]$ \end{center}}
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+
+	\item {\bf Observaciones:}
+\begin{itemize}
+	\item {\em Si $A$ es unitaria, entonces $A$ es normal.
+	\item Si $A$ es hermitiana, entonces $A$ es normal.}
+\end{itemize}
+\end{itemize}
+
+
+
+\section{Sistemas de ecuaciones lineales con coeficientes \mbox{complejos}}
+\subsection*{\qquad Resolución de sistemas lineales}
+
+\indent {\em Consideremos el sistema \[A\vec{x}=\vec{b}\]
+\indent con $A\in \mathcal{M}(\m{C})_{m\times n}$, $x\in \m{C}^n$ y $b\in \m{C}^n$.\\[3mm]
+Las técnicas de resolución de sistemas lineales de ecuaciones con coeficientes reales se tranfieren de manera directa a los sistemas lineales de ecuaciones con coeficientes complejos, para esto, basta hacer uso de aritmética compleja.\\[2mm]
+\indent Las alternativas de resolución de sistemas complejos al igual que los sistemas reales son: Operaciones por filas y las formas escalonadas para tales sistemas por medio de la reducción de Gauss-Jordan.}\\[2mm]
+
+
+{\bf Ejemplo:}\\[2mm]
+{\em Resolver el siguiente sistema lineal mediante una reducción de Gauss-Jordan:
+\[\left\{(1+i)x_1+(2+i)x_2=5\atop (2-2i)x_1+ ix_2=1+2i\right.\]
+Primero formemos la matriz \emph{aumentada} \[\left[{1+i\atop 2-2i}\quad {2+i\atop i}\quad {|\atop |}\quad {5\atop 1+2i}\right]\]
+multiplicamos la primera fila por $\displaystyle \frac{1}{1+i}$, para obtener \[\left[{1\atop 2-2i}\quad {\frac{3}{2} -\frac{1}{2}i\atop i}\quad {|\atop |}\quad {\frac{5}{2}-\frac{5}{2}i \atop 1+2i}\right]\]
+ahora sumamos $-(2-2i)$ veces la primera fila a la segunda, para obtener \[\left[{1\atop 0}\quad {\frac{3}{2} -\frac{1}{2}i\atop -2+5i}\quad {|\atop |}\quad {\frac{5}{2}-\frac{5}{2}i \atop 1+12i}\right]\]
+multiplicamos la segunda fila por $\displaystyle \frac{1}{-2+5i}$, para obtener \[\left[{1\atop 0}\quad {\frac{3}{2} -\frac{1}{2}i\atop 1}\quad {|\atop |}\quad {\frac{5}{2}-\frac{5}{2}i \atop 2-i}\right]\]
+finalmente sumamos $\displaystyle -(\frac{3}{2}-\frac{1}{2}i)$ veces la segunda fila a la primera, para obtener \[\left[{1\atop 0}\quad {0\atop 1}\quad {|\atop |}\quad {0\atop 2-i}\right]\]
+Por lo tanto la solución del sistema es: $x_1=0$ \quad y\quad $x_2=2-i$.}
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+
+
+\section{Espacio vectorial euclídeo}
+\subsection{Producto escalar euclídeo}
+\defi {\em Un producto escalar en un espacio vectorial $E$ sobre $\m{R}$, es una forma bilineal simétrica y definida positiva.\footnote{Ver Capítulo de formas bilineales y formas cuadráticas.} 
+\[f:E\times E\to \m{R}\] definido por \[f(x,y)=\e{x,y},\footnote{La expresión $\e{x,y}$ se denomina producto escalar de $x$ y $y$.}\qquad \forall x,y\in E\]
+que verifica las siguientes propiedades:
+\begin{enumerate}
+	\item {\bf Bilineal:} Para cualesquiera $x,y,z\in E$ y $\alpha,\beta\in \m{R}$, ha de cumplirse
+	\[\e{\alpha x+\beta y}z=\alpha\e{x,z}+\beta\e{y,z}\]
+	\[x\e{\alpha y+\beta z}=\alpha \e{x,y}+\beta \e{x,z}\]
+	
+	\item {\bf Simetría:} Para cualesquiera $x,y\in E$, se tendrá 
+	\[\e{x,y}=\e{y,x}\]
+	
+	\item {\bf Definida positiva:} Para cualquier $x\in E$ no nulo
+	\[\e{x,x}>0\]
+\end{enumerate}  }
+
+
+\defi {\em Al par $(E,\langle~,~\rangle)$, formado por un espacio vectorial junto con un producto escalar se le denomina {\bf espacio vectorial euclídeo}.}
+
+\pro {\em En un espacio vectorial euclídeo $(E,\langle~,~\rangle)$ se verifican las siguientes propiedades:
+\begin{enumerate}
+	\item $\e{x,0}=0$, para cualquier vector $x\in E$.
+	\item $\e{x,x}=0$, si y sólo si $x=0$. De hecho si $x\neq 0$, entonces $\e{x,x}>0$.
+\end{enumerate}}
+ 
+{\bf Ejemplos:}
+\begin{enumerate}
+	\item {\em  El producto escalar usual \emph{(canónico o euclídeo)} en $\rn{n}$.\\[2mm]
+	Dados $\s{x}$, $\s{y}\in \rn{n}$ se define el siguiente producto escalar en $\rn{n}$:
+	\[\e{\s{x},\s{y}}=x_1y_1+x_2y_2+\ldots+x_ny_x\]}
+	
+	\item {\em He aquí un ejemplo de un producto escalar \emph{(distinto del euclídeo)} definido en $\m{R}^3$.
+	\[\e{(x_1,x_2,x_3),(y_1,y_2,y_3)}=x_1y_1+5x_2y_2+2x_3y_3\]}
+	
+	\item {\em En $\m{R}^3$ con el producto escalar euclídeo obtenemos }
+	\[\e{(2,1,-3),(5,2,4)}=2.5+1.2+(-3).4=10+2-12=0\]
+	{\em y con el producto del literal $2.$ obtenemos}
+	\[\e{(2,1,-3),(5,2,4)}=2.5+5.5.1+2.(-3)4=10+10-24=-4\]
+\end{enumerate}
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+ 
+{\em Una forma de caracterizar a un producto escalar es la siguiente}
+
+\pro {\em Sea $\e{~,~}:E\times E\to \m{R}$ una aplicación bilineal, con $E$ un espacio vectorial real, y sea $B=\ba{e}$ una base de $E$. Entonces $\e{~,~}$ es un producto escalar si y sólo si la matriz
+\[A=\left(\begin{array}{cccc} \e{e_1,e_1}&\e{e_1,e_2}&\ldots&\e{e_1,e_n}\\ \e{e_2,e_1}&\e{e_2,e_2}&\ldots&\e{e_2,e_n}\\ \vdots&\vdots& \ddots&\vdots\\ \e{e_n,e_1}&\e{e_n,e_2}&\ldots&\e{e_n,e_n}\end{array}\right)\]
+es simétrica y definida positiva \emph{(esto último significa que los menores principales de la matriz sean todos positivos)}.}\\[2mm]
+
+{\bf Ejemplos:}\\[2mm]
+{\em Determinar si las siguientes aplicaciones bilineales son o no productos escalares.
+\begin{enumerate}
+	\item $\e{(x_1,x_2),(y_1,y_2)}=2x_1y_1+2x_1y_2+2x_2y_2$ en $\rn{2}$.\\[2mm]
+	Como la matriz que se obtiene tomando la base canónica de $\rn{2}$ es
+	\[A=\left(\begin{array}{cc} \e{(1,0),(1,0)}&\e{(1,0),(0,1)}\\ \e{(0,1),(1,0)}&\e{(0,1),(0,1)}\end{array}\right)=\left(\begin{array}{cc} 2&2\\ 0&2 \end{array}\right)\]
+	y ésta matriz no es simétrica, se tiene que no es un producto escalar.
+	
+	\item $\e{(x_1,x_2),(y_1,y_2)}=x_1y_1+x_1y_2+x_2y_1+x_2y_2$ en $\rn{2}$.\\[2mm]
+	La matriz que se obtiene tomando la base canónica de $\rn{2}$ es 
+	\[A=\left(\begin{array}{cc} 1&1\\ 1&1\end{array}\right)\]
+	por lo que ésta es simétrica. Los determinantes principales valen $\det A_1=1$ y $\det A=0$, luego no es definida positiva. Así no es un producto escalar. 
+	
+	\item $\e{(x_1,x_2,x_3),(y_1,y_2,y_3)}=x_1y_1+2x_1y_2+2x_2y_1-x_2y_3-x_3y_2+5x_2y_2$ en $\rn{3}$.\\[2mm]
+	Tomando la base canónica de $\rn{3}$, obtenemos la matriz 
+	\[A=\left(\begin{array}{rrr} 1&2&0\\ 2&5&-1\\ 0&-1&0\end{array}\right)\]
+	y ésta es simétrica.\\[2mm]
+	Los menores principales son:
+	\[A_1=1>0\]
+	\[A_2=\det \left|\begin{array}{rr} 1&2\\ 2&5\end{array}\right|=1>0\]
+	\[A_3=\det \left|\begin{array}{rrr} 1&2&0\\ 2&5&-1\\ 0&-1&0\end{array}\right|=-1<0\]
+	luego no es definida positiva. Así no es un producto escalar.
+	
+	\item $\e{(x_1,x_2),(y_1,y_2)}=4x_1y_1+2x_2y_2-2x_1y_2-2x_2y_1$ en $\rn{2}$.\\[2mm]
+	A partir de la base canónica de $\rn{2}$ se obtiene la matriz
+	\[A=\left(\begin{array}{rr} 4&-2\\ -2&2\end{array}\right)\]
+	que es simétrica.\\
+	Los menores principales son
+	\[A_1=4>0\]
+	\[A_2=\dd{4}{-2}{-2}{2}=4>0\]
+	luego es definida positiva.\\
+	Así la aplicación bilineal es un producto escalar.	
+\end{enumerate}}
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+
+\subsection{Norma asociada a un producto escalar}
+{\em Sea $(E,\e{~,~})$ un espacio vectorial euclídeo. Se denomina {\bf norma} asociada al producto escalar anterior a la aplicación
+\[\n{~}:E\to \rn{+}\] definida por \[\n{x}=\sqrt{\e{x,x}}\]
+
+que cumple:
+\begin{enumerate}
+	\item $\n{x}=0$ si y sólo si $x=0$.
+	\item $\n{\alpha x}=|\alpha| \n{x}$, para todo $\alpha\in \m{R}$ o $\m{C}$.
+	\item $\n{x+y}\leq \n{x}+\n{y}$ \qquad \emph{(desigualdad triangular).}
+\end{enumerate}
+
+A este valor lo llamaremos {\bf norma} \emph{(módulo o longitud)} del vector $x$.\\[2mm]
+
+Se llama espacio vectorial {\bf normado} a un espacio vectorial dotado de una norma.}
+
+\obs {\em La norma asociada al producto escalar euclídeo de $\rn{n}$ está dada para un vector \[\s{x}\in \rn{n}\] por
+\[\n{\s{x}}=\sqrt{x_1^2+x_2^2+\ldots+x_n^2}\]
+la llamaremos {\bf norma euclídea}.
+
+Se dice que un vector es {\bf unitario} cuando tiene norma $1$. A partir de cualquier vector no nulo siempre puede construirse un vector unitario dividiendo el vector para su norma.\\[2mm]
+
+{\bf Ejemplos:}
+\begin{enumerate}
+	\item Con el producto escalar usual en $\rn{3}$, la norma del vector $x=(2,-3,0)$ es igual a:
+	\[\n{x}=\n{(2,-3,0)}=\sqrt{2^2+(-3)^2+0^2}=\sqrt{4+9+0}=\sqrt{13}.\]
+	Entonces el vector 
+	\[\frac{x}{\n{x}}=\left(\frac{2}{\sqrt{13}},-\frac{3}{\sqrt{13}},0\right)\]
+	es unitario, pues 
+	\[\n{\frac{x}{\n{x}}}=\n{\left(\frac{2}{\sqrt{13}},-\frac{3}{\sqrt{13}},0\right)}=\sqrt{(\frac{2}{\sqrt{13}})^2+(-\frac{3}{\sqrt{13}})^2+0^2}=\sqrt{\frac{4}{13}+\frac{9}{13}+0}=\sqrt{\frac{13}{13}}=\sqrt{1}=1.\]
+	
+	\item Utilizando la norma asociada al producto escalar en $\rn{2}$ dado mediante la expresión
+	\[\e{(x_1,x_2),(y_1,y_2)}=4x_1y_1+2x_2y_2-2x_1y_2-2x_2y_1\]
+	la norma del vector $x=(2,1)$ es
+	\[\n{x}=\n{(2,1)}=\sqrt{\e{(2,1),(2,1)}}=\sqrt{4.2.2+2.1.1+-2.2.1-2.1.2}=\sqrt{10}\]
+	mientras que la norma euclídea del mismo vector es
+	\[\n{(2,1)}=\sqrt{\e{(2,1),(2,1)}}=\sqrt{2^2+1^2}=\sqrt{5}.\]	
+\end{enumerate}}
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+
+\subsection{Ortogonalidad}
+{\em Se dice que dos vectores $x$ y $y$ de un espacio vectorial euclídeo $E$ son {\bf ortogonales} \emph{(o perpendiculares)} cuando
+\[\e{x,y}=0,\qquad \forall x,y\in E.\]
+Un sistema de vectores se dice que es un sistema {\bf ortogonal} de vectores cuando los vectores son ortogonales dos a dos. Si además todos los vectores son unitarios entonces se dirá que el sistema es {\bf ortonormal.}}\\[2mm]
+
+{\em Una base de un espacio vectorial euclídeo $E$ que además es un sistema ortogonal \emph{(respectivamente ortonormal)} de vectores se llamará {\bf base ortogonal} de $E$ \emph{(respectivamente {\bf base ortonormal})}.\\[2mm]
+
+La {\bf base canónica} de $\rn{n}$ es siempre una base {\bf ortonormal} de este espacio vectorial, si estamos considerando el producto escalar euclídeo de $\rn{n}$.}\\
+
+\pro {\em En un espacio vectorial euclídeo se verifican las siguientes propiedades:
+\begin{enumerate}
+	\item El vector $0$ es ortogonal a todos los vectores.
+	\item Un sistema ortogonal de vectores no nulos es un sistema linealmente independientes de vectores. En consecuencia un sistema ortonormal de vectores es un sistema linealmente independientes de vectores.
+	\item Si tenemos una base ortonormal podemos multiplicar cada vector por un escalar no nulo que el resultado sigue siendo una base ortonormal.
+	\item Si en una base ortogonal de un espacio vectorial euclídeo de $E$ dividimos cada vector por su norma, entonces el sistema resultante de vectores es una base ortonormal de $E$.
+\end{enumerate}}
+
+
+\subsection{Proceso de Gram-Schmidt}
+{\em El proceso de Gram-Schmidt para calcular una base ortonormal $T=\{w_1,w_2,\ldots\ldots,w_m\}$ para un subespacio no nulo $W$ de $\m{R}^n$, dada una base $S=\{u_1,u_2,\ldots\ldots,u_m\}$ para $W$, es como sigue.
+\begin{itemize}
+	\item {\bf Paso 1.} Haga $v_1=u_1$.
+	\item {\bf Paso 2.} Calcule los vectores $v_2,v_3,\ldots\ldots,v_m$ de manera sucesiva, uno a la vez, por medio de la fórmula \[v_i=u_i-\left(\frac{u_i.v_1}{v_1.v_1}\right)v_1- \left(\frac{u_i.v_2}{v_2.v_2}\right)v_2-\cdots\cdots-\left(\frac{u_i.v_{i-1}}{v_{i-1}.v_{i-1}}\right)v_{i-1}\]
+	El conjunto de vectores $T*=\{v_1,v_2,\ldots\ldots,v_m\}$ es un conjunto ortogonal.
+	\item {\bf Paso 3.} Haga \[w_i=\frac{1}{\n{v_i}}v_i\qquad (1\leq i\leq m).\]
+	Entonces $T=\{w_1,w_2,\ldots\ldots,w_m\}$ es una base ortonormal para $W$.\\[2mm]
+	
+	{\bf Proyección de un vector sobre la recta generada por otro vector}
+	
+	\begin{center}
+	\begin{pspicture}(6,3)
+	%\psgrid[subgriddiv=1,griddots=10,gridlabels=7pt](0,0)(6,3)
+	\psline[linecolor=red,arrowsize=0.2]{->}(0,0.5)(3.5,0.5)
+	\psline[linestyle=dashed,dash=3pt]{-}(3.5,0.5)(5,0.5)
+	\psline[linestyle=dashed,dash=3pt]{-}(3.5,2.5)(3.5,0.5)
+	\psline[linecolor=blue,arrowsize=0.2]{->}(0,0.5)(3.5,2.5)
+	\rput(3.4,0.6){$\blacksquare$}
+	\rput(1.5,1.6){$\vec{U}$}
+	\rput(1.5,0.3){$\vec{V}$}
+	\rput(3.5,0.2){$proy_{\vec{U}}\vec{V}$}
+	\end{pspicture}
+	\end{center}
+	\[\fbox{$\displaystyle proy_{\vec{v}}\vec{u}=\alpha.\vec{v}=\frac{\e{u,v}}{\e{v,v}}\vec{v}$}\]
+\end{itemize}}
+
+{\bf Ejemplos:}
+{\em 
+\begin{enumerate}
+	\item Con el producto escalar usual hallar una base ortonormal de $\rn{3}$ a partir de la base 
+	\[\underbrace{(1,1,1)}_{v_1},\underbrace{(2,1,0)}_{v_2},\underbrace{(1,0,0)}_{v_3}\]
+	En primer lugar pongamos \[w_1=v_1=(1,1,1)\]
+	Ahora ponemos \[w_2=v_2-\frac{\e{v_2,w_1}}{\e{w_1,w_1}}w_1\]
+	De modo que obtenemos que \[w_2=(2,1,0)-(1,1,1)=(1,0,-1)\]
+	Finalmente necesitamos hallar un vector \[w_3=v_3-\frac{\e{v_3,w_1}}{\e{w_1,w_1}}w_1-\frac{\e{v_3,w_2}}{\e{w_2,w_2}}w_2\]
+	Entonces \[w_3=(1,0,0)-\frac{1}{3}(1,1,1)-\frac{1}{2}(1,0,-1)=\frac{1}{6}(1,-2,1)\]
+	Así hemos obtenido una base ortogonal\footnote{Utilizamos el proceso de Gram-Schmidt, para obtener una base ortogonal.} de $\rn{3}$:
+	\[\{(1,1,1),(1,0,-1),(\frac{1}{6},-\frac{1}{3},\frac{1}{6})\}\]
+	Como lo que se pedía era una base ortonormal es suficiente con dividir cada uno de estos vectores por su norma, y obtenemos la base
+	\[\{\left(\frac{1}{\sqrt{3}},\frac{1}{\sqrt{3}},\frac{1}{\sqrt{3}}\right), \left(\frac{1}{\sqrt{2}},0,-\frac{1}{\sqrt{2}}\right),\left( \frac{1}{\sqrt{6}},-\frac{2}{\sqrt{2}},\frac{1}{\sqrt{6}}\right)\}\]
+	
+	\item Utilizando el producto escalar en $\rn{2}$ dado mediante la expresión
+	\[\e{(x_1,x_2),(y_1,y_2)}=4x_1y_1+2x_2y_2-2x_1y_2-2x_2y_1\]
+	hallemos una base ortonormal a partir de la base \[\{(1,0),(0,1)\}\]
+	Tomamos \[w_1=(1,0)\]
+	Ahora consideramos \[w_2=(0,1)-\frac{\e{(0,1),(1,0)}}{\e{(1,0),(1,0)}}(1,0)\]
+	De este modo obtenemos que \[w_2=(0,1)+\frac{1}{2}(1,0)=\left(\frac{1}{2},1\right)\]
+	Así hemos obtenido una base ortogonal de $\rn{2}$: \[\{(1,0),\left(\frac{1}{2},1\right)\}\]
+	Como lo que se pedía era una base ortonormal es suficiente con dividir cada uno de estos vectores por su norma y se tiene que 
+	\[\n{(1,0)}=\sqrt{4.1.1}=2\]
+	y además
+	\[\n{\left(\frac{1}{2},1\right)}=\sqrt{4.\frac{1}{2}.\frac{1}{2}+2.1.1-2.\frac{1}{2}.1-2.1.\frac{1}{2}}=\sqrt{1}=1\]
+	Finalmente obtenemos la base ortonormal de $\rn{2}$ \emph{(con el producto escalar establecido inicialmente)}:
+	\[\left\{\left(\frac{1}{2},0\right),\left(\frac{1}{2},1\right)\right\}\]  
+\end{enumerate}}
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+
+\subsection{Subespacio ortogonal}
+
+\pro {\em Sea $E$ un espacio vectorial euclídeo y $S$ un subespacio de $E$.\\[2mm]
+ Entonces el conjunto de los vectores de $E$ que son ortogonales a todos los vectores de $S$ es un espacio vectorial $E$, llamado el {\bf subespacio ortogonal} de $E$, y será denotado por $S^{\perp}$. Es decir, tenemos que
+\[S^{\perp}=\{x\in E~/~\e{x,y}=0,\quad \forall y\in S\}.\]}
+
+\obs {\em Además se tiene que \[E=S\oplus S^{\perp}\] es suma directa. Por tanto 
+\[\dim S+\dim S^{\perp}=\dim (S+S^{\perp}).\]
+
+En las condiciones anteriores, conocida una base de $S$, se cumple que un vector $x\in E$ es ortogonal a todos los vectores de $S$ si y sólo si es ortogonal a todos los vectores de dicha base.\\[2mm]
+
+A partir de ahí puede obtenerse más o menos sencillamente $S^{\perp}$.
+
+ Veámoslo en el caso más sencillo en que $E=\rn{n}$.\\[2mm]
+
+Un vector $\s{x}\in \rn{n}$ pertenece a $S^{\perp}$ si y sólo si es ortogonal a todos los vectores de la base 
+\[B=\{\s{a_1},\s{a_2},\ldots,\s{a_k}\}\]
+de $S$, es decir, si y sólo si se cumplen las siguientes ecuaciones \emph{(que serán las ecuaciones implícitas de $S^{\perp}$)}.}
+
+\begin{eqnarray*}
+\e{\s{a_1},\s{x}}&=&0\\
+\e{\s{a_2},\s{x}}&=&0\\
+\vdots\qquad\qquad\qquad\vdots\qquad\qquad&&\vdots\\
+\e{\s{a_k},\s{x}}&=&0
+\end{eqnarray*} 
+
+{\em que dependerán del producto escalar con el que estemos. En el caso del producto escalar euclídeo las ecuaciones de $S^{\perp}$ quedarán así:}
+
+\begin{eqnarray*}
+a_{11}x_1+a_{12}x_2+\ldots+a_{1n}x_n&=&0\\
+a_{21}x_1+a_{22}x_2+\ldots+a_{2n}x_n&=&0\\
+\vdots\qquad\qquad\qquad\vdots\qquad\qquad&&\vdots\\
+a_{k1}x_1+a_{k2}k_2+\ldots+a_{kn}x_n&=&0
+\end{eqnarray*}
+
+{\em En el caso del producto escalar euclídeo, de modo simétrico puede obtenerse que si el subespacio inicial está dado por ecuaciones implícitas entonces el subespacio ortogonal tiene como sistema generador las filas de la matriz de coeficientes del sistema anterior.}\\[2mm]
+
+{\bf Ejemplos:}
+\begin{enumerate}
+	\item {\em Supongamos que tenemos el subespacio de $\rn{4}$ siguiente:
+	\[S=\e{(1,-2,0,3),(-3,0,2,0)}\]
+	Entonces, respecto al producto escalar euclídeo tenemos que $S^{\perp}$ tiene por ecuaciones implícitas
+	\[\left\{\begin{array}{l} x-2y+3t=0\\ -3x+2z=0\end{array}\right.\]
+	
+	\item Supongamos que tenemos el subespacio de $\rn{3}$ siguiente
+	\[S=\{(x,y,z)~/~-x+2y-z=0\}\]
+	Entonces, respecto al producto escalar euclídeo tenemos que 
+	\[S^{\perp}=\e{(-1,2,-2)}\]
+	
+	\item Supongamos que tenemos el subespacio de $\rn{3}$ siguiente 
+	\[S=\e{(1,3,-2),(-1,0,3)}\]
+	Entonces, respecto al producto escalar siguiente
+	\[\e{(x_1,x_2,x_3),(y_1,y_2,y_3)}=x_1y_1+2x_2y_2+4x_3y_3\]
+	tenemos que $S^{\perp}$ tiene por ecuaciones implícitas
+	\[\left\{\begin{array}{l} \e{(x_1,x_2,x_3),(1,3,-2)}=0\\ \e{(x_1,x_2,x_3),(-1,0,3)}=0\end{array}\right.\]
+	es decir}
+	\[\left\{\begin{array}{l} x+6y-8z=0\\ -x+12z=0\end{array}\right.\]	
+\end{enumerate}
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+
+\subsection{Proyección ortogonal}
+
+{\em Sea $S$ un subespacio de un espacio vectorial euclídeo $E$. Debido a que $E$ se descompone como suma directa de $S$ y su ortogonal $S^{\perp}$, todo vector del espacio puede ponerse de modo único como suma de un vector de $S$ y otro de $S^{\perp}$.\\[2mm]
+
+Sea $x\in E$ y supongamos que tenemos
+\[x=x_1+x_2\]
+con $x_1\in S$ y $x_2\in S^{\perp}$.\\[2mm]
+Entonces a $x_1$ lo llamaremos {\bf proyección ortogonal} de $x$ sobre $S$. Además, este vector cumple que 
+\[x-x_1\in S^{\perp}\]
+y es el único de todos los vectores de $S$ que cumple esta propiedad, es decir, si $y\in S$ cumple que
+\[x-y\in S^{\perp}\]
+entonces $y=x_1$ \emph{(la proyección ortogonal de $x$ sobre $S$).}}  
+
+{\em Veamos a continuación un método para hallar la {\bf proyección ortogonal} de un vector sobre un subespacio.\\[2mm]
+
+Sea $x\in E$ y además
+\[\dim S\leq \dim E\]
+Supongamos que tenemos una base ortogonal
+\[B=\ba{w}\]
+de $S$. \emph{(siempre es posible hallar a partir de una base cualquiera mediante el método de Gram - Schmidt).} Entonces
+\[x=x_1+x_2\]
+donde $x_1$ es la proyección ortogonal de $x$ sobre $S$ y $x_2\in S^{\perp}$.\\[2mm]
+
+Entonces si $x_1$ se escribe como combinación lineal de vectores linealmente independientes
+\[x_1=\alpha_1w_1+\alpha_2w_2+\ldots+\alpha_nw_n\]
+Si multiplicamos escalarmente $x$ por $w_i$, a partir de la igualdad
+\[x=x_1+x_2\]
+obtenemos que 
+\[x.w_i=x_1.w_i+x_2.w_i=\alpha_1w_1.w_i+\alpha_2w_2.w_i+\ldots+\alpha_nw_n.w_i=\alpha_iw_i.w_i\]
+ahora observemos que $\e{x_2,w_i}=0$, ya que $x_2\in S^{\perp}$ y $w_i\in S$; igualmente $\e{w_j,w_i}=0$ si $i\neq j$, ya que son vectores de una base ortogonal.\\[2mm] 
+
+De aquí despejamos el valor del escalar
+\[\alpha_i=\frac{\e{x,w_i}}{\e{w_i,w_i}},\qquad \forall i=1,2,\ldots,n\]
+
+Entonces tenemos determinado $x_1$, la proyección ortogonal de $x$ sobre $S$, sustituyendo el valor de cada $\alpha_i$, es decir
+\[x_1=\alpha_1w_1+\alpha_2w_2+\ldots+\alpha_nw_n=\frac{\e{x,w_1}}{\e{w_1,w_1}}w_1+\frac{\e{x,w_2}}{\e{w_2,w_2}}w_2+\ldots+\frac{\e{x,w_n}}{\e{w_n,w_n}}w_n.\]
+Si la base $B$ es además ortonormal entonces para cada $i=1,2,\ldots,n$ se tiene que 
+\[\e{w_i,w_i}=\n{w_i}^2=1\]
+con lo que la fórmula de los escalares queda más sencillamente así: \[\alpha_i=\e{x,w_i}\]
+y por tanto
+\[x_1=\alpha_1w_1+\alpha_2w_2+\ldots+\alpha_nw_n=\e{x,w_1}w_1+\e{x,w_2}w_2+\ldots+\e{x,w_n}w_n.\]}
+
+\pro {\em Hemos elegido una base ortogonal u ortonormal para que el cálculo necesario para hallar los escalares $\alpha_i$ sea lo más sencillo posible. Pero previo a esto probablemente sea necesario hallar esta base ortogonal u ortonormal, lo cual requiere también operaciones.\\[2mm]
+
+Es posible inicialmente coger una base cualquiera de $S$ \emph{(no necesariamente ortogonal ni ortonormal)} y realizar, como hemos hecho anteriormente, los productos escalares de un modo similar al anterior. La diferencia está en que ahora no podemos despejar directamente los valores de $\alpha_i$ que ahora resultarían, pues su valor se hallará resolviendo el sistema de ecuaciones que aparece; ya que éstos serán las incógnitas de este sistema.\\ También es cierto que de esta manera nos ahorramos aplicar el método de Gram - Schmidt a la hora de hallar la base ortogonal. Así que puede elegirse la base de la forma que cada cual considere oportuna.\\[2mm]
+}
+
+{\bf Ejemplo:}
+{\em
+\begin{enumerate}
+	\item Consideremos el espacio vectorial $E=\rn{4}$ con el producto escalar usual, y el subespacio vectorial 
+	\[S=gen\{(1,0,0,1),(1,-1,2,1)\}\]
+	y el vector \[x=(0,1,3,0)\]
+	Hallar la proyección ortogonal de $x$ sobre $S$.\\[2mm]
+	Sabemos que \[x=x_1+x_2,\qquad \mbox{donde}\quad x_1\in S,\quad x_2\in S^{\perp}\]
+  En este caso $x_1$ es la proyección ortogonal de $x$ sobre $S$.
+  
+  Tenemos que hallar una base de $S$. Pero en este caso es inmediato que los vectores
+  \[y_1=(1,0,0,1)\qquad\mbox{y}\qquad y_2=(1,-1,2,1)\]
+  nos sirven como base de $S$.
+  
+  Entonces sabemos que 
+  \[x_1=\alpha_1y_1+\alpha_2y_2\]
+  Pues bien si multiplicamos escalarmente $x$ con cada uno de estos vectores obtenemos por un lado que
+  \[\e{x,y_1}=(x_1+x_2).y_1=\e{x_1,y_1}+\e{x_2,y_1}=(\alpha_1y_1+\alpha_2y_2).y_1+0=\alpha_1\e{y_1,y_1}+\alpha_2\e{y_2,y_1}\]
+  de donde, calculando los productos escalares
+  \[\e{x,y_1}=\e{(0,1,3,0),(1,0,0,1)}=0\]
+  \[\e{y_1,y_1}=\e{(1,0,0,1),(1,0,0,1)}=2\]
+  y además 
+  \[\e{y_2,y_1}=\e{(1,-1,2,1),(1,0,0,1)}=2\]
+  de donde deducimos que
+  \[2\alpha_1+2\alpha_2=0\]
+  y por otra parte
+  \[\e{x,y_2}=(x_1+x_2).y_2=\e{x_1,y_2}+\e{x_2,y_2}=(\alpha_1y_1+\alpha_2y_2).y_2+0=\alpha_1\e{y_1,y_2}+\alpha_2\e{y_2,y_2}\]
+  de donde hallando ahora los productos
+  \[\e{x,y_2}=\e{(0,1,3,0),(1,-1,2,1)}=5\]
+  \[\e{y_1,y_2}=\e{(1,0,0,1),(1,-1,2,1)}=2\]
+  y también
+  \[\e{y_2,y_2}=\e{(1,-1,2,1),(1,-1,2,1)}=7\]
+  y deducimos que 
+  \[2\alpha_1+7\alpha_2=5\]
+  Entonces resolviendo el sistema
+  \[\left\{\begin{array}{l} 2\alpha_1+2\alpha_2=0\\ 2\alpha_1+7\alpha_2=5\end{array}\right.\qquad \Rightarrow\qquad \left\{\begin{array}{l} \alpha_1=-1\\ \alpha_2=1 \end{array}\right.\]
+  
+  Así, la proyección ortogonal del vector $x$ sobre el subespacio $S$ es
+  \[x_1=-1.(1,0,0,1)+1.(1,-1,2,1)=(0,-1,2,0)\]
+  
+  Otra forma de hacerlo sería a partir de una base ortogonal de $S$. Utilizando el método de Gram - Schmidt.	
+	  
+\end{enumerate}}
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+
+
+\subsection{Ángulo entre vectores}
+
+\defi {\em Sea $E$ un espacio euclídeo. Dados dos vectores no nulos $x,y\in E$, definimos el {\bf ángulo} que forman como el valor $\alpha\in [0,\pi]$ verificando:
+\[\cos \alpha=\frac{\e{x,y}}{\n{x}.\n{y}}\]
+Por la desigualdad de Schwartz
+\[-1\leq \frac{\e{x,y}}{\n{x}.\n{y}}\leq 1\]
+Por tanto en el intervlo $[0,\pi]$ sólo existe un ángulo cuyo coseno sea el anterior.\\[2mm]
+Con esta definición de ángulo se verifica:
+\[\e{x,y}=\n{x}.\n{y} \cos\alpha\]}
+
+{\bf Ejemplo:}
+{\em 
+\begin{enumerate}
+	\item Si $u=(2,4)$ y $v=(-1,2)$ entonces
+	\[\e{u,v}=(2)(-1)+(4)(2)=6\]
+	Además
+	\[\n{u}=\sqrt{2^2+4^2}=\sqrt{20}\]
+	y
+	\[\n{v}=\sqrt{(-1)^2+2^2}=\sqrt{5}\]
+	De aquí que
+	\[\cos \alpha =\frac{6}{\sqrt{20}~\sqrt{5}}=0.6\]
+	
+	Podemos obtener una aproximación al ángulo por medio de una calculadora o con la ayuda de una tabla de cosenos; en cualquier caso, encontraremos que $\alpha$ es aproximadamente $0.93$ radianes.
+	  
+\end{enumerate}}
+
+
+\section{Espacio vectorial complejo}
+\defi {\em Un espacio vectorial complejo se define exactamente como un espacio vectorial real, es decir, es una terna formada por un conjunto $E$ y dos operaciones $\oplus$ y $\odot$ que satisfacen las siguientes propiedades:
+\begin{enumerate}
+	\item Si $u$ y $v$ son elementos de $E$, entonces $u+v$ está en $E$.\qquad \emph{(cerrado bajo la suma.)}
+	\item $u\oplus v=v\oplus u$, para todo $u,v\in E$.
+	\item $u\oplus(v\oplus w)=(u\oplus v)\oplus w$ para todo $u,v,w\in E$.
+	\item Existe un elemento $0^*$ en $E$, tal que $u\oplus 0^*=0^*\oplus u=u$, para todo $u\in E$.
+	\item Para todo $u\in E$, existe un elemento $-u\in E$ tal que $u\oplus -u=0$.
+	\item Si $u$ es elemento de $E$ y $\alpha \in \m{C}$, entonces $\alpha\odot u$ está en $E$. \qquad \emph{(cerrado bajo el producto.)}
+	\item $\alpha \odot(u+v)=\alpha\odot u\oplus \alpha\odot v$, para todo $u,v\in E$ y $\alpha \in \m{C}$.
+	\item $(\alpha +\beta)\odot u=\alpha\odot u\oplus \beta\odot u$, para todo $u\in E$ y $\alpha,\beta\in \m{C}$.
+	\item $\alpha\odot(\beta \odot u)=(\alpha \beta)\odot u$, para todo $u\in E$ y $\alpha,\beta\in \m{C}$.
+	\item Existe un elemento $1^*\in E$, tal que $1^*\odot u=u$, para todo $u\in E$.
+\end{enumerate}}
+
+\obs {\em Casi todos los espacios vectoriales reales, tienen sus equivalentes espacios vectoriales complejos.}\\[2mm]
+
+{\bf Notación:} 
+\[(E,\m{C},\oplus,\odot)\] 
+{\em representa el conjunto de vectores de $E$, en el espacio vectorial complejo.}\\[2mm]
+
+{\bf Ejemplo:}
+\begin{enumerate}
+\item {\em Consideremos $\m{C}^n$ el conjunto de todas las matrices $n\times 1$. 
+\[\m{C}^n =\{\left[{z_1\atop z_2}\atop {\vdots\atop z_n}\right]~/~z_k\in \m{C},\quad k=1,2,\ldots,n\}\] 
+con entradas complejas.\\[2mm]
+Sean $\oplus$ la suma matricial, y la operación $\odot$ la multiplicación de una matriz por un número complejo.\\[2mm]
+Podemos verificar que si
+\[\left[\begin{array}{c} z_1\\ z_2\\ \vdots\\ z_n\end{array}\right]\oplus \left[\begin{array}{c} w_1\\ w_2\\ \vdots\\ w_n\end{array}\right]= \left[\begin{array}{c} z_1+w_1\\ z_2+w_2\\ \vdots\\ z_n+w_n\end{array}\right]\]
+y además
+\[\alpha\odot \left[\begin{array}{c} z_1\\ z_2\\ \vdots\\ z_n\end{array}\right]=\left[\begin{array}{c} \alpha z_1\\ \alpha z_2\\ \vdots\\ \alpha z_n\end{array}\right]\]
+  
+tenemos que $\m{C}^n$ es un espacio vectorial complejo mediante las operaciones de matrices antes estudiadas y las propiedades de la aritmética compleja, además $\m{C}^n$ tiene dimensión $n$.\\[2mm]
+
+\item Sea $C[a,b]$, el conjunto de funciones con valores complejos, continuas en el intervalo $[a,b]$, es decir todas las funciones de la forma 
+\[f(t)=f_1(t)+if_2(t)\]
+donde $f_1(t)$ y $f_2(t)$ son funciones con valores reales, continuas en $[a,b]$, con la operación $\oplus$ definida como 
+\[(f\oplus g)(t)=f(t)+g(t)\]
+y la operación $\odot$ definida como
+\[(\alpha \odot f)(t)=\alpha f(t)\]
+para cualquier número complejo $\alpha$.\\[2mm]
+Forma un espacio vectorial complejo. 
+
+\item El espacio vectorial de los polinomios con coeficientes complejos.
+	\[\C{P}_{\m{C}}[t]=\m{C}[t]=\{p(t)=a_0+a_1t+\ldots +a_k t^k~/~a_k\in \m{C}\}\]
+	con la suma de polinomios como $\oplus$ y la multiplicación de un polinomio por un número complejo como $\odot$, forma un espacio vectorial complejo.}
+\end{enumerate}
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+
+{\bf Observación:}
+\[(\m{C},\m{R},\oplus,\odot)\] 
+\indent {\em es un espacio vectorial real de dimensión $2$ y su base es: }
+\[B=\{1,i\}\]
+
+\section{Subespacio vectorial complejo}
+\defi {\em Sea $E$ un espacio vectorial complejo y $S$ un subconjunto no vacío de $E$. Si $S$ es un espacio vectorial con respecto a las operaciones de $E$, entonces $S$ es un subespacio vectorial complejo de $E$.}
+
+\teo {\em Sea $E$ un espacio vectorial complejo con las operaciones $\oplus$ y $\odot$, sea $S$ un subconjunto no vacío de $E$. Entonces $S$ es un subespacio vectorial complejo de $E$ si y sólo si se cumplen las condiciones siguientes:
+\begin{itemize}
+	\item [a)] Si $u,v\in S$, entonces $u\oplus v\in S$.
+	\item [b)] Si $\alpha\in \m{C}$ y $u\in S$, entonces $\alpha \odot u\in S$. 
+\end{itemize}}
+
+{\bf Ejemplo:}
+\begin{enumerate}
+	\item {\em Sea $S$ el conjunto de vectores en $\m{C}^3$ de la forma $(a,0,b)$, donde $a$ y $b$ son números complejos.\\[2mm]
+	Por tanto 
+	\[(a,0,b)\oplus (c,0,d)=(a+c,0,b+d)\]
+	pertenece a $S$, y para cualquier $\lambda \in \m{C}$
+	\[\lambda\odot (a,0,b)=(\lambda a,0\lambda b)\]
+	pertenece a $S$.\\[2mm]
+	Por tanto, $S$ es un subespacio vectorial complejo de $\m{C}^3$. 
+	
+	\item Sea $S$ el conjunto de todos los vectores  en $\C{M}_{n\times n}$ con entradas exclusivamente.\\[2mm]
+	 Si \[A=(a_{ij})\qquad \mbox{y}\qquad B=(b_{ij})\]
+	 pertenecen a $S$, entonces también 
+	 \[A\oplus B=(a_{ij}+b_{ij})\]
+	 pues $a_{kj}$ y $b_{kj}$ son reales, su suma también es real.\\[2mm]
+	 Sin embargo si $\lambda\in \m{C}$ y $A$ pertenece a $S$, entonces 
+	 \[\lambda \odot A=\lambda A\]
+	 puede tener entradas $\lambda a_{kj}$ que no necesariamente son números reales.\\[2mm]
+	 A partir de esto podemos concluir que $\lambda A$ no pertenece necesariamente a $S$, de modo que $S$ no es un subespacio vectorial complejo.}
+\end{enumerate}
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}   
+
+
+\section{Espacio vectorial hermítico}
+\subsection{Producto escalar hermítico}
+
+\defi {\em Un producto escalar hermítico en un espacio vectorial complejo $E$, es una forma sesquilineal hermítica
+\[f:E\times E\to \m{C}\]
+definida por 
+\[f(x,y)=\e{x,y}\qquad \forall x,y\in E\]
+que cumple:\\[2mm]
+$\forall x,y,z\in E,\quad \lambda\in \m{C}$.
+\begin{enumerate}
+	\item [i)] $\e{x+y,z}~=~\e{x,z}+\e{y,z}$
+	\item [ii)] $\e{\lambda x,y}~=~\lambda \e{x,y}$
+	\item [iii)] $\e{x,y}~=~\overline{\e{y,x}}$
+	\item [iv)] $\e{x,x}~\geq~ 0$
+\end{enumerate}
+{\bf Observaciones:}
+\begin{itemize}
+  \item $(i)$ y $(ii)$ definen la linealidad a la izquierda.
+  \item $(iii)$ simétria hermitica.
+\end{itemize}
+
+\quad Si se tiene simetría hermitica \[\overline{\e{x,x}}=\e{x,x} \qquad \Rightarrow \qquad \e{x,x} \quad \mbox{ es real}\]}
+
+\defi {\em Sea $E$ un espacio vectorial complejo dotado de un producto escalar hermitico\footnote{En algunos textos de Álgebra Lineal al espacio vectorial hermítico también se lo llama espacio vectorial hermitiano.}, entonces se dice que $E$ es un espacio vectorial hermitico.\\[2mm]
+
+{\bf Ejemplos:}
+\begin{enumerate}
+\item En $\m{C}^n$, el producto hermitiano se define como: \[\e{x,y}=\sum_{i=1}^{n}x_i \overline{y_i}, \quad\mbox{donde}\quad x=(x_1,x_2,\ldots,x_n) \quad\mbox{ y }\quad y=(y_1,y_2,\ldots,y_n)\]
+
+\item Para el conjunto de las funciones continuas: \[\mathcal{F}([a,b],\m{C})=\{f:[a,b]\subset \m{R}\to \m{C},\quad \mbox{$f$ es continua}.\}\]
+\[\e{f,g}=\int_{a}^{b} f(t).\overline{g(t)} \emph{dt}.\]
+
+\item En $\mathcal{M}_{m\times n}(\m{C})$ \[\e{A,B}=tr(\underbrace{\underbrace{B*}_{n\times m}.\underbrace{A}_{m\times n}}_{n\times n})=\sum_{i=1}^{m}\sum_{j=1}^{n} a_{ij} \overline{b_{ij}}\]
+\item En $\m{C}^n$, si $A$ es una matriz hermitiana $(A=\overline{A^T})$, tal que $x^T A x>0$, $\forall x\in \m{C}^n-\{0\}$.\\[3mm]
+ Entonces \[\langle x,y\rangle=x^T A \overline{y}\] es el producto escalar complejo de $\m{C}^n$
+\end{enumerate} 
+Los ejemplos anteriores son productos escalares hermitícos, los mismos que va a ser tratados en este capítulo, ahora veamos ejemplos númericos de dichos productos.\\[2mm]
+ 
+
+{\bf Ejemplo:}
+\begin{enumerate}
+\item Sea $[a,b]=[0,1]$, $f(t)=t^2+ie^t$ y $g(t)=t+2i$, calcule $\e{f,g}$
+\begin{eqnarray*}
+\langle f,g\rangle&=&\int_{0}^{1}(t^2+ie^t)(\overline{t+2i})dt\\
+&=&\int_{0}^{1}(t^2+ie^t)(t-2i)dt\\
+&=&\int_{0}^{1}(t^3+2e^t)dt +i\int_{0}^{1}(te^t-2t^2)dt\\
+&=&\frac{1}{4}+2e-\frac{2}{3}i\\
+\end{eqnarray*}
+
+\item Sea \[u=\left[\begin{array}{c} 1+i\\ 2-i\\ 3+i \end{array} \right]\quad;\qquad v=\left[\begin{array}{c} 6-2i\\ 2i\\ -1+i \end{array} \right]\]
+entonces 
+\begin{eqnarray*}
+\e{u,v}&=&u^T \overline{v}\\
+&=&(1+i)\overline{(6-2i)}+(2-i)\overline{(2i)}+(3+i)\overline{(-1+i)}\\
+&=&(1+i)(6+2i)+(2-i)(-2i)+(3+i)(-1-i)\\
+&=&0
+\end{eqnarray*}
+de modo que $u$ y $v$ son ortogonales.\\[2mm]
+Además, 
+\begin{eqnarray*}
+\n{u}&=&\sqrt{\langle u,u\rangle}\\
+&=&\sqrt{u^t \overline{u}}\\
+&=&\sqrt{(1+i)(1-i)+(2-i)(2+i)+(3+i)(3-i)}\\
+&=&\sqrt{17}
+\end{eqnarray*}
+\end{enumerate}}
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+
+\subsection{Desigualdad de Cauchy-Schwartz}
+{\em Una las desigualdades más utilizadas e importantes en Álgebra Lineal y Análisis Matemático, sin duda es {\bf Cauchy - Schwartz}, la misma que establece que\\ $\forall x,y\in E$
+\[|\e{x,y}|^2\leq \n{x}^2 \n{y}^2\]
+
+{\bf Demostración:}\\[2mm]
+Sea $y\neq 0$ y consideremos
+\[0\leq \n{x-\e{x,y} ty}=\e{x-\e{x,y}ty, x-\e{x,y}ty}\] 
+\[0\leq \e{x,x}-\e{x,\e{x,y}ty} -\e{\e{x,y} ty,\e{x,y}ty}\]
+\[0\leq \n{x}^2-\overline{\e{x,y}}\e{x,y}t - \e{x,y}\e{y,x}t + \e{x,y}\overline{\e{x,y}}\e{y,y} t^2\] 
+\[0\leq \n{x}^2-2|\e{x,y}|^2t+|\e{x,y}|^2\n{y}^2t^2\] 
+si \[4|\e{x,y}|-4\n{x}^2|\e{x,y}|^2\n{y}^2\leq 0\]
+se sigue que \[|\e{x,y}|^2\leq \n{x}^2 \n{y}^2\]}
+\begin{flushright}
+$\blacksquare$
+\end{flushright}
+
+\subsection{Otras propiedades del producto hermitico}
+{\em 
+\begin{itemize}
+	\item {\bf Teorema de Pitágoras}\\[2mm]
+	Sean $x,y\in E$ tal que \[\langle x,y\rangle=0\qquad \Rightarrow \qquad \n{x+y}^2=\n{x}^2 +\n{y}^2\]
+	{\bf RECÍPROCO} 
+	\[\n{x+y}^2=\n{x}^2 +2Re(\langle x,y\rangle)+\n{y}^2\]  \[\Rightarrow \qquad 2Re(\langle x,y\rangle)=0\] \[Re(\langle x,y\rangle)=0 \qquad\nRightarrow\qquad \langle x,y\rangle=0\]	
+	El recíproco no siempre se cumple.
+	
+	\item {\bf Identidad del paralelogramo}\\[2mm]
+	\begin{center}
+	\begin{pspicture}(6,3)
+	%\psgrid[subgriddiv=1,griddots=10,gridlabels=7pt](0,0)(6,3)
+	\psline[linecolor=blue,arrowsize=0.2]{->}(0.5,0.5)(5.5,2.5)
+	\psline{-}(0.5,0.5)(1.5,2.5)
+	\psline{-}(1.5,2.5)(5.5,2.5)
+	\psline{-}(0.5,0.5)(4.5,0.5)
+	\psline{-}(5.5,2.5)(4.5,0.5)
+	\psline[linecolor=red,,arrowsize=0.2]{->}(1.5,2.5)(4.5,0.5)
+	\rput(0.8,1.5){$\vec{x}$}
+	\rput(2.5,0.2){$\vec{y}$}
+	\rput{-27}(3.7,1.3){$x-y$}
+	\rput*{27}(1.5,1.2){$x+y$}% se pone * para crear un marco
+	\end{pspicture}
+	\end{center}
+	\[\n{x+y}^2+\n{x-y}^2=2(\n{x}^2+\n{y}^2)\]
+	
+	\item {\bf Identidad de polarización} \[\langle x,y\rangle=\frac{1}{4}(\n{x+y}^2-\n{x-y}^2)+\frac{1}{4}i(\n{x+iy}^2-\n{x-iy}^2)\]
+\end{itemize}}
+
+  
+\section{Valores y Vectores Propios}
+{\em Sea una matriz compleja $A\in \C{M}_n(\m{C})$, decimos que $\lambda\in \m{C}$ es un valor propio de $A$ y $\vec{v}$ es el vector asociado a $A$ si:  \[A\vec{v}=\lambda \vec{v} \qquad \Longleftrightarrow \qquad (A-\lambda I)\vec{v}=0,\qquad \mbox{con $\vec{v}\neq 0$}\] por tanto \[det (A-\lambda I)=0\]
+
+Si $\lambda$ es el valor propio de $A$ con $\vec{v}$ como vector propio asociado, entonces $\overline{\lambda}$ es el valor propio de $\overline{A}$ con $\overline{\vec{v}}$ como vector asociado.\\[3mm]
+Los valores propios de $\overline{A^T}$ son los valores propios de $\overline{A}$.
+\begin{itemize}
+	\item {\bf Propiedades:}
+\begin{itemize}
+	\item Si $A$ es una matriz hermitiana, todos sus valores propios de $A$ son reales. Además, los vectores propios correspondientes a valores propios distintos son ortogonales.
+	\item Si $A$ es una matriz hermitiana, existe una matriz $U$ tal que $U^{-1}AU=D$, es una matriz diagonal. Los valores propios de $A$ están sobre la diagonal principal de $D$.
+	\[D=diag(\lambda_1,\lambda_2,\ldots ,\lambda_n)\]
+	\item Si $A$ es una matriz normal, existe una matriz unitaria $U$ tal que $U^{-1}AU=D$, es una matriz diagonal. Recíprocamente, si $A$ es una matriz para la cual existe una matriz unitaria $U$ tal que $U^{-1}AU=D$, es una matriz diagonal, $A$ es una matriz normal.
+\end{itemize}
+
+\item {\bf Ejemplo:} 
+\end{itemize}
+Sea  \[A=\left[{1\atop -i}\quad{i\atop 1}\right]\] determine una matriz $P$ tal que $P^{-1}AP=D$, es una matriz diagonal.\\[2mm]
+\[\det~A=|A|=\left|{1\atop -i}\quad{i\atop 1}\right|=1+i^2=0\]
+\[\quad \overline{A^T}=\left[{1\atop -i}\quad{i\atop 1}\right]\quad ;\qquad \mbox{$A$ es hermitiana}\]
+ahora calculemos los valores propios de $A$.
+\[\det(A-\lambda I)=\left|{1-\lambda \atop -i}\quad {i\atop 1-\lambda}\right|=(1-\lambda)^2+i^2\]%\
+\[(1-\lambda)^2+i^2=1-2\lambda +\lambda^2 -1=0\]
+\[\lambda(\lambda-2)=0\qquad \Rightarrow\quad \left\{{\lambda=0\atop \lambda=2}\right.\]
+Primero calculemos el vector propio $\vec{v_1}$, asociado al valor propio $\lambda=0$
+\[\left({1\atop -i}\quad {i\atop 1}\quad {\vdots\atop :}\quad {0\atop 0}\right)\quad \thicksim \quad \left({1\atop 0}\quad {i\atop 0}\quad {\vdots\atop :}\quad {0\atop 0}\right)\quad \Rightarrow \quad \vec{v_1}=\left[-i\atop 1\right]\]
+ahora el vector propio $\vec{v_2}$, asociado al valor propio $\lambda=2$
+\[\left({-1\atop -i}\quad {i\atop -1}\quad {\vdots\atop :}\quad {0\atop 0}\right)\quad \thicksim \quad \left({1\atop 0}\quad {-i\atop 0}\quad {\vdots\atop :}\quad {0\atop 0}\right)\quad \Rightarrow \quad \vec{v_2}=\left[i\atop 1\right]\]
+por lo tanto \[P=\left[{-i\atop 1}\quad {i\atop 1}\right]\qquad y \qquad P^{-1}=\left[{\frac{i}{2}\atop -\frac{i}{2}}\quad {\frac{1}{2}\atop \frac{1}{2}}\right]\]
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}}
+
+\section{Espacio Vectorial Producto}
+
+{\em Sean $E$ y $F$ dos espacios vectoriales definidos para el mismo campo escalar $\m{K}$.\\[2mm] Formemos el producto cartesiano de ambos espacios vectoriales. Si defnimos en dicho conjunto las operaciones por componentes, obtenemos un nuevo espacio vectorial. \[E\times F=\{(e,f)~/~e\in E,~ f\in F \}\] dotado de las operaciones para $(e_1,f_1)$, $(e_2,f_2)\in E\times F$, $\lambda\in \m{K}$
+\begin{eqnarray*}
+\oplus&:& (e_1,f_1)\oplus (e_2,f_2)=(e_1+e_2, f_1+f_2)\\
+\odot&:& \lambda \odot(e_1,f_1)=(\lambda.e_1, \lambda.f_1)\\
+\end{eqnarray*}
+\begin{itemize}
+	\item {\bf Propiedades:}
+\end{itemize}
+Si $E$ y $F$ son de dimensión finita, entonces $E\times F$ es de dimensión finita.\\[2mm]
+Además si \[\{e_1,e_2,\ldots\ldots,e_n\}\qquad \mbox{ base de $E$}\]  \[\{f_1,f_2,\ldots\ldots,f_n\}\qquad \mbox{ base de $F$}\]
+Sea $(x,y)\in E\times F$, entonces 
+\[x\in E,\qquad \Rightarrow \qquad x=\sum_{i=1}^{n}x_i e_i\]  \[y\in F,\qquad \Rightarrow \qquad x=\sum_{i=1}^{n}y_i f_i\] 
+\begin{eqnarray*}
+(x,y)&=&\left(\sum_{i=1}^{n}x_i e_i,\quad \sum_{j=1}^{m}y_j f_j\right)=\left(\sum_{i=1}^{n}x_i e_i,\quad 0_{F}\right) + \left(0_E,\quad \sum_{j=1}^{m}y_j f_j\right)\\
+(x,y)&=&\sum_{i=1}^{n}x_i(e_i, 0_{F})\quad+\quad\sum_{j=1}^{m}y_j(0_{E}, f_j)\\
+\end{eqnarray*}
+donde \[B=\left\{(e_i,0_{F}), (0_{E},f_j)\quad ,{i=1,2,\ldots,n\atop j=1,2,\ldots,m}\right\}\quad \mbox{ genera } E\times F\]
+ahora, probemos que $B$ es linealmente independiente.\\[2mm]
+Sea \[\sum_{i=1}^{n}\alpha_i(e_i, 0_{F})\quad+\quad\sum_{j=1}^{m}\beta_j(0_{E}, f_j)=(0_E, 0_F)\]
+\[\left(\sum_{i=1}^{n}\alpha_i e_i,\quad \sum_{j=1}^{m}\beta_j f_j\right)=(0_E, 0_F)\]
+\[\sum_{i=1}^{n} \alpha_i e_i=0_E\quad,\quad \sum_{j=1}^{m}\beta_j f_j=0_F\]
+Como $\displaystyle \{e_i\}$ es base de $E$, entonces $\alpha_i=0$, $\forall i=1,2,\ldots,n$ y además $\displaystyle \{f_j\}$ es base de $F$, entonces $\beta_j=0$, $\forall i=1,2,\ldots,m$, entonces $B$ es linealmente independiente \emph{i.e la base es libre}.\\[3mm]
+Por tanto, \[\dim E\times F = \dim E + \dim F\]
+$E~\times~\{0\}$ y $\{0\}~\times~F$ son subespacios vectoriales suplementarios del producto que podemos identifcar con E y F respectivamente.
+
+\begin{itemize}
+	\item {\bf Observaciones:}
+\end{itemize}
+ Sean \[(E,~\langle~,~\rangle_E), (F,~\langle~,~\rangle_F)\] espacios vectoriales euclideanos o hermitianos.\\
+ Si para $E\times F$ se define $\langle\langle~,~\rangle\rangle_{E\times F}$. \[\langle\langle(e_1,f_1),(e_2,f_2)\rangle\rangle_{E\times F}~=~\langle e_1,e_2\rangle_{E}~+~\langle f_1,f_2\rangle_{F}\]
+entonces $\displaystyle (E\times F,~\e{\e{~,~}}_{E\times F})$ es un espacio vectorial euclideano o hermítico respectivamente.}
+
+
+
+%%%%%%%%%%%%%%%%%%%EJERCICIOS RESUELTOS%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Ejercicios Resueltos:}
+\begin{enumerate}
+\item Se considera la matriz \[A=\left[\begin{array}{cccc} 0&0&0&i\\ 0&0&-i&0\\ 0&i&0&0\\ -i&0&0&0\\ \end{array} \right]\]
+\begin{itemize}
+	\item [a)] Hallar el determinante de $A$.
+	\[\det A=\det\left|\begin{array}{cccc} 0&0&0&i\\ 0&0&-i&0\\ 0&i&0&0\\ -i&0&0&0\\ \end{array}\right|=-i.(-i^3)=i^4=1\]
+	\item [b)] Calcular $A^2$.
+	\[A.A=\left[\begin{array}{cccc} 0&0&0&i\\ 0&0&-i&0\\ 0&i&0&0\\ -i&0&0&0\\ \end{array} \right].\left[\begin{array}{cccc} 0&0&0&i\\ 0&0&-i&0\\ 0&i&0&0\\ -i&0&0&0\\ \end{array} \right]=\left[\begin{array}{cccc} 1&0&0&0\\ 0&1&0&0\\ 0&0&1&0\\ 0&0&0&1\\ \end{array} \right]=I_4\]
+	\item [c)] Si $A$ es inversible hallar $A^{-1}$\\[2mm]
+	Dado que $A.A=I_4$, se tiene que $A=I_4 A^{-1}$, es decir $A=A^{-1}$, por lo tanto 
+	\[A^{-1}=\left[\begin{array}{cccc} 0&0&0&i\\ 0&0&-i&0\\ 0&i&0&0\\ -i&0&0&0\\ \end{array} \right]\]
+	\item [d)] La matriz $A$ es ¿hermitiana? ¿normal? ¿unitaria?.\\[3mm]
+	Mostremos que $A$ es hermitiana
+	\[\overline{A^T}=\overline{\left[\begin{array}{cccc} 0&0&0&i\\ 0&0&-i&0\\ 0&i&0&0\\ -i&0&0&0\\ \end{array} \right]^T}=\left[\begin{array}{cccc} 0&0&0&-i\\ 0&0&i&0\\ 0&-i&0&0\\ i&0&0&0\\ \end{array} \right]^T=\left[\begin{array}{cccc} 0&0&0&i\\ 0&0&-i&0\\ 0&i&0&0\\ -i&0&0&0\\ \end{array} \right]=A\]
+	Ahora como $A$ es hermitiana, tenemos que $A$ es normal.\\[3mm]
+	Y además $A.A=I$ por $c)$ y $A=\overline{A^{T}}$, tenemos que $A.\overline{A^T}=A.A^*=I=A^*.A$, entonces $A$ es unitaria.
+	\item [e)] Calcular sus valores y vectores propios
+	\[p(\lambda)=(A-\lambda I)=\left[\begin{array}{cccc} -\lambda&0&0&i\\ 0&-\lambda&-i&0\\ 0&i&-\lambda&0\\ -i&0&0&-\lambda\\ \end{array} \right]= \lambda^4 -2\lambda^2 +1, \quad \Rightarrow \left[\begin{array}{c} \lambda_1=-1\\ \lambda_2=-1\\ \lambda_3=1\\ \lambda_4=1 \end{array}\right. \]
+	calculemos ahora los vectores propios asociados a los valores propios encontrados.\\[3mm]
+	Reemplazamos el valor $\lambda_{1,2}=-1$, en la matriz, y tenemos
+	\[\left(\begin{array}{cccccc} 1&0&0&i&:&0\\ 0&1&-i&0&:&0\\ 0&i&1&0&:&0\\ -i&0&0&1&:&0\\ \end{array} \right)\]
+	sumamos $i$ veces la primera a la cuarta fila
+	 \[\left(\begin{array}{cccccc} 1&0&0&i&:&0\\ 0&1&-i&0&:&0\\ 0&i&1&0&:&0\\ 0&0&0&0&:&0\\ \end{array} \right)\]
+	sumamos $-i$ veces la segunda a la tercera fila.
+	\[\left(\begin{array}{cccccc} 1&0&0&i&:&0\\ 0&1&-i&0&:&0\\ 0&0&0&0&:&0\\ 0&0&0&0&:&0\\ \end{array} \right)\]
+	por lo tanto \[v=\left[\begin{array}{c} x_1\\ x_2\\ x_3\\ x_4\end{array} \right]=\left[\begin{array}{c} -ix_4\\ ix_3\\ x_3\\ x_4\end{array} \right]= x_3\left[\begin{array}{c} 0\\ i\\ 1\\ 0\end{array} \right]+x_4\left[\begin{array}{c} -i\\ 0\\ 0\\ 1\end{array} \right]\]
+	\[v_1=\left[\begin{array}{c} 0\\ i\\ 1\\ 0\end{array} \right],\qquad v_2=\left[\begin{array}{c} -i\\ 0\\ 0\\ 1\end{array} \right]\]
+	
+	Reemplazamos el valor $\lambda_{3,4}=1$, en la matriz, y tenemos
+	\[\left(\begin{array}{cccccc} -1&0&0&i&:&0\\ 0&-1&-i&0&:&0\\ 0&i&-1&0&:&0\\ -i&0&0&-1&:&0\\ \end{array} \right)\]
+	multiplicamos por $-1$, la matriz y obtenemos 
+	\[\left(\begin{array}{cccccc} 1&0&0&-i&:&0\\ 0&1&i&0&:&0\\ 0&-i&1&0&:&0\\ i&0&0&1&:&0\\ \end{array} \right)\]
+	sumamos $-i$ veces la primera a la cuarta fila
+	\[\left(\begin{array}{cccccc} 1&0&0&-i&:&0\\ 0&1&i&0&:&0\\ 0&-i&1&0&:&0\\ 0&0&0&0&:&0\\ \end{array} \right)\]
+	sumamos $i$ veces la segunda a la tercera fila
+	\[\left(\begin{array}{cccccc} 1&0&0&-i&:&0\\ 0&1&i&0&:&0\\ 0&0&0&0&:&0\\ 0&0&0&0&:&0\\ \end{array} \right)\]
+	por lo tanto \[u=\left[\begin{array}{c} y_1\\ y_2\\ y_3\\ y_4\end{array} \right]=\left[\begin{array}{c} iy_4\\ -iy_3\\ y_3\\ y_4\end{array} \right]= y_3\left[\begin{array}{c} 0\\ -i\\ 1\\ 0 \end{array} \right]+y_4\left[\begin{array}{c} i\\ 0\\ 0\\ 1\end{array} \right]\]
+	\[v_3=\left[\begin{array}{c} 0\\ -i\\ 1\\ 0 \end{array} \right],\qquad v_4=\left[\begin{array}{c} i\\ 0\\ 0\\ 1\end{array} \right]\]
+\end{itemize}
+\end{enumerate}
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+
+\begin{itemize}
+	\item [2.] Sean $\displaystyle (H_1, \langle~,~\rangle_1)$ y $\displaystyle (H_2, \langle~,~\rangle_2)$ dos espacios hermitianos. Se define la aplicación $\displaystyle b:H_1\times H_2\to \m{C}$ mediante 
+	\[b\left(x=(x_1,x_2),~y=(y_1,y_2)\right)=\langle x_1,y_1\rangle_1+\langle x_2,y_2\rangle_2\]
+\begin{itemize}
+	\item  Si $\displaystyle H_1=\m{C}^2$ y $\displaystyle H_2=\wp_2(\m{C})$ con los productos escalares usuales $\displaystyle \langle a,b\rangle_1=a^T\overline{b}$ y $\displaystyle \langle p,q\rangle_2=\int_{0}^{1} p(t)\overline{q(t)}dt$ calcular $\displaystyle b(u,v)$ si: \[ u=((1-2i,3i),(3-i)-5t^2)\quad \mbox{ y } \quad  v=((-i,1+i),2-it).\]
+\begin{eqnarray*}
+b(u,v)&=&b\left(((1-2i,3i),(3-i)-5t^2),((-i,1+i),2-it)\right)\\
+&=&\langle (1-2i,3i),(-i,1+i)\rangle_1+\langle(3-i)-5t^2, 2-it\rangle_2\\
+&=&(1-2i,3i)\left(i\atop 1-i\right)+\int_{0}^{1}[(3-i)-5t^2]\overline{(2-it)} dt\\
+&=&i+2+3i+3+\int_{0}^{1}[2(3-i)-10t^2+it(3-i)-5it^3]dt\\
+&=&5+4i+\left(2(3-i)t -\frac{10}{3}t^3+\frac{i}{2}(3-i)t^2 -\frac{5}{4}it^4\right)\left|_{0}^{1}\right.\\
+&=&5+4i+6-2i-\frac{10}{3}+\frac{3}{2}i+\frac{1}{2}-\frac{5}{4}i\\
+&=&\frac{43}{6}+\frac{9}{4}i
+\end{eqnarray*}	
+\end{itemize}
+\end{itemize}
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+
+\begin{itemize}
+	\item[3.] Sea $\displaystyle H=\left\{\left[\begin{array}{cc} u& v\\ \overline{u}& \overline{v}\end{array}\right], \quad u,v\in \m{C}\right\}\subset \mathcal{M}_2(\m{C})$. Los elementos de $H$ se dicen cuaterniones.
+\begin{itemize}
+	\item [a)] Demostrar que $H$ es un subespacio vectorial real de $\mathcal{M}_2(\m{C})$. Dar una base y su dimensión.\\[2mm]
+	\item {\bf P.D.} $H$ no es vacío.\\[3mm]
+	Para mostrar que $H$ no es vacío, basta tomar $u=v=0$, con lo cual la matriz nula pertenece a $H$.\\[2mm]
+	\item {\bf P.D.} $\forall u,v,w,z\in \m{C}$,\quad $\displaystyle \left[\begin{array}{cc} u&v\\ \overline{u}&\overline{v}\end{array}\right]+ \left[\begin{array}{cc} w&z\\ \overline{w}&\overline{z}\end{array}\right]\in H$.
+	\[\left[\begin{array}{cc} u&v\\ \overline{u}&\overline{v}\end{array}\right]+\left[\begin{array}{cc} w&z\\ \overline{w} &\overline{z} \end{array} \right]=\left[\begin{array}{cc} u+w&v+z\\ \overline{u}+\overline{w}&\overline{v}+\overline{z}\end{array}\right]=\left[\begin{array}{cc} u+w&v+z\\ \overline{u+w}&\overline{v+z}\end{array}\right]\] por lo tanto \[\left[\begin{array}{cc} u+w&v+z\\ \overline{u+w}&\overline{v+z}\end{array}\right]\in H\]
+\vspace{3mm}	
+	\item {\bf P.D.} $\forall \lambda \in \m{R}$, $u,v\in \m{C}$\quad $\displaystyle \lambda\left[\begin{array}{cc}u&v\\ \overline{u}&\overline{v} \end{array}\right]\in H$.\\[2mm]
+	\[\lambda\left[\begin{array}{cc}u&v\\ \overline{u}&\overline{v} \end{array}\right]=\left[\begin{array}{cc} \lambda u&\lambda v\\ \lambda\overline{u}&\lambda\overline{v} \end{array}\right]=\left[\begin{array}{cc}\lambda u&\lambda v\\ \overline{\lambda u}&\overline{\lambda v} \end{array}\right]\] por lo tanto \[\left[\begin{array}{cc}\lambda u&\lambda v\\ \overline{\lambda u}&\overline{\lambda v} \end{array}\right]\in H\]
+	Ahora hallemos una base para $H$, tomemos $\displaystyle \left[\begin{array}{cc}u&v\\ \overline{u}&\overline{v} \end{array}\right]\in H$, por tanto \[\left[\begin{array}{cc}u&v\\ \overline{u}&\overline{v} \end{array}\right]=\left[\begin{array}{cc}a+ib&c+id\\ a-ib&c-id \end{array}\right]= \left[\begin{array}{cc}a&c\\ a&c \end{array}\right]+i\left[\begin{array}{cc}b&d\\ -b&-d \end{array}\right]\]
+\[\left[\begin{array}{cc}a+ib&c+id\\ a-ib&c-id \end{array}\right]=a\underbrace{\left[\begin{array}{cc}1&0\\ 1&0 \end{array}\right]}_{m_1}+c\underbrace{\left[\begin{array}{cc} 0&1\\ 0&1 \end{array}\right]}_{m_2}+b\underbrace{\left[\begin{array}{cc} i&0\\ -i&0 \end{array}\right]}_{m_3}+d\underbrace{\left[\begin{array}{cc} 0&i\\ 0&-i \end{array}\right]}_{m_4}\]	
+	Por tanto \[B=\{m_1,m_2,m_3,m_4\}\] es una base de $H$, y su dimensión es \[\dim B=4\]
+	
+\vspace{3mm}	
+	\item [b)] ¿ Es $H$ un subespacio vectorial complejo de $\mathcal{M}_2(\m{C})$ ?\\[3mm]
+	Probemos que $H$ no es un subespacio vectorial complejo, para ello tomemos $\lambda\in \m{C}$, por lo tanto sabemos que $\overline{\lambda}\neq \lambda$ y mostremos que \[\lambda \left[\begin{array}{cc} u&v\\ \overline{u}&\overline{v} \end{array}\right]\notin H\] es decir el subespacio vectorial complejo no es cerrado bajo el producto.\\[3mm]
+	\[\lambda\left[\begin{array}{cc} u&v\\ \overline{u}&\overline{v}\end{array}\right]=\left[\begin{array}{cc} \lambda u&\lambda v\\ \lambda\overline{u} &\lambda \overline{v}\end{array} \right]=\left[\begin{array}{cc} \lambda u&\lambda v\\ \overline{\overline{\lambda} u} &\overline{\overline{\lambda} v}\end{array} \right]\] 
+	de donde, observamos que $\overline{\lambda}u\neq \lambda u$, por lo tanto $H$ no es un subespacio vectorial complejo.\\[3mm]
+	
+	
+	\item [c)] ¿ El producto de cuaterniones es un cuaternión ?\\[3mm]
+	Suponemos que $\displaystyle \left[\begin{array}{cc} u&v\\ \overline{u}&\overline{v}\end{array}\right]$ y $\displaystyle \left[\begin{array}{cc} w&z\\ \overline{w}&\overline{z}\end{array}\right]$ son dos cuaterniones donde $u,v,w,z\in \m{C}$.\\[3mm]
+	Por tanto  \[\left[\begin{array}{cc} u&v\\ \overline{u}&\overline{v}\end{array}\right]. \left[\begin{array}{cc} w&z\\ \overline{w}&\overline{z}\end{array}\right]= \left[\begin{array}{cc} uw+v\overline{w}&uz+v\overline{z}\\ \overline{u}w+\overline{v}\overline{w}&\overline{u}z+\overline{v}\overline{z}\end{array}\right]\]
+	de donde claramente se observa que \[\Large{\overline{uw+v\overline{w}}=\overline{uw}+\overline{v}w\neq \overline{u}w+\overline{v}\overline{w}}\] por lo tanto concluimos que el producto de cuaterniones no es un cuaternión en general.\\[3mm]
+\end{itemize}
+\end{itemize}
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+
+
+
+\begin{itemize}
+	\item[4.] Verificar si la aplicación $T:\m{C}\to \m{C}$, $T(z=a+ib)=a-ib$ es una aplicación lineal si 
+\begin{itemize}
+	\item [a)] $\m{C}$ es un espacio vectorial real.
+	\item {\bf P.D.} $T(z+w)=T(z)+T(w)$\qquad \mbox{ donde } $z=a+ib,\quad w=c+id$.
+	\begin{eqnarray*}
+	T(z+w)&=&T(a+ib + c+id)\\
+	&=&T((a+c)+i(b+d))\\
+	&=&(a+c)-i(b+d)\\
+	&=&(a-ib)+(c-id)\\
+	&=&T(a+ib)+T(c+id)\\
+	T(z+w)&=&T(z)+T(w)	
+	\end{eqnarray*}
+	
+	\item {\bf P.D.} $T(\alpha z)=\alpha T(z)$\qquad \mbox{ donde } $\alpha\in \m{R}$ y $z=a+ib$.
+	\begin{eqnarray*}
+	T(\alpha z)&=&T(\alpha(a+ib))\\
+	&=&T(\alpha a +\alpha ib)\\
+	&=&\alpha a-\alpha ib\\
+	&=&\alpha (a-ib)\\
+	&=&\alpha T(a+ib)\\
+	T(\alpha z)&=&\alpha T(z)
+	\end{eqnarray*}	
+	Si es aplicación en un espacio vectorial real.
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+	
+	\item [b)] $\m{C}$ es un espacio vectorial complejo. 
+	\item {\bf P.D.} $T(x+y)=T(x)+T(y)$\qquad \mbox{ donde } $x=a+ib,\quad y=c+id$.
+	\begin{eqnarray*}
+	T(x+y)&=&T(a+ib + c+id)\\
+	&=&T((a+c)+i(b+d))\\
+	&=&(a+c)-i(b+d)\\
+	&=&(a-ib)+(c-id)\\
+	&=&T(a+ib)+T(c+id)\\
+	T(x+y)&=&T(x)+T(y)	
+	\end{eqnarray*}
+	
+	\item {\bf P.D.} $T(\beta z)=\beta T(z)$\qquad \mbox{ donde } $\beta=(e+if)\in \m{C}$ y $z=a+ib$.
+	\begin{eqnarray*}
+	T(\beta z)&=&T((e+if)(a+ib))\\
+	&=&T((ea-fb)+i(af+be))\\
+	&=&(ea-fb)-i(af+be)\\
+	&=&(e-if)+(a-ib)\\
+	&=&T(e+if)+T(a+ib)\\
+	&=&T(\beta )+T(z)\\
+	T(\beta z)&\neq &\beta T(z)
+	\end{eqnarray*}
+	No es aplicación en un espacio vectorial complejo.	
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+\end{itemize}
+
+  \item [5.] Sea $u=(1,i,1+i)\in \mathbb{C}^{3}$, hallar una base ortogonal de $U^{\perp}=\{v\in \m{C}^3~/~\e{u,v}=0\}$
+  \[u=(1,i,1+i)\quad;\qquad v=(a+ib,c+id,e+if)\]
+	\begin{eqnarray*}
+	\e{u,v}&=&\e{(1,i,1+i).(a+ib,c+id,e+if)}\\
+	&=&(a+ib)+i(c+id)+(1+i)(e+if)\\	
+	&=&(a-d+e-f)+i(b+c+e+f)=0\\
+	\end{eqnarray*}
+	por  tanto $(a-d+e-f)=0$, y $(b+c+e+f)=0$, ahora demos valores para: $a,b,c,d$, que satisfagan las 2 ecuaciones.\\[2mm]
+	Sea \[a=1, \quad b=3,\quad  c=-2,\quad d=4\] entonces \[e=\frac{d-a-b-c}{2}=1,\qquad f=\frac{a-b-c-d}{2}=-2\] es decir \[v=(1+3i,-2+4i,1-2i)\]
+	por tanto \[U^{\perp}=gen\{(1+3i,-2+4i,1-2i)\}\]
+		
+	\item [6.] Ortogonalizar $u_1=(0,1,-1)$, $u_2=(1+i,1,1)$ y $u_3=(1-i,1,1)$\\[3mm]
+	$v_1=u_1=(0,1,-1)$\\[3mm]
+	$\displaystyle v_2=u_2-proy_{v_1}u_2=(1+i,1,1)-0=(1+i,1,1)$\\[3mm]
+	$\displaystyle v_3=u_3-proy_{v_1}u_3-proy_{v_2}u_3=(1-i,1,1)-0-(2,1-i,1-i)=(-1-i,i,i)$\\[3mm]
+	por tanto \[B=\{(0,1,-1),~(1+i,1,1),~(-1-i,i,i)\}\] es una base ortogonal.\\[3mm]
+	
+	\item [7.] Representar $u=(3-i,0,1-i)$ en la base ortogonal hallada.\\[3mm]
+	Ahora debemos hallar $\alpha,~\beta,~\gamma\in \m{C}$ tal que \[u=\alpha v_1+\beta v_2+\gamma v_3\]
+	Formando la matriz aumentada tenemos \[\left[\begin{array}{cccccc} 0&1+i&-1-i&\vdots&3-i&\\ 1&1&i&\vdots&0&\\ -1&1&i&\vdots&1-i& \end{array}\right]\]
+	sumamos $-1$ veces la tercera fila a la primera
+	\[\left[\begin{array}{cccccc} 1&i&-1-2i&\vdots&2&\\ 1&1&i&\vdots&0&\\ -1&1&i&\vdots&1-i& \end{array}\right]\]
+	sumando $1$ veces la tercera a la segunda fila y sumando $1$ veces la primera a la tercera fila.
+	\[\left[\begin{array}{cccccc} 1&i&-1-2i&\vdots&2&\\ 0&2&2i&\vdots&1-i&\\ 0&1+i&-1-i&\vdots&3-i& \end{array}\right]\]
+	multiplicamos por $\displaystyle \frac{1}{1+i}$ la tercera fila.
+	\[\left[\begin{array}{cccccc} 1&i&-1-2i&\vdots&2&\\ 0&1&i&\vdots&\frac{1-i}{2}&\\ 0&1&-1&\vdots&1-2i& \end{array}\right]\]
+	sumando $-1$ veces la segunda a la tercera fila
+	\[\left[\begin{array}{cccccc} 1&0&-1-i&\vdots&-i&\\ 0&1&i&\vdots&\frac{1-i}{2}&\\ 0&0&-1-i&\vdots&\frac{1-3i}{2}& \end{array}\right]\]
+	finalmente multiplicando por $\displaystyle \frac{1}{-1-i}$ la tercera fila
+	\[\left[\begin{array}{cccccc} 1&0&0&\vdots&\frac{1-3i}{2}&\\ 0&1&0&\vdots&\frac{3+2i}{2}&\\ 0&0&1&\vdots&\frac{1+2i}{2}& \end{array}\right]\]
+	por tanto las soluciones son: \[\alpha=\frac{1-3i}{2};\qquad \beta=\frac{3+2i}{2};\qquad \gamma=\frac{1+2i}{2}\]
+	es decir \[u=\frac{1}{2}\left[\begin{array}{c} 1-3i\\ 3+2i\\ 1+2i \end{array} \right]_{B}\] 
+
+\end{itemize}
+
+
+\newpage
+\section{Ejercicios Propuestos}
+
+\begin{enumerate}
+  \item ¿Cuáles de las siguientes matrices son hermitianas, cuáles son unitarias y cuáles normales ?.
+  \begin{multicols}{2}
+  \begin{enumerate}
+  \item $\mdc{i}{i}{-i}{1}$\\[3mm]
+	  \item $\mdc{3}{2+i}{2-i}{4}$\\[3mm]
+	  \item $\mdc{2}{1-i}{3+i}{-2}$\\[3mm]
+	  \item $\mdc{4+7i}{-2-i}{1-2i}{3+4i}$\\[3mm]
+	  \item $\mdc{\frac{1-i}{2}}{\frac{1+i}{2}}{\frac{1+i}{2}}{\frac{1-i}{2}}$\\[3mm]
+	  \item $\mtc{1}{0}{0}{0}{\frac{1+i}{\sqrt{3}}}{\frac{1}{\sqrt{3}}}{0}{-\frac{1}{\sqrt{3}}}{\frac{1-i}{\sqrt{3}}}$\\[3mm]
+	  \item $\mtc{1}{3-i}{4-i}{3+i}{-2}{2+i}{4+i}{2-i}{3}$\\[3mm]
+  \end{enumerate}
+  \end{multicols}
+  
+  \item Resuelva los siguientes sistemas lineales complejos, mediante reducción de Gauss - Jordan.
+  \begin{enumerate}
+	  \item $\left\{\begin{array}{l} (1+2i)x_1+(-2+i)x_2=1-3i\\ (2+i)x_1+(-1+2i)x_2=-1-i \end{array}\right.$\\[3mm]
+	  \item $\left\{\begin{array}{l} (1+i)x_1-x_2=-2+i\\ 2ix_1+(1-i)x_2=i\end{array}\right.$
+  \end{enumerate}
+
+	\item Determine si los siguientes conjuntos son espacios vectoriales \emph{(justifique)}.
+\begin{itemize}
+	\item [a)] $(\m{Q},\m{R},+,.)$
+	\item [b)] $\{f\in \mathcal{C}[0,1]~:~f(0),~ f(1)=a\}.$ Para que valores de $a$?.
+	\item [c)] $\{a_0+a_1x+\ldots+a_nx^n~:~a_0=a_1=\ldots=a_n,\quad a_i\in \m{R}, \forall~i\}$\\[3mm]
+\end{itemize}
+  \item Estudiar si los conjuntos siguientes de números reales y las operaciones que se indican forman o no, un espacio vectorial sobre el cuerpo de los números racionales:
+\begin{itemize}
+\item [a)] $A=\{ x+y\sqrt{5}:x,y\in \mathbb{Z}\} $ y las operaciones \begin{eqnarray*}
+(x_{1}+y_{1}\sqrt{5})+(x_{2}+y_{2}\sqrt{5}) &=&(x_{1}+x_{2})+(y_{1}+y_{2})%
+\sqrt{5} \\
+\lambda (x+y\sqrt{5}) &=&( \lambda x) +( \lambda y) \sqrt{5}
+\end{eqnarray*}
+
+\item [b)] $B=\{ x+y\sqrt{5}:x,y\in \mathbb{Q}\} $ y las mismas
+operaciones anteriores.\\[3mm]
+  \end{itemize}
+  
+  \item Sea $E$ el conjunto de las sucesiones infinitas de números reales; en $E$ se consideran las operaciones
+  \[(x_n)+(y_n)=(x_n+y_n),\qquad \forall (x_n),(y_n)\in E\]
+  \[\alpha (x_n)=(\alpha x_n),\qquad \forall \alpha\in \m{R},\forall (x_n)\in E\]
+  \begin{enumerate}
+	  \item Demuestre que $E$ con dichas operaciones, es espacio vectorial.
+	  \item Demuestre que los siguientes subconjuntos son subespacios de $E$:
+    \begin{itemize}
+	    \item Las sucesiones acotadas.
+	    \item Las sucesiones constantes.
+	    \item Las sucesiones con límite.
+    \end{itemize}
+    \item Analice si los siguientes subconjuntos son subespacios vectoriales de $E$:
+    \begin{itemize}
+	    \item La sucesiones con límite igual a $1$.
+	    \item Las sucesiones con términos positivos.
+	    \item Las sucesiones sin límite.\\[3mm]
+    \end{itemize}
+  \end{enumerate}
+  
+  \item Sea $E$ el conjunto de las funciones reales de una variable real y considérese las siguientes operaciones de suma y producto por un escalar:
+  \[(f+g)(x)=f(x)+g(x),\qquad \forall f,g\in E,\quad \forall x\in \m{R}\]
+  \[(\alpha f)(x)=\alpha f(x),\qquad \forall f\in E,\quad \forall \alpha,x\in \m{R}\]
+  \begin{enumerate}
+	  \item Demuestre que $E$ con dichas operaciones es un espacio vectorial.
+	  \item Demuestre que los siguientes subconjuntos son subespacios de $E$:
+    \begin{itemize}
+	    \item Las funciones pares.
+	    \item Las funciones impares.
+	    \item Las funciones acotadas.
+	    \item Las funciones polinómicas.
+	    \item Las funciones continuas.
+	    \item Las funciones derivables.
+	    \item Las funciones que se anulan en el punto $x=1$.
+    \end{itemize}
+    \item Analice si los siguientes subconjuntos son subespacios vectoriales de $E$:
+    \begin{itemize}
+	    \item Las funciones que no se anulan en ningún punto.
+	    \item Las funciones con algún punto de discontinuidad.
+	    \item Las funciones negativas.
+	    \item Las funciones acotadas superiormente por la unidad.\\[3mm]
+    \end{itemize}
+    
+  \end{enumerate}
+  
+  \item Sea \[E=\wp_4[t]=\{\mbox{ polinomios de grado $\leq 4$}\}\]
+  Pruebe que \[F=\{p\in E~|~\int_0^1 p(t) dt=0\}\]
+  es un subespacio vectorial de $E$ y encuentre una base para $F$.\\[3mm]
+  
+  \item Sea el espacio vectorial real 
+  \[E=\wp[x,y]=\{\mbox{ polinomios de dos variables reales }\}\]
+  Se considera el conjunto \[F=\wp_1[x,y]=\{p(x,y)=ax+bx+cy,\quad a,b,c\in \m{R}\}\]
+  Demostrar que $F$ es un subespacio vectorial de $E$, hallar una base y dar su dimensión.\\[3mm] 
+  
+  \item Sea $E=\rn{3}$, además 
+  \[S=\{(x_1,x_2,x_3)\in E~|~ x_1-x_2+2x_3=0\}\]
+  \[T=\{(y_1,y_2,y_3)\in E~|~ y_1=\alpha+\beta, y_2=\beta+\gamma, y_3=\alpha+2\beta+\gamma,\quad \alpha,\beta,\gamma\in \m{R}\}\] 
+  Hallar una base y dar su dimensión de los subespacios vectoriales $S$ y $T$.\\[3mm]
+  
+  \item Se considera el espacio vectorial complejo de las matrices $2\times 2$ con términos complejos.
+\begin{itemize}
+	\item [a)] Dar una base y la dimensión de $\mathcal{M}_2(\m{C})$.
+	\item [b)] Se consideran las tres matrices complejas dadas por Pauli\footnote{Wolfgang Ernst Pauli.\quad Premio Nobel de Física 1945 por el descubrimiento del Principio de exclusión} para estudiar los espines de los electrones. \[\sigma_1=\left[\begin{array}{cc} 0&1\\ 1&0 \end{array}\right],\quad \sigma_2=\left[\begin{array}{cc} 0&-i\\ i&0 \end{array}\right],\quad \sigma_3=\left[\begin{array}{cc} 1&0\\ 0&-1 \end{array}\right]\]
+	Mostrar que la matriz identidad con estas  tres matrices forman una base ortonormal de $\mathcal{M}_2(\m{C})$ para el producto escalar definido por \[\langle A|B\rangle=\frac{1}{2}tr(\overline{A^T}B)\]
+	\item [c)] Deducir la fórmula de $\sigma_{i}^n$, para $i=1,2,3$ y además $n\in \m{N}$.\\[3mm]
+\end{itemize}
+  \item Sea la matriz \[A=\left[\begin{array}{ccc} 2&0&0\\ 0&2&i\\ 0&-i&2\end{array}\right]\]
+\begin{itemize}
+	\item [a)] Calcular el determinante
+	\item [b)] ¿ Es $A$ una matriz hermitiana ?.
+	\item [c)] Hallar $A^{-1}$.
+	\item [c)] Hallar los valores y vectores propios asociados a la matriz.
+	\item [d)] ¿ Se puede escribir la matriz de la forma $A=B+iC$, donde $B$ es real simétrica $(B=B^T)$ y $C$ es real antisimétrica $(C=-C^T)$ ?.\\[3mm] 
+\end{itemize}
+  \item Muestre que si $A$ es unitaria, $P$ no singular y $B=AP$ entonces $PB^{-1}$ es unitaria.\\[3mm]
+  \item Calcular los valores y vectores propios asociados a la matriz \[A=\left[\begin{array}{cccc} 0&0&0&i\\ 0&0&2i&0\\ 0&-3i&0&0\\ -4i&0&0&0 \end{array}\right]\]
+  \item  Hallar un conjunto de vectores ortonormal a partir de \[u_1=[1+i,i,1],\quad u_2=[2,1-2i,2+i],\quad u_3=[1-i,0,-i]\]
+  
+  \item Construya una base ortonormal para $P_3[0,2]$.\\[3mm]
+  
+  \item Determine el coseno del ángulo que forma cada par de vectores
+  \begin{enumerate}
+	  \item $u=(1,2)$, $v=(2,-3)$.
+	  \item $u=(1,2,3)$, $v=(-2,0,1)$.
+	  \item $u=(-1,0,3,4)$, $v=(1,-1,4,2)$.\\[3mm]
+  \end{enumerate}
+  
+  \item ¿La siguiente proposición es verdadera o falsa para un espacio vectorial real o complejo?.
+  \[\n{x}=\n{y} \quad \mbox{ si y sólo si }\quad \e{x+y,x-y}=0\]
+  Demostrar o dar un contraejemplo.
+\end{enumerate}
