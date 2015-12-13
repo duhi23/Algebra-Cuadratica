@@ -1,0 +1,113 @@
+\documentclass[11pt,a4paper,twoside]{book}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{pst-eucl,pstricks,pstricks-add}
+%\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{url}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{lmodern}
+\parindent=0mm
+
+% Definiciones
+\newtheorem{teo}{Teorema}[chapter]
+\newtheorem{defi}{Definición}[chapter]
+\newtheorem{eje}{Ejemplo}[chapter]
+\newtheorem{ejr}{Ejercicio}[chapter]
+\newtheorem{lem}{Lema}[section]
+\newtheorem{pro}{Proposición}[chapter]
+\newtheorem{obs}{Observación}[chapter]
+\newtheorem{cor}[teo]{Corolario}
+% Notacion
+\newcommand{\p}[1]{\partial{#1}}
+\newcommand{\m}[1]{\mathbb{#1}}
+\newcommand{\n}[1]{\left\|#1\right\|}
+\newcommand{\V}[1]{\nabla{#1}}
+\newcommand{\C}[1]{\mathcal{#1}}
+\newcommand{\e}[1]{\langle #1\rangle}
+\newcommand{\s}[1]{({#1}_1,{#1}_2,\ldots,{#1}_n)}
+\newcommand{\ba}[1]{\{{#1}_1,{#1}_2,\ldots,{#1}_n\}}
+\newcommand{\rn}[1]{\mathbb{R}^{#1}}
+\newcommand{\mtr}[9]{\left(\begin{array}{rrr} #1&#2&#3\\ #4&#5&#6\\ #7&#8&#9\end{array}\right)}
+\newcommand{\mtc}[9]{\left(\begin{array}{ccc} #1&#2&#3\\ #4&#5&#6\\ #7&#8&#9\end{array}\right)}
+\newcommand{\dt}[9]{\left|\begin{array}{rrr} #1&#2&#3\\ #4&#5&#6\\ #7&#8&#9\end{array}\right|}
+\newcommand{\mdr}[4]{\left(\begin{array}{rr} #1&#2\\ #3&#4\end{array}\right)}
+\newcommand{\mdc}[4]{\left(\begin{array}{cc} #1&#2\\ #3&#4\end{array}\right)}
+\newcommand{\dd}[4]{\left|\begin{array}{rr} #1&#2\\ #3&#4\end{array}\right|}
+\newcommand{\su}[1]{\left({#1}_{n}\right)}
+\newcommand{\fu}[5]{\begin{array}{rccl} #1:&#2&\to&#3\\ &#4&\mapsto&#5\end{array}}
+\newcommand{\an}[1]{{#1}^{\circ}}
+
+
+\begin{document}
+
+\thispagestyle{empty}
+
+%%% modificacion preambulo
+\makeatletter
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1ex \hfill \kern \z@}
+\def\@makechapterhead#1{%
+  \reset@font
+  \vspace*{10\p@}%
+  {\parindent \z@ 
+    \begin{flushleft}
+      \reset@font \scshape \bfseries \Huge \thechapter \par
+    \end{flushleft}
+    \hrule
+    \begin{flushleft}
+      \reset@font \LARGE \strut #1\strut \par
+    \end{flushleft}
+    \vskip 80\p@
+  }}
+\def\@makeschapterhead#1{%
+  \reset@font
+  \vspace*{10\p@}%
+  {\parindent \z@ 
+    \begin{flushleft}
+      \reset@font \scshape \bfseries \Huge \vphantom{\thechapter} \par
+    \end{flushleft}
+    \hrule
+    \begin{flushleft}
+      \reset@font \LARGE \strut #1\strut \par
+    \end{flushleft}
+    \vskip 80\p@
+  }}
+%%%
+
+% Portada
+
+<<child-front, child='Capitulos/frontpage.Rnw'>>=
+@
+\BOOKALG
+
+%Derechos
+
+% Dedicatoria
+\setcounter{page}{0}
+\cleardoublepage
+\vspace*{\stretch{1}}
+\hfill
+\begin{minipage}[t]{0.66\textwidth}
+\raggedleft
+\thispagestyle{empty}
+\textit{Un aporte a la sociedad.}
+\end{minipage}
+\vspace*{\stretch{3}}
+\clearpage
+
+% Contenidos
+\tableofcontents
+
+<<child-cap01, child='Capitulos/Cap01.Rnw'>>=
+@
+
+\end{document}
