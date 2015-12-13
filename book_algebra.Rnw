@@ -16,6 +16,7 @@
 \usepackage{multicol}
 \usepackage{float}
 \usepackage{lmodern}
+\usepackage{amsmath,amscd,fancybox,fancyhdr,fancyvrb}
 \parindent=0mm
 
 % Definiciones
