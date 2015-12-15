@@ -17,3 +17,4 @@ y Cuadrática}\\ [\baselineskip]
 \endgroup}
 
 % practicando, practicando! 
+% otra práctica! 
