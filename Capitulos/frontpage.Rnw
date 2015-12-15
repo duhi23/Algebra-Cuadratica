@@ -15,3 +15,5 @@ y Cuadrática}\\ [\baselineskip]
 \rule{\textwidth}{0.5pt}
 \vspace*{\baselineskip}
 \endgroup}
+
+% practicando, practicando! 
