@@ -1,0 +1,664 @@
+\chapter{Espacio vectorial cociente}
+
+\begin{center}
+\shadowbox{
+\begin{minipage}{5in}
+En este capítulo vamos a estudiar conjuntos sobre los cuales vamos a definir ciertas relaciones de equivalencia, los mismos que a su vez, van a adquirir la estructura de espacio vectorial mediante las operaciones de suma y producto por escalar definidas especialmente para dichos conjuntos.
+\end{minipage}}
+\end{center}
+
+\section{Relaciones binarias}
+
+{\em En el lenguaje ordinario tratar de ver si dos objetos guardan cierta relación entre sí, o por el contrario si no tienen nada en común, nos lleva a pensar que se debe satisfacer alguna proposición o dejar de satisfacerse, para dichos objetos.}\\[2mm] 
+
+\defi {\em Sea $E$ un espacio vectorial, por una relación $\C{R}$ en $E$ entendemos el subconjunto de $E\times E$, tal que satisface las siguientes propiedades:\\[2mm]
+Sea $\C{R}$ una relación en $E$; entonces 
+\begin{enumerate}
+	\item $\mathcal{R}$ se dice reflexiva si \[\forall x\in E,\quad (x,x)\in \C{R}\]
+	\item $\mathcal{R}$ se dice simétrica si \[(x,y)\in \C{R}\quad \Rightarrow\quad (y,x)\in \C{R}\]
+	\item $\mathcal{R}$ se dice anti-simétrica si \[(x,y)\in \C{R}\quad \wedge\quad (y,x)\in \C{R}\quad \Rightarrow\quad x=y\]
+	\item $\mathcal{R}$ se dice transitiva si \[(x,y)\in \C{R}\quad \wedge\quad (y,z)\in \C{R}\quad \Rightarrow\quad (x,z)\in \C{R}\]
+\end{enumerate}}
+
+{\bf Ejemplo:}
+{\em 
+\begin{enumerate}
+	\item Como ejemplo de relación entre elementos de un mismo conjunto puede considerarse lo siguiente:\\[2mm]
+	Para el conjunto \[A=\{1,2,3,4,5,6,7,8,9\}\]
+	se dice que $a$ está relacionado con $b$ si y sólo si 
+	\begin{center} \emph{$a$ es primo y además $a$ y $b$ no son primos entre sí} \end{center}
+	esta relación tiene el siguiente \emph{grafo}:
+	\[\C{R}=\{(2,2),(2,4),(2,6),(2,8),(3,3),(3,6),(3,9),(5,5),(7,7)\}\]
+	Para representar esta relación se puede unir mediante líneas los elementos relacionados entre sí, pero ahora se hace necesario, al considerar un solo conjunto, indicar con una flecha cuál es el primer y cuál el segundo de los elementos que están relacionados, ya que por ejemplo 
+	\[(2,4)\in \C{R},\quad \mbox{ pero, sin embargo }\quad (4,2)\notin \C{R}\]
+	procediendo de este modo  se puede obtener el esquema, llamado sagital, siguiente:
+\end{enumerate}}
+
+\begin{center}
+\begin{pspicture}(-3,-3)(3,3)
+%\psgrid[subgriddiv=1,griddots=10,gridlabels=7pt](-3,-3)(3,3)
+\psline(-2,2)(-2,-2)
+\psline(-2,-2)(2,-2)
+\psline(2,-2)(2,2)
+\psline(2,2)(-2,2)
+\dotnode(-1,0){2}
+\dotnode(0,1){4}
+\dotnode(-1,1){1}
+\dotnode(-1,-1){3}
+\dotnode(0,0){5}
+\dotnode(0,-1){6}
+\dotnode(1,1){7}
+\dotnode(1,0){8}
+\dotnode(1,-1){9}
+\pscurve{->}(-1,0)(-0.7,0.6)(-0.05,1)
+\pscurve{->}(-1,0)(-0.3,0.4)(0.3,0.4)(0.95,0)
+\pscurve{->}(-1,0)(-0.7,-0.6)(-0.05,-1)
+\pscurve{->}(-1,-1)(-0.4,-1.1)(-0.05,-1)
+\pscurve{->}(-1,-1)(-0.3,-1.4)(0.3,-1.4)(0.95,-1)
+\nccircle{->}{2}{.3}
+\nccircle{->}{5}{.3}
+\nccircle{->}{7}{.3}
+\nccircle{->}{3}{.3}
+\rput(1.5,2.5){\huge A}
+\rput(-1,1.3){1}
+\rput(-1,0.3){2}
+\rput(-1,-0.7){3}
+\rput(0,1.3){4}
+\rput(0,0.3){5}
+\rput(0,-0.7){6}
+\rput(1,1.3){7}
+\rput(1,0.3){8}
+\rput(1,-0.7){9}
+
+%\psline[linewidth=0.4mm]{<->}(-7,0)(7,0)
+%\psplot[linecolor=red]{-2}{3.3}{x 2 exp -2 mul  x 3 exp add x 3 mul sub }
+%\psline[linecolor=blue, linewidth=0.6mm]{<-}(3.3,1)(4,1)
+%\rput(7.2,13){\small $q(x)=9-3x-2x^2+x^3$}
+\end{pspicture}	
+	\end{center}
+
+\section{Relación de equivalencia}
+
+{\em La idea de \emph{\bf relación de equivalencia} es una importante extensión y generalización de la tradicional idea de \emph{\bf igualdad} que se utiliza en la matemática.}
+
+\defi {\em Una relación, se dice de \emph{\bf equivalencia} si ésta es reflexiva, simétrica y transitiva.}\\
+\obs {\em Dado una relación de equivalencia $\mathcal{R}$ en $E$, algunas veces se escribe $x\thicksim y$ en reemplazo de $(x,y)\in \C{R}$, y decimos que $x$ es equivalente a $y$, dada la relación $\C{R}$.\\
+
+Note que si $\mathcal{R}$, es una relación de equivalencia en $E$, se tiene:
+\begin{enumerate}
+	\item $x\thicksim x,~\forall x\in E$.
+	\item $x\thicksim y\quad \Rightarrow\quad y\thicksim x$.
+	\item $x\thicksim y \quad \wedge \quad y\thicksim z\quad \Rightarrow\quad x\thicksim z$
+\end{enumerate}}
+
+
+{\bf Ejemplo:}
+\begin{enumerate}
+\item {\em Para el conjunto $\m{N}^2$ de los pares de números naturales, la relación 
+\[(x_1,x_2)\thicksim (y_1,y_2)\quad \mbox{ si y sólo si } x_1+y_2=y_1+x_2\]
+es una relación de equivalencia.}
+
+\item {\em Sea el conjunto \[\m{Q}_{3}[x]=\{\mbox{ polinomios de grado igual a $3$ }\}=\{p(x)=a_0+a_1x+a_2x^2+a_3x^3~/~a_3\neq 0\}\] entonces $\m{Q}_3[x]$ no es subespacio vectorial, pues \[a_3x^3\in \m{Q}_3; \quad -a_3x^3\in \m{Q}_3\quad \Rightarrow \quad 0\notin \m{Q}_3\]
+Si para todo $p,q\in \m{Q}_3[x]$ se define la relación: \[p\thicksim q \quad \Longleftrightarrow \quad \frac{dp}{dx}=\frac{dq}{dx}\] Pruebe que $\thicksim$ es una relación de equivalencia.\\[2mm]
+
+Ahora, para mostrar que $\thicksim$ es una relación de equivalencia debemos probar que $\thicksim$ es reflexiva, simétrica y transitiva, por tanto:}
+\begin{itemize}
+	\item {\bf P.D.} $\thicksim$ es reflexiva
+	\[p\thicksim p ,\quad \mbox{ pues }\quad \frac{dp}{dx}=\frac{dp}{dx}\]
+	{\em La identidad se tiene de forma directa.}
+	
+	\item {\bf P.D.} $\thicksim$ es simétrica
+	\[p\thicksim q, \quad \Leftrightarrow \quad \frac{dp}{dx}=\frac{dq}{dx}\quad \Leftrightarrow \quad \frac{dq}{dx}=\frac{dp}{dx}\]
+	{\em La igualdad es obvia.}
+	
+	\item {\bf P.D.} $\thicksim $ es transitiva
+	\[\displaystyle \left.{p\thicksim q,\quad \Leftrightarrow \quad \frac{dp}{dx}=\frac{dq}{dx} }\atop {q\thicksim r,\quad \Leftrightarrow \quad \frac{dq}{dx}=\frac{dr}{dx}}\right] \Rightarrow \frac{dp}{dx}=\frac{dr}{dx}\quad \mbox{ es decir }\quad p\thicksim r\]
+	{\em Igualamos los polinomios y obtenemos la igualdad requerida.}
+\end{itemize}
+{\em por tanto $\thicksim$ es una relación de equivalencia en $\m{Q}_3[x]$.}
+\end{enumerate} 
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+
+\subsection{Clases de equivalencia}
+ \defi {\em Sea $E$ un espacio vectorial y sea $\C{R}$ una relación de equivalencia en $E$. Si $x\in E$, entonces la clase de equivalencia de $x$ dado $\C{R}$, es el conjunto $\C{R}_x$ definido como: 
+ \[\mathcal{R}_x=\{y\in E~/~(y,x)\in \mathcal{R}\}=\{y\in E~/~y\thicksim x\}\] 
+dicho de otro modo, $\mathcal{R}_x$ es el conjunto de todos los elementos de $E$ que son equivalentes a $x$. Las clases de equivalencia se las nota de la forma $x/\C{R}$.}\\[3mm]
+
+\defi {\em Si $\C{R}$ es una relación de equivalencia en un espacio vectorial $E$, entonces el conjunto de las clases de equivalencia de $\C{R}$, se denomina {\bf conjunto cociente} de $E$ por $\C{R}$ y se nota como $E/\C{R}$.}\\[2mm]
+
+{\bf Ejemplo:}
+\begin{enumerate}
+\item {\em En el ejemplo anterior vimos que $\thicksim$ es una relación de equivalencia, ahora encontremos la clase de equivalencia.\\[2mm]
+Sea $p\in \m{Q}_3[x]$, entonces 
+\[\dot{p}=\{q\in \m{Q}_3[x]~/~p\thicksim q\}\] 
+por lo tanto si 
+\[p(x)=a_0+a_1x+a_2x^2+a_3x^3\quad \Rightarrow \quad \frac{dp}{dx}=a_1+2a_2x+3a_3x^2\] y
+\[q(x)=b_0+b_1x+b_2x^2+b_3x^3\quad \Rightarrow \quad \frac{dq}{dx}=b_1+2b_2x+3b_3x^2\]
+ahora se tiene que 
+\[\frac{dp}{dx}=\frac{dq}{dx}\quad \Leftrightarrow \quad a_1+2a_2x+3a_3x^2=b_1+2b_2x+3b_3x^2\]
+es decir \[a_1=b_1;\quad a_2=b_2;\quad a_3=b_3\]
+por tanto 
+\[\dot{p}=\{q\in \m{Q}_3~/~ a_1=b_1;\quad a_2=b_2;\quad a_3=b_3\}\]}
+\end{enumerate}
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+
+{\em Gráficamente para el ejercicio anterior, dado \[p(x)=3-3x-2x^2+x^3\] las clases de equivalencia  de $p$, lo conforman todos los polinomios de tercer grado que tienen la misma pendiente que $p$, para todo $x\in \rn{}$.}
+
+\begin{center}
+\begin{pspicture}(-4,-5)(4,5)
+\psset{xunit=0.6cm}
+\psset{yunit=0.3cm}
+%\psgrid[subgriddiv=1,griddots=10,gridlabels=7pt](-10,-14)(10,14)
+\psline[linewidth=0.4mm]{<->}(0,-14)(0,14)
+\psline[linewidth=0.4mm]{<->}(-7,0)(7,0)
+\psplot[linecolor=red]{-2}{3.3}{x 2 exp -2 mul  x 3 exp add x 3 mul sub }
+\psplot[linecolor=green]{-2}{3.3}{x 2 exp -2 mul  x 3 exp add x 3 mul sub 3 add}
+\psplot[linecolor=blue]{-2}{3.3}{x 2 exp -2 mul  x 3 exp add x 3 mul sub -3 add}
+\psplot[linecolor=yellow]{-2}{3.3}{x 2 exp -2 mul  x 3 exp add x 3 mul sub 6 add}
+\psplot[linecolor=pink]{-2}{3.3}{x 2 exp -2 mul  x 3 exp add x 3 mul sub 9 add}
+\psline[linecolor=pink, linewidth=0.6mm]{<-}(3.3,13)(4,13)
+\psline[linecolor=yellow, linewidth=0.6mm]{<-}(3.3,10)(4,10)
+\psline[linecolor=green, linewidth=0.6mm]{<-}(3.3,7)(4,7)
+\psline[linecolor=red, linewidth=0.6mm]{<-}(3.3,4)(4,4)
+\psline[linecolor=blue, linewidth=0.6mm]{<-}(3.3,1)(4,1)
+\rput(7.2,13){\small $q(x)=9-3x-2x^2+x^3$}
+\rput(7.2,10){\small $q(x)=6-3x-2x^2+x^3$}
+\rput(7.2,7){\fbox{\small $q(x)=3-3x-2x^2+x^3$}}
+\rput(7,4){\small $q(x)=-3x-2x^2+x^3$}
+\rput(7.5,1){\small $q(x)=-3-3x-2x^2+x^3$}
+\rput(0.5,13){$x$}
+\rput(6.5,-1){$y$}
+\end{pspicture}
+\end{center}
+
+{\em es decir, las clases de equivalencia de $p$, lo forman todos los polinomios de la forma
+\[q(x)=\alpha -3x-2x^2+x^3,\qquad \forall \alpha\in \rn{}.\]}
+
+\subsection{Partición y equivalencia}
+
+{\em Si $\thicksim$ es una equivalencia para un conjunto $E$, resulta, de cuanto se acaba de exponer, que el conjunto de las clases de equivalencia es una partición de $E$, ya que las clases son conjuntos disjuntos de $E$ y todo elemento de $E$ pertenece a una clase \emph{(aquella que le tiene por representante)}.\\
+
+Por tanto, a partir de una equivalencia en un conjunto, se ha llegado a una partición del mismo: la constituida por las clases de equivalencia.\\
+
+Recíprocamente, dada una partición 
+\[\{E_i~|~ i=1,2,\ldots,n\}\]
+de un cierto conjunto $E$, la relación $\thicksim$ definida en $E$ mediante $a\thicksim b$ si y sólo si $a$ y $b$ pertenecen a un mismo subconjunto de los que constituyen la partición, evidentemente una equivalencia para $E$; las clases de equivalencia de $\thicksim$ son entonces los conjuntos $E_i$ que constituyen la partición.\\
+
+Puede en consecuencia afirmarse que a toda equivalencia en un conjunto le corresponde una partición del mismo, la formada por la clases de equivalencia; y, recíprocamente, a toda partición de un conjunto le corresponde una equivalencia en el mismo. }
+
+\section{Conjunto cociente}
+
+\defi {\em Dado un conjunto $E$ y una relación de equivalencia $\thicksim$ en él, se llama conjunto cociente de $E$ por $\thicksim$, y se le representa por $E/\thicksim$, al conjunto cuyos elementos son las clases de equivalencia definidas en $E$ por $\thicksim$; es decir, el conjunto cociente es la partición de $E$ subordinada por la equivalencia $\thicksim$.}
+
+{\bf Ejemplo:}
+{\em 
+\begin{enumerate}
+	\item Para la relación de equivalencia definida en $\m{N}^2$ mediante 
+	\[(x_1,x_2)\thicksim (y_1,y_2)\qquad \mbox{si y sólo si}\qquad x_1+y_2=y_1+x_2\]
+	a la clase de representantes \[(x_1,x_2)\] 
+	es decir, a \[\C{R}_{(x_1,x_2)}=\{(y_1,y_2)\in \m{N}^2~|~(x_1,x_2)\thicksim (y_1,y_2)\}\] 
+	también pertenecen los pares \[(x_1+h,x_2+h)\] para todo número natural $h$, así como los pares
+	\[(x_1-h,x_2-h)\] para todo natural \[h\leq x_1\quad \mbox{y}\quad h\leq x_2\]
+	para elegir un representante sencillo de la clase $\C{R}_{(x_1,x_2)}$ se puede proceder del siguiente modo: primero, si $x_1>x_2$ entonces se adopta como representante a $(x_1-x_2,0)$; segundo, si $x_1<x_2$, entonces se toma como representante al par $(0,x_1-x_2)$; y tercero, si $x_1=x_2$, entonces se adoptará como representante de la clase $(0,0)$.\\[2mm]
+	
+	El conjunto cociente de $\m{N}^2/\thicksim$ será, en consecuencia
+	\[\{\C{R}_{(r,0)},\C{R}_{(0,s)},\C{R}_{(0,0)}~|~ r,s\in \m{N}\}\]
+	este conjunto se representa por $\m{Z}$, y su elementos, una vez definidas las adecuadas operaciones algebraicas, reciben el nombre de números enteros, de manera que el entero $\C{R}_{(r,0)}$ es posible identificarlo con el natural $r$, al entero $\C{R}_{(0,s)}$ se le designa por $-s$, y entonces \[\m{Z}=\{0,1,-1,2,-2,3,-3,\ldots,n,-n,\ldots\}\]  
+\end{enumerate}}
+
+
+\section{Relación de equivalencia en un espacio vectorial}
+
+\defi {\em Sea $E$ un espacio vectorial, y $F$ un subespacio vectorial de $E$, la relación de equivalencia de $x\in E$ se define como:
+\[x\thicksim y \quad \Leftrightarrow \quad x-y\in F\]}
+
+\obs {\em La relación $\thicksim$ es una relación de equivalencia.}\\[2mm]
+{\bf Demostración:}
+\begin{itemize}
+	\item [i)]  {\bf P.D.} $\thicksim$ es reflexiva.\\[2mm]
+	{\em Sea $x\in E$, $x-x=0\in F$, pues $F$ es subespacio vectorial} \[\Rightarrow x\thicksim x\]
+	
+	\item [ii)] {\bf P.D.} $\thicksim$ es simétrica.\\[2mm]
+	{\em Sean $x,y\in E$ tal que $x\thicksim y \quad \Rightarrow\quad x-y\in F$ 
+	\[\Rightarrow\quad -(x-y)\in F, \mbox{ pues $F$ es subespacio vectorial }\] 
+	\[ \Rightarrow \quad y-x\in F\quad\] \[ \Rightarrow \quad y\thicksim x\qquad \]}
+	
+	\item [iii)] {\bf P.D.} $\thicksim$ es transitiva.\\[2mm]
+	 {\em Si $x,y,z\in E$,  $x\thicksim y$, $y\thicksim z$, $\Rightarrow x-y\in F, \quad y-z\in F$
+	\[\Rightarrow [(x-y)+(y-z)]\in F, \mbox{ pues $F$ es subespacio vectorial}\]
+	\[\Rightarrow\quad x-z\in F\]
+	\[\Rightarrow\quad x\thicksim z\]}
+\end{itemize}
+{\em Entonces $\thicksim$ es una relación de equivalencia.}
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+
+
+{\bf Ejemplo:}
+\begin{enumerate}
+\item {\em Sea $E$ un espacio vectorial, y $F=\{0\}$ subespacio vectorial.\\[2mm]
+Sean $x,y\in E$.
+\begin{eqnarray*}
+x\thicksim y &\Leftrightarrow& x-y\in F\\
+&\Leftrightarrow& x-y=0\\
+&\Leftrightarrow& x=y
+\end{eqnarray*}
+Por tanto \[\dot{x}=\{y\in E~/~ x\thicksim y\}\] \[\dot{x}=\{x\}\]
+Las clases de equivalencia forman una partición de $E$, es fácil verificar que
+\[\bigcup_{x\in E}\dot{x}=E\] donde \[\dot{x}\cap \dot{y}=\emptyset \qquad \mbox{si}\qquad x\neq y\]
+Por tanto el {\bf conjunto cociente} es:
+\[E/F=\{\dot{x},~x\in E\}=\{\{x\},~x\in E\}\]
+
+Ahora si
+\[x\thicksim y \Leftrightarrow x-y\in E-F\] \[\dot{x}=\{y~/~y\in E\}=E\] \[E/F=\{E\}\]}
+
+\item {\em Sea $E=\m{R}^2$ y $F=\{(u_1,u_2)\in E~/~2u_1-u_2=0\}$\\[3mm]
+Si $u=(u_1,u_2)\in E$ y $v=(v_1,v_2)\in E$, se tiene que:
+\begin{eqnarray*}
+u\thicksim v&\Leftrightarrow& u-v\in F\\
+&\Leftrightarrow& 2(u_1-v_1)-(u_2-v_2)=0\\
+&\Leftrightarrow& 2u_1-u_2=2v_1-v_2
+\end{eqnarray*}
+\[\dot{u}=\{(v_1,v_2)\in E~/~2v_1-v_2=2u_1-u_2\}\]
+Veamos ahora un ejemplo gráfico:\\[2mm]
+Supongamos que $u=(4,-3)$, por tanto} \\[3mm]
+\begin{center}
+\begin{pspicture}(-4.5,-4.5)(4.5,4.5)
+\psset{xunit=0.4cm}
+\psset{yunit=0.4cm}
+%\psgrid[subgriddiv=1,griddots=10,gridlabels=7pt](-12,-12)(12,12)
+\psline[linecolor=red]{->}(0,0)(4,-3)
+\psline[linecolor=blue]{<->}(0,-11)(8,5)
+\psline[linecolor=green]{<->}(4,8)(-4,-8)
+\psline[linestyle=dashed,dash=3pt]{-}(4,0)(4,-3)
+\psline[linestyle=dashed,dash=3pt]{-}(0,-3)(4,-3)
+\psline[linewidth=0.4mm]{<->}(0,-12)(0,12)
+\psline[linewidth=0.4mm]{<->}(-12,0)(12,0)
+\rput(2.5,-1.3){$u$}
+\rput(4,0.4){$4$}
+\rput(-0.8,-3){$-3$}
+\rput(4.5,8.5){$F$}
+\rput(8.5,5.5){$\dot{u}$}
+\rput(11,0.5){$x$}
+\rput(0.5,11){$y$}
+
+\end{pspicture}
+\end{center}
+\[\dot{u}=\{v=(v_1,v_2)\in E~/~ 2v_1-v_2=11\}\] 
+{\em el mismo que no es subespacio vectorial porque no tiene el $0$.\\[2mm]
+
+En el gráfico observamos que las clases de equivalencia de un vector $u$, no es más que las rectas paralelas a $F$, y que contienen el extremo del vector $u\in \rn{2}$.\\
+Además \[\dot{0}=\{v=(v_1,v_2)\in E~/~2v_1-v_2=0\}=F\]}
+\end{enumerate}
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+
+\section{Co - conjunto\qquad \emph{(coset)}}
+
+\defi {\em Sea $E$ un espacio vectorial, y $F$ un subespacio vectorial de $E$, además si $x\in E$, se define el {\bf co - conjunto} como:
+\[x+F=\{z\in E~/~z=x+f,~f\in F\}\]
+
+\begin{itemize}
+	\item {\bf Observaciones}
+\end{itemize}
+De la definición anterior tenemos que:
+\[z\in x+F\quad \Leftrightarrow \quad (x-z)\in F\quad \Leftrightarrow \quad x\in z+F\]
+es decir 
+\begin{eqnarray*}
+x\thicksim z&\Leftrightarrow&x-z\in F\\
+&\Leftrightarrow&z\in x+F\\
+&\Leftrightarrow&x\in z+F\\
+\end{eqnarray*}
+La relación 
+\[x\thicksim z\quad \Leftrightarrow\quad z\in x+F\] 
+es de equivalencia.
+
+\begin{itemize}
+	\item [i)] $x\thicksim x$ pero $x\in x+F$ ya que $x=x+0$
+	\item [ii)] $x\thicksim y\quad \Rightarrow\quad y\in x+F \quad \Leftrightarrow\quad  x\in y+F\quad  \Leftrightarrow\quad  y\thicksim x$ 
+	\item [iii)] $\displaystyle \left.{x\thicksim y\atop y\thicksim z}\right\}\quad \Rightarrow\quad \left\{ {y\in x+F\atop z\in y+F}\right.$
+\end{itemize}
+
+Ahora sí, $z\in y+F$
+
+\begin{center}
+$\qquad \displaystyle \Rightarrow\quad \left\{ {y=x+f_1,~f_1\in F\atop z=y+f_2,~f_2\in F}\right.$
+\end{center}
+\[\qquad \Rightarrow\qquad z=x+\underbrace{(f_1+f_2)}_{\in F}\qquad \Rightarrow\qquad z\in x+F\]
+\begin{itemize}
+	\item {\bf Observaciones:}
+\end{itemize}
+\begin{center} $\displaystyle \{x+F\}_{x\in E}$\quad forman una partición de $E$.\end{center}
+\begin{itemize}
+	\item [i)] $\displaystyle (x+F)\cap (y+F)=\left\{{x+F\atop \emptyset}\right.$
+	\item [ii)] $\displaystyle \forall x\in E$ pertenece a algún $y+F$.\\[2mm]
+	En $E/F$ \qquad $(x\thicksim y\qquad \Leftrightarrow\qquad z\in x+F)$\\[2mm]
+	Se definen \[\dot{x}\oplus \dot{y}=(x+F)\oplus(y+F)=(x+y)+F\]  \[\lambda \odot \dot{x}=\lambda\odot (x+F)=\lambda x+F\]
+\end{itemize}
+\begin{flushright}
+$\blacksquare$
+\end{flushright}}
+
+\teo {\em Sea $E$ un espacio vectorial, y $F$ un subespacio vectorial de $E$.\\ Sea $\{w_1,w_2,\ldots,w_s\}$ base de $F$ y $\{\dot{u_1},\dot{u_2},\ldots,\dot{u_r}\}$ base de $E/F$, donde $\dot{u_j}=u_j+F$.\\[2mm] 
+Entonces $\{w_1,w_2,\ldots,w_s,u_1,u_2,\ldots,u_r\}$ es base de $E$.\\[2mm] 
+Además \[\dim E=\dim F +\dim (E/F)\] es decir \[\dim (E/F)=\dim E - \dim F\] 
+
+{\bf Demostración:}\\[2mm]
+\begin{itemize}
+	\item [i)] Sea $x\in E$
+	\begin{eqnarray*}
+	\dot{x}&=&x+F=\alpha_1 \dot{u_1}+\alpha_2 \dot{u_2}+\ldots+\alpha_r \dot{u_r}\\
+	&=&\dot{\overline{\alpha_1 u_1+\alpha_2 u_2+\ldots+\alpha_r u_r}}\\
+	x&\in &\dot{\overline{\alpha_1 u_1+\alpha_2 u_2+\ldots+\alpha_r u_r}}\\
+	&=&\alpha_1 u_1+\alpha_2 u_2+\ldots+\alpha_r u_r+\beta_1 w_1+\beta_2 w_2+\ldots+\beta_s w_s
+	\end{eqnarray*}
+	\item [ii)] $B$ es libre.
+	\begin{eqnarray*}
+	\alpha_1u_1+\alpha_1u_2+\ldots+\alpha_ru_r+\beta_1w_1+\beta_2w_2+\ldots+\beta_sw_s&=&0\qquad(E)\qquad (\emph{1})\\
+	\dot{\overline{\alpha_1u_1+\alpha_1u_2+\ldots+\alpha_ru_r+\beta_1w_1+\beta_2w_2+\ldots+\beta_sw_s}}&=&\dot{0}\qquad(E/F)\\
+	\alpha_1\dot{u_1}+\alpha_1\dot{u_2}+\ldots+\alpha_r\dot{u_r}+\dot{\overline{\beta_1w_1+\beta_2w_2+\ldots+\beta_sw_s}}&=&\dot{0}\qquad(E/F)\\
+	\alpha_1\dot{u_1}+\alpha_1\dot{u_2}+\ldots+\alpha_r\dot{u_r}+\dot{0}&=&\dot{0}\qquad (E/F)\\
+	\end{eqnarray*}
+	pues $\{\dot{u_1},\dot{u_2},\ldots,\dot{u_r}\}$ es base de $E/F$
+	\[\alpha_1=\alpha_2=\ldots\ldots=\alpha_r=0\]
+	En $(1)$ se tiene que \[\beta_1w_1+\beta_2w_2+\ldots\ldots+\beta_sw_s=0\] por tanto \[\beta_1=\beta_2=\ldots\ldots=\beta_s=0\] pues $\{w_1,w_2,\ldots,w_s\}$ es base de $F$.\\[3mm]
+	Por lo tanto se sigue que $B$ es libre.	  
+\end{itemize}}
+\begin{flushright}
+$\blacksquare$
+\end{flushright}
+
+\section{Espacio vectorial cociente}
+\pro {\em El conjunto $E/F$ queda dotado de la estructura de espacio vectorial sobre el mismo cuerpo $\m{K}$ que $E$ mediante las operaciones:
+\[(x+F)+(y+F)=(x+y)+F\]
+\[\alpha (x+F)=(\alpha x)+F\]
+
+{\bf Demostración:}\\
+
+\begin{enumerate}
+	\item En primer lugar hay que probar que estas operaciones son válidas en el sentido de tener resultado único, independiente de los representantes de cada clase. En efecto, si en la clase \[x+F\] cambiamos su representante $x$ por $x'$, como ambos deben ser congruentes, se cumplirá que 
+	\[x'-x\in F\] en cuyo caso
+	\[(x'-y)-(x-y)=x'-x\in F\quad \Rightarrow\quad (x'+y)+F=(x+y)+F\]
+	\[(\alpha x')-(\alpha x)=\alpha(x'-x)\in F\quad \Rightarrow\quad (\alpha x')+F=(\alpha x)+F\]
+	si en la suma cambiamos el representante del segundo dato, el razonamiento es similar.
+	
+	\item Puesto que las operaciones con clases se efectúan a partir de las correspondientes con sus representantes, se heredan sin más las propiedades asociativa y conmutativa de la adición, así como las cuatro propiedades de la multiplicación por un escalar.
+	
+	\item La clase \[0+F=F\] sirve de neutro para la adición de clases.
+	
+	\item Para cada $x$, las clases \[x+F,\qquad \mbox{y}\qquad (-x)+F\] son opuestas entre sí.\\[2mm]
+	
+	Como veremos a continuación este nuevo espacio vectorial, recibe el nombre de {\bf espacio vectorial cociente} del espacio $E$ mediante el subespacio $F$. 
+\end{enumerate}
+}
+
+\defi {\em Sea $E$ un espacio vectorial, y $F$ un subespacio vectorial de $E$, entonces llamaremos {\bf espacio vectorial cociente} al espacio $E/F$ definido como:
+\[E/F=\{\{\dot{x}\},\quad x\in E\}\]
+donde:
+\[\{\dot{x}\}=\{y\in E~/~x\thicksim y\}=\{y\in E~/~x-y\in F\}\]
+Por tanto $E/F$ es un espacio vectorial, para esto definimos las siguientes operaciones:\\[2mm]
+
+Se define para $\dot{x}\in E/F$, $\dot{y}\in E/F$,\quad  $\lambda\in \m{R}$
+\[\dot{x}\oplus\dot{y}=\dot{\overline{x+y}}\qquad;\qquad \dot{\lambda}\odot \dot{x}=\dot{\overline{\lambda.x}}\]
+Entonces \[(E,\m{R},\oplus, \odot)\] es un espacio vectorial.\\[2mm]
+
+Probemos que estas operaciones están bien definidas, es decir no dependen del representante.\\[2mm]
+{\indent Sean $\dot{x}, \dot{y}\in E/F$, y sean $x,x_0\in \dot{x}$,\quad  $y,y_0\in \dot{y}$.}\\[2mm]
+\begin{itemize}
+	\item {\bf P.D.} $\dot{x}\oplus \dot{y}=\dot{x_0}+\dot{y_0}$
+\end{itemize}
+Por hipótesis \[x\thicksim x_0\quad \Rightarrow\quad  x-x_0\in F\]  \[y\thicksim y_0\quad \Rightarrow\quad  y-y_0\in F\] es decir
+\[(x+y-x_0-y_0)\in F\] \[(x+y)-(x_0+y_0)\in F\] \[(x+y)\thicksim (x_0+y_0) \] por tanto \[\dot{\overline{x+y}}=\dot{\overline{x_0+y_0}}\]  
+\begin{flushright}
+$\blacksquare$
+\end{flushright}
+
+Sea $\dot{x}\in E/F$, $\lambda\in \m{R}$ y sean $x_0\in \dot{x}$
+\begin{itemize}
+	\item {\bf P.D.} $\lambda\odot \dot{x}=\lambda\odot \dot{x_0}$
+\end{itemize}
+como
+\begin{eqnarray*}
+x\thicksim x_0&\Rightarrow& x-x_0\in F\\
+&\Rightarrow& \lambda(x-x_0)\in F\quad \mbox{ pues $F$ es s.e.v}\\
+&\Rightarrow& \lambda x-\lambda x_0\in F\\
+&\Rightarrow& \lambda x \thicksim \lambda x_0\\
+&\Rightarrow& \dot{\overline{\lambda~x}}=\dot{\overline{\lambda~x_0}}\\
+&\Rightarrow& \lambda\odot \dot{x}=\lambda\odot \dot{x_0}\\
+\end{eqnarray*}
+\begin{flushright}
+$\blacksquare$
+\end{flushright}
+
+\begin{itemize}
+	\item {\bf P.D.} $\dot{x}\oplus\dot{0}= \dot{x}$
+\end{itemize}
+pues \[\dot{x}\oplus\dot{0}=\dot{\overline{x+0}}=\dot{x}\]
+\begin{flushright}
+$\blacksquare$
+\end{flushright}}
+
+
+\newpage
+\section{Ejercicios resueltos:}
+{\em Sea $F$ un subespacio vectorial  de $E$. Demostrar que:
+\begin{enumerate}
+	
+\item  Si $\{u_1+F, u_2+F, \ldots, u_r+F\}$ es libre en $E/F$, entonces $\{u_1, u_2,\ldots, u_r\}$ es libre en $E$.\\[3mm]
+	Suponemos que $\alpha_1 u_1+\alpha_2 u_2+\ldots+\alpha_p u_p=0_E$ \qquad  \qquad {\bf P.D.}\quad $\alpha_1=\alpha_2=\ldots=\alpha_p=0$.\\[2mm]
+	por tanto \[\dot{\overline{\alpha_1 u_1+\alpha_2 u_2+\ldots+\alpha_p u_p}}=\dot{0}_{E/F}\] de donde, se tiene \[\alpha_1 \dot{u_1}+ \alpha_2 \dot{u_2}+\ldots+\alpha_p \dot{u_p}=\dot{0}_{E/F}\footnote{Recuerde que $\dot{u}=u+F$.}\] por operaciones en $(E/F)$, entonces \[\alpha_1=\alpha_2=\ldots=\alpha_p=0\] pues \[\{\dot{u_1},\dot{u_2},\ldots,\dot{u_p}\}\qquad \mbox{es libre.}\] en conclusión \[\{u_1,u_2,\ldots,u_p\}\qquad \mbox{ es libre.}\]
+
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+
+\item Sea $f:E\to F$, una aplicación lineal, además sea $G=\C{N}(f)$.\\[2mm]
+Halle el espacio vectorial $E/G$.\\[2mm] 
+Por definición se tiene \[E/G=\{x\in E~/~x+\C{N}(f)\}=\{\dot{x}~/~x\in E\}\] 
+además 
+  \begin{eqnarray*}
+  \dot{x}&=&\{y\in E~/~(x-y)\in \C{N}(f)\}\\
+  &=&\{y\in E~/~f(x-y)=0\}\\
+  &=&\{y\in E~/~f(x)-f(y)=0\}\\
+  &=&\{y\in E~/~f(x)=f(y)\}
+  \end{eqnarray*}
+  \begin{flushright}
+$\blacktriangle$
+\end{flushright}
+  
+\item Sea $E=\rn{3}$ espacio vectorial y $f$ una aplicación lineal definida por 
+\[\fu{f}{\rn{3}}{\rn{}}{(x_1,x_2,x_3)}{f(x_1,x_2,x_3)=x_1-2x_2+3x_3}\]
+y sea $G=\C{N}(f)$. Encuentre $E/G$.\\[2mm]
+Primero hallemos una base de $G$.
+  \begin{eqnarray*}
+  \mathcal{N}(f)&=&\{(x_1,x_2,x_3)\in \m{R}^3~/~x_1-2x_2+3x_3=0\}\\
+  &=&\{(2x_2-3x_3,x_2,x_3)~/~x_2,x_3 \in \m{R}\}\\
+  &=&\{x_2\underbrace{(2,1,0)}_{v_1}+x_3\underbrace{(-3,0,1)}_{v_2}\}\\
+  &=&gen\{v_1,v_2\}
+  \end{eqnarray*}
+  Además \[\dim G=\dim \C{N}(f)=2\]
+  
+  Ahora sea $x=(3,-2,1)$ por tanto
+  \begin{eqnarray*}
+  \dot{x}&=&\{y\in \m{R}^3~/~(x-y)\in \C{N}(f)\}\\
+  &=&\{(y_1,y_2,y_3)\in \m{R}^3~/~f(x_1-y_1,x_2-y_2,x_3-y_3)=0\}\\
+  &=&\{(y_1,y_2,y_3)\in \m{R}^3~/~f(3-y_1,-2-y_2,1-y_3)=0\}\\
+  &=&\{(y_1,y_2,y_3)\in \m{R}^3~/~3-y_1-2(-2-y_2)+3(1-y_3)=0\}
+  \end{eqnarray*}
+  
+  es decir 
+  \[\dot{x}=\{(y_1,y_2,y_3)\in \m{R}^3~/~ y_1-2y_2+3y_3=10\}\]
+  Por tanto 
+  \[E/G=\{\dot{x}~/~x\in E\}\]
+  y aplicando el teorema de la dimensión se tiene
+  \begin{eqnarray*}
+  \dim (E/G)&=&\dim E -\dim G\\
+  &=&3-2\\
+  &=&1  
+  \end{eqnarray*}
+  
+ Entonces ahora hallemos una base de $E/G$.\\[2mm]
+ Para esto se tiene
+ \[E=[\C{N}(f)]^{\perp}\oplus [\C{N}(f)]\quad \footnote{Todo espacio vectorial $E$, es igual a la suma directa de cualquier subespacio $S$ de $E$ y su complemento $S^{\perp}$. Es decir \[E=S\oplus S^{\perp}.\]}\]
+ de donde 
+ \[[\C{N}(f)]^{\perp}=\{x\in \rn{3}~/~\e{x,y}=0,\quad \forall y\in \C{N}(f)\}\]
+ es decir
+ \[x\in \C{N}(f)\Leftrightarrow \{\e{(x_1,x_2,x_3),(2,1,0)}=0,\quad \mbox{y}\quad \e{(x_1,x_2,x_3),(-3,0,1)}=0\}\]
+ de donde 
+ \[\left\{\begin{array}{c} 2x_1+x_2=0\\ -3x_1+x_3\end{array}\right.\qquad\Rightarrow\qquad \left\{\begin{array}{c} x_2=-2x_1\\ x_3=3x_1\end{array} \right.\]
+ por tanto 
+  \[x=\{x_1\underbrace{(1,-2,3)}_{v},\quad x_1\in \rn{}\}\]
+ entonces 
+ \[\{\dot{v}\} \mbox{ es base de } E/G.\]
+ 
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+  
+  \item Sea $E=\C{M}(\m{R})_{2\times 2}$. Se considera
+  \[F=\{A=(a_{ij})\in E~|~ \sum_{j=1}^2 a_{ij}=0,\quad i=1,2~;\qquad \sum_{i=1}^2 a_{ij}=0,\quad j=1,2\}\]
+  \begin{enumerate}
+	  \item Mostrar que $F$ es un subespacio vectorial de $E$. Hallar una base y dar la dimensión.\\[2mm]
+	  Primero expresando los elementos de $F$ en forma matricial se tiene
+	  \[F=\{A=(a_{ij})\in E~|~ A=\mdc{a}{-a}{-a}{a},\quad a\in \m{R}\}\]
+	  por tanto 
+	  \[F=gen\underbrace{\left\{\mdc{1}{-1}{-1}{1}\right\}}_{v_1}\]
+	  es decir $v_1$ es base de $F$ y además \[\dim F=1\]  
+    \begin{itemize}
+	    \item {\bf P.D.} $0^*\in F$.\\[2mm]
+	    Bastaría tomar $a=0$, con lo cual 
+	    \[\mdc{0}{0}{0}{0}\in F\]
+	    
+	    \item {\bf P.D.} $\forall A,B\in F$, se tiene que $A+B\in F$.\\[2mm]
+	    Sea \[A=\mdc{a}{-a}{-a}{a}~;\qquad B=\mdc{b}{-b}{-b}{b}\]
+	    entonces \[A*B=\mdc{(a+b)}{-(a+b)}{-(a+b)}{(a+b)}\in F\]
+	    
+	    \item {\bf P.D.} $\forall \lambda\in \m{R},~\forall A\in F$, se tiene que $\lambda A\in F$.\\[2mm]
+	     Sea \[A=\mdc{a}{-a}{-a}{a}\]
+	     entonces 
+	     \[\lambda\mdc{a}{-a}{-a}{a}=\mdc{\lambda a}{-\lambda a}{-\lambda a}{\lambda a}\in F,\qquad \lambda a\in \m{R}\]
+	     Por tanto $F$ es subespacio vectorial de $E$.
+    \end{itemize}
+	  
+	  \item Caracterizar los elementos de $E/F$ y dar la dimensión de este espacio cociente.\\[2mm]
+	  El conjunto 
+	  \[E/F=\{\dot{A}~|~ A\in E\}\]
+	  en donde \[\dot{A}=\{B\in E~|~ A\thicksim B\}=\{B\in E~|~ A-B\in F\}\]
+	  es decir \[\dot{A}=\left\{B\in E~|~ B=A+\lambda \mdc{1}{-1}{-1}{1}, \quad \lambda\in \m{R}\right\}\]
+	  \[\dim E/F=\dim E-\dim F=4-1\]
+	  de donde tenemos que 
+	  \[\dim E/F=3\]
+  \end{enumerate}
+  
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+  
+  \item Sea $E=\rn{3}$, y el conjunto \[F=\{(x_1,x_2,x_3)\in E~|~ x_2=-3x_1+2x_3\}\]
+  \begin{enumerate}
+	  \item Hallar una base y dar la dimensión del subespacio vectorial $F$.\\[2mm]
+	  Sea $(x_1,x_2,x_3)\in F$, por tanto
+	  \[\left(\begin{array}{c} x_1\\ x_2\\ x_3\end{array}\right)=\left(\begin{array}{c} x_1\\ -3x_1+2x_3\\ x_3\end{array}\right)= x_1 \underbrace{\left(\begin{array}{r} 1\\ -3\\ 0\end{array}\right)}_{v_1}+x_3\underbrace{\left(\begin{array}{c} 0\\ 2\\ 1 \end{array}\right)}_{v_2}\]
+	  de donde, además $v_1,v_2$ son linealmente independiente.
+	  
+	  Por tanto
+	  \[F=gen\{(1,-3,0),(0,2,1)\}\]
+	  y además
+	  \[\dim F=2.\]
+	  
+	  \item Caracterizar los elementos del espacio cociente $E/F$.\\[3mm]
+	  Como
+	  \[E/F=\{\dot{x}, x\in E\}\]
+	  de donde
+	  \[\dot{x}=\{y\in E~|~ x\thicksim y\}=\{y\in E~|~ (x-y)\in F\}\]
+	  y además 
+	  \begin{eqnarray*}
+	  (x-y)\in F&\Leftrightarrow& (x_1,x_2,x_3)-(y_1,y_2,y_3)\in F\\
+	  &\Leftrightarrow& (x_1-y_1,x_2-y_2,x_3-y_3)\in F
+	  \end{eqnarray*}
+	  por tanto
+	  \[\dot{x}=\{(y_1,y_2,y_3)\in E~|~ x_2-y_2=-3(x_1-y_1)+2(x_3-y_3)\}\]
+	  \begin{eqnarray*}
+	  \dim (E/F)&=&\dim E-\dim F\\
+	  &=&3-2\\
+	  &=&1
+	  \end{eqnarray*}
+  \end{enumerate}
+ 
+\end{enumerate}}
+\begin{flushright}
+$\blacktriangle$
+\end{flushright}
+
+
+\newpage
+\section{Ejercicios propuestos}  
+{\em 
+\begin{enumerate}
+	\item Sea $E=\rn{3}$ y el conjunto 
+	\[F=\{(x_1,x_2,x_3)\in E~|~ x_1-x_2=0\}\]
+  \begin{enumerate}
+	  \item Pruebe que $F$ es un subespacio vectorial de $E$.
+	  \item Encuentre las clases de equivalencia de $E/F$.
+	  \item Halle una base y la dimensión de $E/F$.\\[3mm]
+  \end{enumerate}
+  
+  \item Sea $E=\rn{4}$ y el conjunto 
+  \[F=\{(x_1,x_2,x_3,x_4)\in E~|~ 2x_1-x_2=0,\quad x_1+3x_3-x_4=0\}\]
+  \begin{enumerate}
+	  \item Demostrar que $F$ es un subespacio vectorial de $E$.
+	  \item Caracterizar las clases de equivalencia de $E/F$.
+	  \item Encontrar la dimensión y una base de $E/F$.
+	  \item Encuentre $F^{\perp}$.\\[3mm] 
+  \end{enumerate}
+  
+  \item Sea $E=\wp[t]=\{\mbox{ polinomios de variable $t$ }\}$ y sea el subespacio vectorial 
+  \[F=\{\mbox{ polinomios divisibles por $t^4$ }\}\]
+  \begin{enumerate}
+	  \item Encuentre $E/F$ y dar su dimensión.\\[3mm]
+  \end{enumerate}
+  
+  \item Sea $E=\wp[t]=\{\mbox{ polinomios de variable $t$ }\}$ y sea el subespacio vectorial
+  \[F=\{\mbox{ polinomios divisibles por $(t-\frac{1}{2})^2$}\}\]
+  \begin{enumerate}
+	  \item Caracterizar las clases de equivalencia de $E/F$.
+	  \item Encuentre una base de $E/F$.\\[3mm]
+  \end{enumerate}
+  
+  \item Sea el espacio vectorial $E=\wp_5[t]=\{\mbox{ polinomios de grado $\leq 5$ }\}$ y el conjunto 
+  \[F=\{p\in E~|~ \int_0^2=p(t)dt=0\}\]
+  \begin{enumerate}
+	  \item Pruebe que $F$ es un subespacio vectorial de $E$.
+	  \item Encuentre una base y la dimensión de $F$.
+	  \item Caracterizar las clases de equivalencia $E/F$.
+	  \item Encuentre una base y la dimensión de $E/F$.\\[3mm]
+  \end{enumerate}
+  
+  \item Dada la aplicación lineal 
+  \[\fu{f}{\rn{3}}{\rn{2}}{(x,y,z)}{f(x,y,z)=(x-y,y-z)}\]
+  \begin{enumerate}
+	  \item Encuentre $\C{N}(f)$.
+	  \item Encuentre el espacio vectorial cociente $\rn{3}/\C{N}(f)$.
+  \end{enumerate}
+  
+  \item Sea $E$ un espacio vectorial y $F$ un subespacio vectorial de $E$. Se define la aplicación
+  \[\fu{\psi}{E}{E/F}{x}{\psi(x)=\dot{x}}\]
+  \begin{enumerate}
+	  \item Pruebe que la aplicación $f$ es lineal.
+	  \item Encuentre el núcleo de $\psi$.
+	  \item Probar que $\psi$ es sobreyectiva.
+	  \item Si $E$ es de dimensión finita utilizar el {\bf Teorema de la dimensión} para hallar la dimensión de $E/F$. 
+  \end{enumerate}
+ 
+  \item Determinar una base del subespacio vectorial de $E=\rn{4}$ dado por
+  \[F=\{(x_1,x_2,x_3,x_4)\in E~|~ x_1=x_2-3x_3,\quad x_3=x_4\}\]
+  y completarla hasta una base de $\rn{4}$.\\[2mm]
+  Calcular también un subespacio suplementario de $F$ y una base del espacio cociente $\rn{4}/F$.
+  
+\end{enumerate}}
