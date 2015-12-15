@@ -10,6 +10,7 @@ La mayor parte de los temas tratados en este capítulo ya han sido tratados en e
 
 
 % primer comentario
+% sigo practicando! 
 
 
 \section{Matrices con elementos complejos}
