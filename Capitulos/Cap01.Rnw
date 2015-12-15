@@ -8,6 +8,10 @@ La mayor parte de los temas tratados en este capítulo ya han sido tratados en e
 \end{minipage}}
 \end{center}
 
+
+% primer comentario
+
+
 \section{Matrices con elementos complejos}
 
 \defi {\em Se dice que una matriz $\displaystyle A=(a_{jk})_{n\times m}$ es compleja si sus entradas son números complejos, de modo que podemos realizar operaciones de adición y sustracción entre matrices, y  multiplicación y división por un escalar $\m{K}\in \{\m{R}, \m{C}\}$, de manera análoga al caso de las matrices reales.}\\
