@@ -117,5 +117,10 @@
 <<child-cap03, child='Capitulos/Cap03.Rnw'>>=
 @
 
+<<child-cap04, child='Capitulos/Cap04.Rnw'>>=
+@
+
+<<child-cap05, child='Capitulos/Cap05.Rnw'>>=
+@
 
 \end{document}
