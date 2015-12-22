@@ -17,6 +17,10 @@
 \usepackage{float}
 \usepackage{lmodern}
 \usepackage{amsmath,amscd,fancybox,fancyhdr,fancyvrb}
+
+\usepackage[framemethod=default]{mdframed} % default setting
+%\usepackage[framemethod=tikz]{mdframed}
+%\usepackage[framemethod=pstricks]{mdframed}
 \parindent=0mm
 
 % Definiciones
@@ -50,11 +54,15 @@
 
 % Ambiente definiciones
 \mdfdefinestyle{theoremstyle}{% 
-linecolor=red,linewidth=2pt,% 
-frametitlerule=true,% 
-frametitlebackgroundcolor=gray!20, 
-innertopmargin=\topskip,
-} 
+linecolor=red!40!black,linewidth=1.5pt,% 
+frametitlerule=true,%
+frametitlebackgroundcolor=red!70!black,
+backgroundcolor=brown!15,
+frametitlefont={\normalfont\scshape\color{white}},
+frametitleaboveskip=1pt,
+frametitlebelowskip=1pt,
+innertopmargin=4pt,
+}
 
 \mdtheorem[style=theoremstyle]{definition}{Definición}
 
@@ -122,16 +130,16 @@ innertopmargin=\topskip,
 <<child-cap01, child='Capitulos/Cap01.Rnw'>>=
 @
 
-<<child-cap02, child='Capitulos/Cap02.Rnw'>>=
-@
+%<<child-cap02, child='Capitulos/Cap02.Rnw'>>=
+%@
 
-<<child-cap03, child='Capitulos/Cap03.Rnw'>>=
-@
+%<<child-cap03, child='Capitulos/Cap03.Rnw'>>=
+%@
 
-<<child-cap04, child='Capitulos/Cap04.Rnw'>>=
-@
+%<<child-cap04, child='Capitulos/Cap04.Rnw'>>=
+%@
 
-<<child-cap05, child='Capitulos/Cap05.Rnw'>>=
-@
+%<<child-cap05, child='Capitulos/Cap05.Rnw'>>=
+%@
 
 \end{document}
