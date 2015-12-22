@@ -48,6 +48,18 @@
 \newcommand{\fu}[5]{\begin{array}{rccl} #1:&#2&\to&#3\\ &#4&\mapsto&#5\end{array}}
 \newcommand{\an}[1]{{#1}^{\circ}}
 
+% Ambiente definiciones
+\mdfdefinestyle{theoremstyle}{% 
+linecolor=red,linewidth=2pt,% 
+frametitlerule=true,% 
+frametitlebackgroundcolor=gray!20, 
+innertopmargin=\topskip,
+} 
+
+\mdtheorem[style=theoremstyle]{definition}{Definición}
+
+
+
 \begin{document}
 
 \thispagestyle{empty}
