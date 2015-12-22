@@ -14,6 +14,22 @@
  \end{minipage}}
  \end{center}
  
+ %************************************************APLICACIONES MULTILINEALES******************************************
+ 
+ \section{Aplicaciones Multilineales}
+ \subsection{Definición}
+ 
+ \defi {Sean $E_1,E_2,E_3,\ldots,E_p,F,\mathbb{K}-e.v(espacios vectoriales)\\
+ $ E=E_1\times E_2 \times \ldots \times E_p $ en $F$ y $x=(x_1,x_2,\ldots ,x_p)
+ una aplicación de \\
+ $ \phi \colon E \longrightarrow F \\
+ x \mapsto \phi(x)$\\
+ $ \phi $ se dice multilineal si es lineal respecto a cada variable, es decir\\
+ $ \phi (x_1,x_2,x_3,\ldots ,x_{i-1},[\alpha x_i+y_i],x_{i+1},\ldots ,x_p) = \alpha \phi (x_1,x_2,x_3,\ldots ,x_{i-1},x_i,x_{i+1},\ldots ,x_p)+ \phi (x_1,x_2,x_3,\ldots ,x_{i-1},y_i,x_{i+1},\ldots ,x_p)$ }
+ 
+ 
+ %***********************************formas bilineales**********************************************
+ 
 \section{Formas bilineales}
 \subsection*{Definición y propiedades}
 
@@ -95,6 +111,7 @@ $\blacktriangle$
 $\blacktriangle$
 \end{flushright}}
 
+%************************************************Representación Matricial******************************************
 
 \section{Representación matricial de formas bilineales}
 {\em Sea $E$ un espacio vectorial de dimensión $n$.\\ Si $B=\{e_1,e_2,\ldots,e_n\}$ es una base ordenada de $E$ y $f$ una forma bilineal en $E$, además $x,y\in E$, entonces llamaremos matriz de $f$ respecto a dicha base a: \[A=(a_{ij})_{m\times n}\qquad\mbox{tal que } a_{ij}=f(e_i,e_j)\] es decir} \[A=\left(\begin{array}{cccc} f(e_1,e_1)& f(e_1,e_2)&\ldots &f(e_1,e_n)\\ f(e_2,e_1)&f(e_2,e_2)&\ldots&f(e_2,e_n)\\ \vdots&\vdots &\ddots &\vdots\\ f(e_n,e_1)& f(e_n,e_2)&\ldots&f(e_n,e_n)\end{array}\right)\]
@@ -158,6 +175,9 @@ Basta ver que si $f$ es bilineal se puede escribir como \[f=\frac{1}{2}(f +f^t)+
 $\blacksquare$
 \end{flushright}}
 
+
+%***************************************RELACIÓN DE CONGRUENCIA**************************************
+
 \section{Relación de congruencia}
 \pro[\bf Cambio de base] {\em Sea $f:E\times E\to \m{K}$ una forma bilineal, $\dim V=n$, además $B,B'$ bases de $E$ y $C_{B'\to B}$ la matriz cambio de base $B'$ a la base $B$. Sean $x,y\in E$ con: \[x_B=(x_1,x_2,\ldots,x_n)\qquad x_{B'}=(x'_1,x'_2,\ldots,x'_n)\] \[y_B=(y_1,y_2,\ldots,y_n)\qquad y_{B'}=(y'_1,y'_2,\ldots,y'_n)\] \[\fbox{$M_{B'}f=C^t_{B'\to B}~M_B f~C_{B'\to B}$}\footnote{$M_B f$ representa la matriz asociada a la forma bilineal $f$ respecto a la base $B$.}\]
 {\bf Demostración:}\\[2mm] 
@@ -180,6 +200,9 @@ $\blacksquare$
 	\[\underbrace{\left(\begin{array}{rr} -2&1\\ 1&0\end{array}\right)}_{M_{B'}f}=\underbrace{\left(\begin{array}{rr} 1&-1\\ -1&0\end{array}\right)}_{C^T_{B\to B'}} \underbrace{\left(\begin{array}{rr} 0&1\\ 1&0\end{array}\right)}_{M_Bf}\underbrace{\left(\begin{array}{rr} 1&-1\\ -1&0\end{array}\right)}_{C_{B'\to B}}\]
 \end{enumerate}}
 
+
+%******************************************RANGO DE UNA FORMA BILINEAL************************************************
+
 \section{Rango de una forma bilineal}
 \defi {\em Sea $f:E\times E\to \m{K}$ una forma bilineal, $\dim E=n$, se define el \emph{\bf rango} de una forma bilineal como el rango de la matriz $A$, asociada a la forma bilineal $f$ respecto a una base $B$ cualquiera de $E$.
 
@@ -200,6 +223,9 @@ $\blacktriangle$
 
 \defi {\em Una forma bilineal $f:E\times E\to \m{K}$, $\dim E=n$, se dice que es degenerada si su rango es menor que $n$. Mientras que si su rango es $n$, entonces es no degenerada.\\[2mm]
  Es decir, una forma bilineal $f:E\times E\to \m{K}$, $\dim E=n$, es degenerada si y sólo si $\det(M_B f)=0$ y es no degerada si y sólo si $\det (M_B f)\neq 0$.} 
+ 
+ 
+ %********************************************FORMAS CUADRÁTICAS*********************************************************
  
 \section{Formas cuadráticas} 
 \subsection*{Definición y propiedades}
@@ -252,6 +278,9 @@ Tal forma bilineal simétrica recibe el nombre de forma \emph{polar} de la forma
 	\item $f_p(x,y)=\frac{1}{4}\left[Q(x+y)-Q(x-y)\right]$.
 	\item $f_p(x,y)=\frac{1}{2}\left[g(x,y)+g(y,x)\right]$.
 \end{enumerate}}
+
+
+%******************************************ESPRESIÓN MATRICIAL DE UNA FORMA CUADRÁICA****************************************
 
 \section{Expresión matricial de una forma cuadrática}
 \subsection*{Cambios de base}
@@ -311,7 +340,10 @@ Q(x)&=&(x_1,x_2,\ldots,x_n)~M_BQ~\left(\begin{array}{c} y_1\\ y_2\\ \vdots\\ y_n
 $\blacksquare$
 \end{flushright}}
 
-\section{Matrices congruentes} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MATRICES CONGRUENTES%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%************************************************ MATRICES CONGRUENTES*******************************************************
+
+\section{Matrices congruentes} 
 
 {\em A continuación estudiaremos cómo se relacionan las expresiones matriciales de las formas bilineales y cuadráticas en diferentes bases.\\[2mm]
 Sea $f(x)=x^t Ax$ una forma cuadrática de $E$, expresada en coordenadas respecto a una determinada base.\\[2mm]
@@ -336,6 +368,8 @@ $\blacktriangle$
 
 \pro {\em Sea $A,C\in \mathcal{M}(\m{K})$. Si $A$ es \emph{\bf congruente} con $C$ entonces se tiene que} \[rg(A)=rg(C).\]
 
+
+%******************************************DIAGONALIZACIÓN DE FORMAS CUADRÁTICAS***********************************************
 
 \section{Diagonalización de formas cuadráticas}
 \defi {\em Sea $E$ un espacio vectorial, de dimensión $n$, y \[f:E\times E\to \m{K}\] una forma bilineal simétrica.\\[2mm]
@@ -364,7 +398,13 @@ $\blacksquare$
 
 \cor {\em Toda forma cuadrática o forma bilineal simétrica es diagonalizable. Por tanto, si $A\in \mathcal{M}(\m{R})$ es simétrica entonces $A$ es congruente con una matriz diagonalizable, es decir, existe una matriz invertible $P$ tal que} \[D=P^t A P\]
 
+
+%**********************************************MÉTODOS DE DIAGONALIZAR FORMAS CUADRÁTICAS************************************
+
 \subsection{Métodos para diagonalizar formas cuadráticas}  
+
+%*****************************************DIAGONALIZACIÓN POR CONGRUENCIA- SUMAS DE CUADRADOS*********************************
+
 \subsubsection*{Diagonalización por congruencia. Sumas de cuadrados}
 \pro {\em Sea $E$ un espacio vectorial de dimensión $n$, además $f:E\times E\to \m{K}$ una forma bilineal simétrica y $Q:E\to \m{K}$ su forma cuadrática asociada.\\ Entonces existe una base $B=\{x_1,x_2,\ldots,x_n\}$ de $E$ tal que 
 \[M_BQ=\left(\begin{array}{cccc} a_{11}&0&\ldots&0\\ 0&a_{22}&\ldots&0\\ \vdots&\vdots&\ddots&\vdots\\ 0&0&\ldots&a_{nn}\end{array}\right)\]
@@ -391,6 +431,9 @@ Como veremos a continuación, el encontrar una matriz $P$ invertible que transfo
 Se dice que una forma cuadrática está expresada como suma de cuadrados, cuando se tiene su expresión en coordenadas respecto a una determinada base.\\[2mm]
 
 Reducir una forma cuadrática, mediante una cambio lineal de coordenadas, a una suma de cuadrados, es equivalente a diagonalizar por congruencia su matriz.}
+
+
+%**********************************************MEDIANTE OPERACIONES ELEMENTALES********************************************
 
 \subsubsection*{Mediante operaciones elementales}
 {\em Dada una matriz real y simétrica $A$, si realizamos una operación elemental sobre sus filas y a continuación la misma operación sobre sus columnas, se conserva la simetría de la matriz.\\[2mm]
@@ -433,6 +476,9 @@ es decir, la matriz resultante de realizar sobre la identidad las mismas operaci
 \begin{flushright}
 $\blacktriangle$
 \end{flushright}}
+
+
+%*************************************************COMPLETANDO CUADRADOS************************************************
 
 \subsubsection*{Completando cuadrados}
 {\em Ahora vamos a ver que toda forma cuadrática no nula de $E$ puede reducirse a una suma de cuadrados de formas lineales, más una forma cuadrática \emph{residual} que depende de, a lo sumo, $n-1$ variables, sobre la cual se reiterará el procedimiento.\\[2mm]
@@ -515,6 +561,9 @@ Así, en $n-1$ pasos como máximo, la forma cuadrática original quedará reduci
 $\blacktriangle$
 \end{flushright}
 
+
+%******************************************INVARIANTES LINEALES DE UNA FORMA CUADRÁTICA****************************************
+
 \section{Invariantes lineales de una forma cuadrática}
 {\em Como sabemos, las matrices asociadas a la misma forma cuadrática en distintas bases son congruentes, el problema consiste en dada una matriz simétrica $A$, determinar una matriz diagonal $D$ congruente con $A$.\\[2mm]
 
@@ -523,6 +572,9 @@ Un primer método para obtenerla es la diagonalización por semejanza ortogonal,
 \teo {\em Sea $E$ un espacio vectorial sobre $\m{R}$ de dimensión finita y sea $Q:E\to \m{R}$ su forma cuadrática asociada. Existe una base de $E$ para la cual la matriz asociada a $Q$ es diagonal.\\[2mm]
 
 Veamos como para una forma cuadrática real $Q$, el número de elementos positivos y de elementos negativos en la forma diagonal es un {\bf invariante} de $Q$, esto es: en el proceso de diagonalización por congruencia el resultado es esencialmente independiente del camino seguido.}
+
+
+%******************************************LEY DE INCERCIA DE SYLVESTER***************************************************
 
 \subsection{ Ley de inercia de Sylvester}
 
@@ -550,6 +602,9 @@ Intercambiando los papeles de $D$ y $D'$, se deduce análogamente que \[q\leq p\
 $\blacksquare$
 \end{flushright}}
 
+
+%*********************************************RANGO Y SIGNATURA********************************************************
+
 \subsection{Rango y signatura}
 \defi {\em Dada una forma cuadrática $Q$, se define su {\bf signatura}, y se denota por $\sigma(Q)$\footnote{Algunas veces la signatura de una forma cuadrática $Q$ se la denota también como {\bf sg}($Q$).}, como el número de coeficientes positivos, menos el número de negativos, en cualquier forma diagonal de la misma.
 
@@ -557,8 +612,14 @@ Es decir llamaremos {\bf signatura} de la forma cuadrática real $Q$ al par \[\s
 
 Por otra parte, el rango de $Q$ es igual al número de filas no nulas de su forma diagonal y por tanto} \[rg(Q)=p+q.\]
 
+
+%********************************************CLASIFICACIÓN DE FORMAS CUADRÁTICAS********************************************
+
 \subsection{Clasificación de formas cuadráticas}
 {\em Ahora veremos cómo se puede analizar el signo que toma una forma cuadrática real examinando una de sus matrices asociadas. Para ello comenzamos con las siguientes definiciones:}
+
+
+%***********************************************CLASIFICACIÓN POR MATRICES***************************************************
 
 \defi {\em Sea $A\in \C{M}(\m{R})_{n\times n}$ se dice que: 
 \begin{itemize}
@@ -571,6 +632,9 @@ Por otra parte, el rango de $Q$ es igual al número de filas no nulas de su form
  
 De este modo, surge de manera natural la correspondiente clasificación de las formas cuadráticas que recogemos, análogamente, en la siguiente clasificación.}\\[3mm]
 
+
+%***********************************************CLASIFICACIÓN POR LA FORMA CUADRÁTICA****************************************
+
 \defi {\em Se dice que una forma cuadrática real $Q:E\to \m{R}$ es:
 \begin{itemize}
 	\item [a)] {\bf definida positiva}, si y sólo si $Q(x)>0$, para todo $x\in E$, $x\neq 0$.
@@ -579,6 +643,9 @@ De este modo, surge de manera natural la correspondiente clasificación de las f
 	\item [d)] {\bf semidefinida negativa}, si y sólo si $Q(x)\leq 0$, para todo $x\in E$, $x\neq 0$ y existe $x\in E$, $x\neq 0$ tal que $Q(x)=0$.
 	\item [e)] {\bf no definida o indefinida}, si no se verifica ninguna de las condiciones anteriores.
 \end{itemize}}
+
+
+%*********************************************CLASIFICACIÓN POR AUTOVALORES**************************************************
 
 \subsubsection*{Criterio de los autovalores\footnote{Autovalores o valores propios}}
 {\em Sea \[Q(x)=\vec{x}^t A \vec{x}\] la expresión matricial de una forma cuadrática $Q$. Se tiene }
@@ -590,6 +657,8 @@ De este modo, surge de manera natural la correspondiente clasificación de las f
 	\item [d)] $A$ es {\bf semidefinida negativa} si y sólo si todos los autovalores de $A$ son negativos o nulos.
 	\item [e)] $A$ es {\bf no definida o indefinida} si y sólo si $A$ posee autovalores positivos o negativos. 
 \end{itemize}}
+  
+%****************************************CLASIFICACIÓN-OBSERVACIÓN- POR LA SIGNATURA*****************************************  
   
 \obs {\em Una forma cuadrática no nula de $E$, de rango $r$ y signatura $\sigma$, es:
 \begin{itemize}
@@ -613,6 +682,9 @@ Por tanto, debemos de desarrollar un algoritmo para obtener a partir de $A$ una 
 	\item $Q$ es definida positiva si y sólo si $A$ es congruente a la matriz identidad $I_n$.
 	\item $Q$ es definida negativa si y sólo si $A$ es congruente a la matriz identidad $-I_n$.
 \end{itemize}}
+
+
+%***************************************************CRITERIO DE SYLVESTER***********************************************
 
 \subsection{Criterio de Sylvester}
 
@@ -656,6 +728,9 @@ $\blacksquare$
 \cor {\em $Q$ es semidefinida positiva si se cumple $\det A_k>0$, para cada $k=1,2,\ldots,n-1$ y $\det A=0$.}
 \cor {\em $Q$ es semidefinida negativa si se cumple $(-1)^k\det A_k>0$, para cada $k=1,2,\ldots,n-1$ y $\det A=0$.}
 \cor {\em Si $\det A_k\neq 0$, para cada $k=1,2,\ldots,n-1$ y $\det A=0$ y no se cumple los dos últimos corolarios entonces $Q$ es indefinida. }
+
+
+%***************************************************FORMAS SESQUILINEALES****************************************************
 
 \section{Formas sesquilineales}
 \defi {\em Sea $E$ un espacio vectorial sobre $\m{C}$, se denomina {\bf forma sesquilineal} sobre $E$ a toda aplicación

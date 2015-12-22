@@ -18,3 +18,4 @@ y Cuadrática}\\ [\baselineskip]
 
 % practicando, practicando! 
 % otra práctica! 
+% sigo con la práctica! 
