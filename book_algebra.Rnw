@@ -66,7 +66,19 @@ innertopmargin=4pt,
 
 \mdtheorem[style=theoremstyle]{definition}{Definición}
 
+% Ambiente ejemplos
+\mdfdefinestyle{examplestyle}{%
+linecolor=white,linewidth=1.5pt,%
+frametitlerule=true,%
+frametitlebackgroundcolor=blue!40!black,
+backgroundcolor=blue!5!white,
+frametitlefont={\normalfont\scshape\color{white}},
+frametitleaboveskip=1pt,
+frametitlebelowskip=1pt,
+innertopmargin=4pt,
+}
 
+\mdtheorem[style=examplestyle]{example}{Ejemplo}
 
 \begin{document}
 
@@ -127,8 +139,8 @@ innertopmargin=4pt,
 % Contenidos
 \tableofcontents
 
-<<child-cap01, child='Capitulos/Cap01.Rnw'>>=
-@
+%<<child-cap01, child='Capitulos/Cap01.Rnw'>>=
+%@
 
 %<<child-cap02, child='Capitulos/Cap02.Rnw'>>=
 %@
@@ -139,7 +151,7 @@ innertopmargin=4pt,
 %<<child-cap04, child='Capitulos/Cap04.Rnw'>>=
 %@
 
-%<<child-cap05, child='Capitulos/Cap05.Rnw'>>=
-%@
+<<child-cap05, child='Capitulos/Cap05.Rnw'>>=
+@
 
 \end{document}
