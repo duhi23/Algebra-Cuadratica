@@ -31,7 +31,7 @@ $(x_1,x_2,\ldots, x_n)$ & $\to$ & det $\left([x_1] \ [x_2]\ \ldots \ [x_n]\right
 \begin{align*}
 \text{det} \left([x_1] \ldots [\alpha x_i + y_i] \ldots [x_n]\right) & = 
 \text{det} \left([x_1] \ldots [\alpha x_i] \ldots [x_n]\right) + \text{det} \left([x_1] \ldots [y_i] \ldots [x_n]\right)\\
-&= \alpha \ \text{det} \left([x_1] \ldots [x_i] \ldots [x_n]\right) + \text{det} \left([x_1] \ldots [y_i] \ldots [x_n]\right)\\
+&= \alpha \ \text{det} \left([x_1] \ldots [x_i] \ldots [x_n]\right) + \text{det} \left([x_1] \ldots [y_i] \ldots [x_n]\right)
 \end{align*}
 }
 \end{example}
@@ -59,7 +59,23 @@ Dada una base ordenada $\{e_1, e_2, \ldots, e_n\}$ de un espacio vectorial $V$, 
 A dicha n-forma se le llama determinante.
 \end{teorema}
 
+Así, si $x_1, x_2,\ldots x_n$ son vectores de $V$, expresadas sus coordenadas respecto a la base $B$ del teorema anterior en la siguiente matriz cuadrada $M=(x_1\quad x_2\quad \ldots\quad x_n)$ formada por las coordenadas de los vectores puestos en columna, se tiene
+\[D(x_1, x_2, \ldots, x_n)=\text{det} [x_1\quad x_2\quad \ldots \quad x_n]\]
+
+De la definición y del teorema anterior se derivan todas las propiedades que conocemos sobre los determinantes.\newline
+
 Nos interesaremos en las aplicaciones de $E_1\times E_2$ en $F$ también conocidas como aplicaciones bilineales de $E_1\times E_2$ en $F$.
+
+\section{Aplicaciones Bilineales}
+
+\begin{definition}
+Dados tres espacios vectoriales $U,V,W$ sobre el cuerpo $\mathbb{K}$, una aplicación $f:U\times V\to W$ se dice que es bilineal si es lineal en cada una de sus variables, es decir:
+\[f(\alpha u_1 + u_2, v1)= \alpha f(u_1, v_1) + f(u_2, v_1)\]
+\[f(u_1, \alpha v1+v_2)= \alpha f(u_1, v_1) + f(u_1, v_2)\]
+para cualesquiera $\alpha\in \mathbb{K}$, $u_1,u_2\in U$ y $v_1,v_2\in V$.
+\end{definition}
+
+
 
 
 %\chapter{Formas bilineales y formas cuadráticas}
@@ -89,7 +105,17 @@ Nos interesaremos en las aplicaciones de $E_1\times E_2$ en $F$ también conocid
 
  %***********************************formas bilineales**********************************************
 %  
-% \section{Formas bilineales}
+\section{Formas bilineales}
+
+\begin{definition}
+Una forma bilineal es una aplicación bilineal en la que el espacio vectorial final es el cuerpo $\mathbb{K}$:
+\[f:U\times V \to \mathbb{K}\]
+\end{definition}
+
+\subsection{Expresión matricial de una forma bilineal}
+
+
+
 % \subsection*{Definición y propiedades}
 % 
 % \defi {\em Una forma bilineal de $E$ es una aplicación 
