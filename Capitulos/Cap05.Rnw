@@ -27,11 +27,11 @@ det: $\mathbb{R}^n\times\mathbb{R}^n\times \ldots \times \mathbb{R}^n$ & $\to$ &
 $(x_1,x_2,\ldots, x_n)$ & $\to$ & det $\left([x_1] \ [x_2]\ \ldots \ [x_n]\right)$
 \end{tabular}
 \end{center}
-{\scriptsize
+{\small
 \begin{align*}
-\text{det} \left([x_1] \ldots [x_{i-1}]\ [\alpha x_i + y_i]\ [x_{i+1}] \ldots [x_n]\right) & = 
-\text{det} \left([x_1] \ldots [x_{i-1}]\ [\alpha x_i]\ [x_{i+1}] \ldots [x_n]\right) + \text{det} \left([x_1] \ldots [x_{i-1}]\ [y_i]\ [x_{i+1}] \ldots [x_n]\right)\\
-&= \alpha \text{det} \left([x_1] \ldots [x_{i-1}]\ [x_i]\ [x_{i+1}] \ldots [x_n]\right) + \text{det} \left([x_1] \ldots [x_{i-1}]\ [y_i]\ [x_{i+1}] \ldots [x_n]\right)\\
+\text{det} \left([x_1] \ldots [\alpha x_i + y_i] \ldots [x_n]\right) & = 
+\text{det} \left([x_1] \ldots [\alpha x_i] \ldots [x_n]\right) + \text{det} \left([x_1] \ldots [y_i] \ldots [x_n]\right)\\
+&= \alpha \ \text{det} \left([x_1] \ldots [x_i] \ldots [x_n]\right) + \text{det} \left([x_1] \ldots [y_i] \ldots [x_n]\right)\\
 \end{align*}
 }
 \end{example}
@@ -46,10 +46,18 @@ Llamaremos forma multilineal a la aplicación $\phi$ de $E_1\times E_2\times \ld
 \phi(x_1, \ldots, x_{i-1}, (\alpha x_i+y_i), x_{i+1},\ldots, x_p) =& \alpha \phi(x_1,\ldots, x_{i-1}, x_i, x_{i+1},\ldots, x_p) +\\
 & \phi(x_1,\ldots,x_{i-1}, y_i, x_{i+1},\ldots, x_p)
 \end{align*}
-
 \end{definition}
 
+\begin{definition}
+Una forma multilineal $\phi$ es alternada, si para cualesquiera $i,j$ se tiene
+\[\phi(x_1,\ldots, x_i, \ldots x_j,\ldots, x_n)=-\phi(x_1,\ldots, x_j, \ldots x_i,\ldots, x_n)\]
+\end{definition}
 
+\begin{teorema}
+Dada una base ordenada $\{e_1, e_2, \ldots, e_n\}$ de un espacio vectorial $V$, existe una única forma multilineal alternada $D$ de orden $n$ que verifica
+\[D(e_1, e_2, \ldots, e_n)=1\]
+A dicha n-forma se le llama determinante.
+\end{teorema}
 
 Nos interesaremos en las aplicaciones de $E_1\times E_2$ en $F$ también conocidas como aplicaciones bilineales de $E_1\times E_2$ en $F$.
 
