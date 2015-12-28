@@ -80,6 +80,20 @@ innertopmargin=4pt,
 
 \mdtheorem[style=examplestyle]{example}{Ejemplo}
 
+% Ambiente teoremas
+\mdfdefinestyle{teoremastyle}{%
+linecolor=white,linewidth=1.5pt,%
+frametitlerule=true,%
+frametitlebackgroundcolor=green!40!black,
+backgroundcolor=green!5!white,
+frametitlefont={\normalfont\scshape\color{white}},
+frametitleaboveskip=1pt,
+frametitlebelowskip=1pt,
+innertopmargin=4pt,
+}
+
+\mdtheorem[style=teoremastyle]{teorema}{Teorema}
+
 \begin{document}
 
 \thispagestyle{empty}
