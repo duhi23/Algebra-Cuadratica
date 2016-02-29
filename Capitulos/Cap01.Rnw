@@ -10,7 +10,9 @@ La mayor parte de los temas tratados en este capítulo ya han sido tratados en e
 
 \section{Matrices con elementos complejos}
 
-\defi {\em Se dice que una matriz $\displaystyle A=(a_{jk})_{n\times m}$ es compleja si sus entradas son números complejos, de modo que podemos realizar operaciones de adición y sustracción entre matrices, y  multiplicación y división por un escalar $\m{K}\in \{\m{R}, \m{C}\}$, de manera análoga al caso de las matrices reales.}\\
+\begin{definition}
+Se dice que una matriz $\displaystyle A=(a_{jk})_{n\times m}$ es compleja si sus entradas son números complejos, de modo que podemos realizar operaciones de adición y sustracción entre matrices, y  multiplicación y división por un escalar $\m{K}\in \{\m{R}, \m{C}\}$, de manera análoga al caso de las matrices reales.
+\end{definition}
 
 
 \obs {\em Al conjunto de las matrices complejas se las denota como:  \[\C{M}(\m{C})=\{A=(a_{jk})_{n\times m}~/~ a_{jk}\in \mathbb{C}\}\]}
@@ -32,18 +34,19 @@ $\blacktriangle$
 
 
 \section{Tipos importantes de matrices}
-\begin{itemize}
-	\item [a)]{\bf Matriz Conjugada}
-\defi {\em Sea $A\in \mathcal{M}(\m{C})_{n\times m}$. Decimos que su \emph{conjugada} es la matriz $\overline{A}\in \mathcal{M}(\m{C})_{n\times m}$, tal que 
-	\[\overline{A}=(\overline{a_{jk}})_{n\times m}\] es decir, asignamos a $\overline{A}$ el conjugado de cada elemento de la matriz original $A$.} 	
-\end{itemize}
 
+
+\begin{definition}[Matriz Conjugada]
+{\em Sea $A\in \mathcal{M}(\m{C})_{n\times m}$. Decimos que su \emph{conjugada} es la matriz $\overline{A}\in \mathcal{M}(\m{C})_{n\times m}$, tal que 
+	\[\overline{A}=(\overline{a_{jk}})_{n\times m}\] es decir, asignamos a $\overline{A}$ el conjugado de cada elemento de la matriz original $A$.}
+\end{definition}
 
 {\bf Ejemplo:}\\[2mm]
 
-\qquad {\em Dada la matriz \[A=\left[{2-i\atop 3+2i}\quad {-1+3i\atop -2i}\right]\] 
+{\em Dada la matriz \[A=\left[{2-i\atop 3+2i}\quad {-1+3i\atop -2i}\right]\] 
 \indent por tanto, su matriz hermitiana es: \[\overline{A}=\left[{2+i\atop 3-2i}\quad {-1-3i\atop 2i}\right]\]}
-	\begin{flushright}
+
+\begin{flushright}
 $\blacktriangle$
 \end{flushright}
 
@@ -77,21 +80,23 @@ $\blacksquare$
 $\blacksquare$
 \end{flushright}
 %\end{minipage}}
-
 \end{itemize}
 
-\begin{itemize}
-	\item [b)] {\bf Matriz Hermitiana}
-\defi {\em Una matriz compleja $A$ de $n\times n$ se dice \emph{hermitiana} si: \[\overline{A^T}=A,\quad \mbox{ es decir } \quad \overline{a_{jk}}=a_{jk} \quad \mbox{ para } k=1,2,\ldots,n\quad j=1,2,\ldots,n\]}
+\begin{definition}[Matriz Hermitiana]
+{\em Una matriz compleja $A$ de $n\times n$ se dice \emph{hermitiana} si: \[\overline{A^T}=A,\quad \mbox{ es decir } \quad \overline{a_{jk}}=a_{jk} \quad \mbox{ para } k=1,2,\ldots,n\quad j=1,2,\ldots,n\]}
+\end{definition}
 
 \obs {\em Toda matriz simétrica real es hermitiana, por tanto podemos considerar a las matrices hermitianas como análogas de las matrices simétricas reales.}
   \item {\bf Ejemplo:}  
-\end{itemize}
-\qquad {\em La matriz \[A=\left[{3\atop 2+i}\quad {2-i\atop 4}\right]\] 
-\qquad es hermitiana, pues \[\overline{A^T}= \overline{\left[{3\atop 2-i}\quad {2+i\atop 4}\right]}=\left[{3\atop 2+i}\quad {2-i\atop 4}\right]=A\]}
-	\begin{flushright}
+
+
+{\em La matriz \[A=\left[{3\atop 2+i}\quad {2-i\atop 4}\right]\] 
+ es hermitiana, pues \[\overline{A^T}= \overline{\left[{3\atop 2-i}\quad {2+i\atop 4}\right]}=\left[{3\atop 2+i}\quad {2-i\atop 4}\right]=A\]}
+
+\begin{flushright}
 $\blacktriangle$
 \end{flushright}
+
 \begin{itemize}
 	\item {\bf Propiedades:}
 \begin{itemize}
@@ -102,36 +107,37 @@ $\blacktriangle$
 \qquad{\bf Notación:}
   {\em \[A^*=\overline{A^T}\quad;\qquad \mbox{A es hermitiana si } A^*=A\]}
 
-\vspace{2mm}
+\begin{definition}[Matriz Unitaria]
+{\em Una matriz compleja $A$ de $n\times n$ se dice \emph{unitaria} si: \[(\overline{A^T})A=A(\overline{A^T})=I_n.\] es decir $A$ es unitaria cuando $\overline{A^T}=A^{-1}$.}
+\end{definition}
 
-\begin{itemize}
-	\item [c)] {\bf Matriz Unitaria}
-\defi {\em Una matriz compleja $A$ de $n\times n$ se dice \emph{unitaria} si: \[(\overline{A^T})A=A(\overline{A^T})=I_n.\] es decir $A$ es unitaria cuando $\overline{A^T}=A^{-1}$.}
-	
 \obs {\em Toda matriz ortogonal real es unitaria, por tanto podemos considerar las matrices unitarias como análogas de las matrices ortogonales reales.}
-	\item {\bf Ejemplo:}	
-\end{itemize}
-\qquad {\em La matriz \begin{center} $\displaystyle \left[{\frac{1}{\sqrt{3}}\atop \frac{1-i}{\sqrt{3}}}\quad {\frac{1+i}{\sqrt{3}}\atop -\frac{1}{\sqrt{3}}}\right]$\end{center}
+
+{\bf Ejemplo:}\\[2mm]
+{\em La matriz \begin{center} $\displaystyle \left[{\frac{1}{\sqrt{3}}\atop \frac{1-i}{\sqrt{3}}}\quad {\frac{1+i}{\sqrt{3}}\atop -\frac{1}{\sqrt{3}}}\right]$\end{center}
 \qquad es unitaria, pues \[ (\overline{A^T})A= \left[{\frac{1}{\sqrt{3}}\atop \frac{1-i}{\sqrt{3}}}\quad {\frac{1+i}{\sqrt{3}}\atop -\frac{1}{\sqrt{3}}}\right].\left[{\frac{1}{\sqrt{3}}\atop \frac{1-i}{\sqrt{3}}}\quad {\frac{1+i}{\sqrt{3}}\atop -\frac{1}{\sqrt{3}}}\right]=I_2\]}
 	\begin{flushright}
 $\blacktriangle$
 \end{flushright}
 
-\begin{itemize}
-	\item [d)] {\bf Matriz Normal}
-\defi {\em Una matriz compleja $A$ de $n\times n$ se dice \emph{normal} si: \[(\overline{A^T})A=A(\overline{A^T})\]}
-{\bf Ejemplo:}\\[2mm]	
+
+\begin{definition}[Matriz Normal]
+{\em Una matriz compleja $A$ de $n\times n$ se dice \emph{normal} si: \[(\overline{A^T})A=A(\overline{A^T})\]}
+\end{definition}
+
+{\bf Ejemplo:}\\[2mm]
+
 {\em La matriz \begin{center} $\displaystyle A=\left[{5-i\atop -1-i}\quad{-1+i\atop 3-i}\right]$ \end{center} es normal, pues \begin{center} $\displaystyle (\overline{A^T})A=A(\overline{A^T})=\left[{28\atop -8-8i}\quad {-8+8i\atop 12}\right]$ \end{center}}
 \begin{flushright}
 $\blacktriangle$
 \end{flushright}
 
-	\item {\bf Observaciones:}
+{\bf Observaciones:}
 \begin{itemize}
 	\item {\em Si $A$ es unitaria, entonces $A$ es normal.
 	\item Si $A$ es hermitiana, entonces $A$ es normal.}
 \end{itemize}
-\end{itemize}
+
 
 
 
