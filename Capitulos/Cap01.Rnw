@@ -10,7 +10,7 @@ La mayor parte de los temas tratados en este capítulo ya han sido tratados en e
 
 \section{Matrices con elementos complejos}
 
-\begin{definition}
+\begin{definition}[Matriz Compleja]
 Se dice que una matriz $\displaystyle A=(a_{jk})_{n\times m}$ es compleja si sus entradas son números complejos, de modo que podemos realizar operaciones de adición y sustracción entre matrices, y  multiplicación y división por un escalar $\m{K}\in \{\m{R}, \m{C}\}$, de manera análoga al caso de las matrices reales.
 \end{definition}
 
@@ -166,7 +166,8 @@ $\blacktriangle$
 
 \section{Espacio vectorial euclídeo}
 \subsection{Producto escalar euclídeo}
-\defi {\em Un producto escalar en un espacio vectorial $E$ sobre $\m{R}$, es una forma bilineal simétrica y definida positiva.\footnote{Ver Capítulo de formas bilineales y formas cuadráticas.} 
+\begin{definition}[Producto escalar euclídeo]
+{\em Un producto escalar en un espacio vectorial $E$ sobre $\m{R}$, es una forma bilineal simétrica y definida positiva.\footnote{Ver Capítulo de formas bilineales y formas cuadráticas.} 
 \[f:E\times E\to \m{R}\] definido por \[f(x,y)=\e{x,y},\footnote{La expresión $\e{x,y}$ se denomina producto escalar de $x$ y $y$.}\qquad \forall x,y\in E\]
 que verifica las siguientes propiedades:
 \begin{enumerate}
@@ -179,10 +180,12 @@ que verifica las siguientes propiedades:
 	
 	\item {\bf Definida positiva:} Para cualquier $x\in E$ no nulo
 	\[\e{x,x}>0\]
-\end{enumerate}  }
+\end{enumerate} }
+\end{definition}
 
-
-\defi {\em Al par $(E,\langle~,~\rangle)$, formado por un espacio vectorial junto con un producto escalar se le denomina {\bf espacio vectorial euclídeo}.}
+\begin{definition}[Espacio Vectorial Euclídeo]
+{\em Al par $(E,\langle~,~\rangle)$, formado por un espacio vectorial junto con un producto escalar se le denomina {\bf espacio vectorial euclídeo}.}
+\end{definition}
 
 \pro {\em En un espacio vectorial euclídeo $(E,\langle~,~\rangle)$ se verifican las siguientes propiedades:
 \begin{enumerate}
@@ -529,13 +532,15 @@ $\blacktriangle$
 
 \subsection{Ángulo entre vectores}
 
-\defi {\em Sea $E$ un espacio euclídeo. Dados dos vectores no nulos $x,y\in E$, definimos el {\bf ángulo} que forman como el valor $\alpha\in [0,\pi]$ verificando:
+\begin{definition}[Ángulo entre vectores]
+{\em Sea $E$ un espacio euclídeo. Dados dos vectores no nulos $x,y\in E$, definimos el {\bf ángulo} que forman como el valor $\alpha\in [0,\pi]$ verificando:
 \[\cos \alpha=\frac{\e{x,y}}{\n{x}.\n{y}}\]
 Por la desigualdad de Schwartz
 \[-1\leq \frac{\e{x,y}}{\n{x}.\n{y}}\leq 1\]
 Por tanto en el intervlo $[0,\pi]$ sólo existe un ángulo cuyo coseno sea el anterior.\\[2mm]
 Con esta definición de ángulo se verifica:
 \[\e{x,y}=\n{x}.\n{y} \cos\alpha\]}
+\end{definition}
 
 {\bf Ejemplo:}
 {\em 
@@ -555,7 +560,9 @@ Con esta definición de ángulo se verifica:
 
 
 \section{Espacio vectorial complejo}
-\defi {\em Un espacio vectorial complejo se define exactamente como un espacio vectorial real, es decir, es una terna formada por un conjunto $E$ y dos operaciones $\oplus$ y $\odot$ que satisfacen las siguientes propiedades:
+
+\begin{definition}[Espacio Vectorial Complejo]
+{\em Un espacio vectorial complejo se define exactamente como un espacio vectorial real, es decir, es una terna formada por un conjunto $E$ y dos operaciones $\oplus$ y $\odot$ que satisfacen las siguientes propiedades:
 \begin{enumerate}
 	\item Si $u$ y $v$ son elementos de $E$, entonces $u+v$ está en $E$.\qquad \emph{(cerrado bajo la suma.)}
 	\item $u\oplus v=v\oplus u$, para todo $u,v\in E$.
@@ -568,6 +575,7 @@ Con esta definición de ángulo se verifica:
 	\item $\alpha\odot(\beta \odot u)=(\alpha \beta)\odot u$, para todo $u\in E$ y $\alpha,\beta\in \m{C}$.
 	\item Existe un elemento $1^*\in E$, tal que $1^*\odot u=u$, para todo $u\in E$.
 \end{enumerate}}
+\end{definition}
 
 \obs {\em Casi todos los espacios vectoriales reales, tienen sus equivalentes espacios vectoriales complejos.}\\[2mm]
 
@@ -611,7 +619,9 @@ $\blacktriangle$
 \[B=\{1,i\}\]
 
 \section{Subespacio vectorial complejo}
-\defi {\em Sea $E$ un espacio vectorial complejo y $S$ un subconjunto no vacío de $E$. Si $S$ es un espacio vectorial con respecto a las operaciones de $E$, entonces $S$ es un subespacio vectorial complejo de $E$.}
+\begin{definition}[Subespacio Vectorial Complejo]
+{\em Sea $E$ un espacio vectorial complejo y $S$ un subconjunto no vacío de $E$. Si $S$ es un espacio vectorial con respecto a las operaciones de $E$, entonces $S$ es un subespacio vectorial complejo de $E$.}
+\end{definition}
 
 \teo {\em Sea $E$ un espacio vectorial complejo con las operaciones $\oplus$ y $\odot$, sea $S$ un subconjunto no vacío de $E$. Entonces $S$ es un subespacio vectorial complejo de $E$ si y sólo si se cumplen las condiciones siguientes:
 \begin{itemize}
@@ -647,7 +657,8 @@ $\blacktriangle$
 \section{Espacio vectorial hermítico}
 \subsection{Producto escalar hermítico}
 
-\defi {\em Un producto escalar hermítico en un espacio vectorial complejo $E$, es una forma sesquilineal hermítica
+\begin{definition}[Producto Escalar Hermítico]
+{\em Un producto escalar hermítico en un espacio vectorial complejo $E$, es una forma sesquilineal hermítica
 \[f:E\times E\to \m{C}\]
 definida por 
 \[f(x,y)=\e{x,y}\qquad \forall x,y\in E\]
@@ -658,16 +669,22 @@ $\forall x,y,z\in E,\quad \lambda\in \m{C}$.
 	\item [ii)] $\e{\lambda x,y}~=~\lambda \e{x,y}$
 	\item [iii)] $\e{x,y}~=~\overline{\e{y,x}}$
 	\item [iv)] $\e{x,x}~\geq~ 0$
-\end{enumerate}
+\end{enumerate}}
+\end{definition}
+
+
 {\bf Observaciones:}
 \begin{itemize}
   \item $(i)$ y $(ii)$ definen la linealidad a la izquierda.
   \item $(iii)$ simétria hermitica.
 \end{itemize}
 
-\quad Si se tiene simetría hermitica \[\overline{\e{x,x}}=\e{x,x} \qquad \Rightarrow \qquad \e{x,x} \quad \mbox{ es real}\]}
+Si se tiene simetría hermitica \[\overline{\e{x,x}}=\e{x,x} \qquad \Rightarrow \qquad \e{x,x} \quad \mbox{ es real}\]
 
-\defi {\em Sea $E$ un espacio vectorial complejo dotado de un producto escalar hermitico\footnote{En algunos textos de Álgebra Lineal al espacio vectorial hermítico también se lo llama espacio vectorial hermitiano.}, entonces se dice que $E$ es un espacio vectorial hermitico.\\[2mm]
+\begin{definition}
+{\em Sea $E$ un espacio vectorial complejo dotado de un producto escalar hermitico\footnote{En algunos textos de Álgebra Lineal al espacio vectorial hermítico también se lo llama espacio vectorial hermitiano.}, entonces se dice que $E$ es un espacio vectorial hermitico.}
+\end{definition}
+
 
 {\bf Ejemplos:}
 \begin{enumerate}
@@ -680,6 +697,7 @@ $\forall x,y,z\in E,\quad \lambda\in \m{C}$.
 \item En $\m{C}^n$, si $A$ es una matriz hermitiana $(A=\overline{A^T})$, tal que $x^T A x>0$, $\forall x\in \m{C}^n-\{0\}$.\\[3mm]
  Entonces \[\langle x,y\rangle=x^T A \overline{y}\] es el producto escalar complejo de $\m{C}^n$
 \end{enumerate} 
+
 Los ejemplos anteriores son productos escalares hermitícos, los mismos que va a ser tratados en este capítulo, ahora veamos ejemplos númericos de dichos productos.\\[2mm]
  
 
@@ -709,7 +727,7 @@ Además,
 &=&\sqrt{(1+i)(1-i)+(2-i)(2+i)+(3+i)(3-i)}\\
 &=&\sqrt{17}
 \end{eqnarray*}
-\end{enumerate}}
+\end{enumerate}%}
 \begin{flushright}
 $\blacktriangle$
 \end{flushright}
