@@ -11,7 +11,8 @@ En este capítulo vamos a estudiar conjuntos sobre los cuales vamos a definir ci
 
 {\em En el lenguaje ordinario tratar de ver si dos objetos guardan cierta relación entre sí, o por el contrario si no tienen nada en común, nos lleva a pensar que se debe satisfacer alguna proposición o dejar de satisfacerse, para dichos objetos.}\\[2mm] 
 
-\defi {\em Sea $E$ un espacio vectorial, por una relación $\C{R}$ en $E$ entendemos el subconjunto de $E\times E$, tal que satisface las siguientes propiedades:\\[2mm]
+\begin{definition}[Relación Binaria]
+{\em Sea $E$ un espacio vectorial, por una relación $\C{R}$ en $E$ entendemos el subconjunto de $E\times E$, tal que satisface las siguientes propiedades:\\[2mm]
 Sea $\C{R}$ una relación en $E$; entonces 
 \begin{enumerate}
 	\item $\mathcal{R}$ se dice reflexiva si \[\forall x\in E,\quad (x,x)\in \C{R}\]
@@ -19,6 +20,7 @@ Sea $\C{R}$ una relación en $E$; entonces
 	\item $\mathcal{R}$ se dice anti-simétrica si \[(x,y)\in \C{R}\quad \wedge\quad (y,x)\in \C{R}\quad \Rightarrow\quad x=y\]
 	\item $\mathcal{R}$ se dice transitiva si \[(x,y)\in \C{R}\quad \wedge\quad (y,z)\in \C{R}\quad \Rightarrow\quad (x,z)\in \C{R}\]
 \end{enumerate}}
+\end{definition}
 
 {\bf Ejemplo:}
 {\em 
@@ -81,7 +83,10 @@ Sea $\C{R}$ una relación en $E$; entonces
 
 {\em La idea de \emph{\bf relación de equivalencia} es una importante extensión y generalización de la tradicional idea de \emph{\bf igualdad} que se utiliza en la matemática.}
 
-\defi {\em Una relación, se dice de \emph{\bf equivalencia} si ésta es reflexiva, simétrica y transitiva.}\\
+\begin{definition}[Relación de Equivalencia]
+{\em Una relación, se dice de \emph{\bf equivalencia} si ésta es reflexiva, simétrica y transitiva.}
+\end{definition}
+
 \obs {\em Dado una relación de equivalencia $\mathcal{R}$ en $E$, algunas veces se escribe $x\thicksim y$ en reemplazo de $(x,y)\in \C{R}$, y decimos que $x$ es equivalente a $y$, dada la relación $\C{R}$.\\
 
 Note que si $\mathcal{R}$, es una relación de equivalencia en $E$, se tiene:
@@ -122,11 +127,16 @@ $\blacktriangle$
 \end{flushright}
 
 \subsection{Clases de equivalencia}
- \defi {\em Sea $E$ un espacio vectorial y sea $\C{R}$ una relación de equivalencia en $E$. Si $x\in E$, entonces la clase de equivalencia de $x$ dado $\C{R}$, es el conjunto $\C{R}_x$ definido como: 
- \[\mathcal{R}_x=\{y\in E~/~(y,x)\in \mathcal{R}\}=\{y\in E~/~y\thicksim x\}\] 
-dicho de otro modo, $\mathcal{R}_x$ es el conjunto de todos los elementos de $E$ que son equivalentes a $x$. Las clases de equivalencia se las nota de la forma $x/\C{R}$.}\\[3mm]
 
-\defi {\em Si $\C{R}$ es una relación de equivalencia en un espacio vectorial $E$, entonces el conjunto de las clases de equivalencia de $\C{R}$, se denomina {\bf conjunto cociente} de $E$ por $\C{R}$ y se nota como $E/\C{R}$.}\\[2mm]
+\begin{definition}[Clases de Equivalencia] 
+{\em Sea $E$ un espacio vectorial y sea $\C{R}$ una relación de equivalencia en $E$. Si $x\in E$, entonces la clase de equivalencia de $x$ dado $\C{R}$, es el conjunto $\C{R}_x$ definido como: 
+ \[\mathcal{R}_x=\{y\in E~/~(y,x)\in \mathcal{R}\}=\{y\in E~/~y\thicksim x\}\] 
+dicho de otro modo, $\mathcal{R}_x$ es el conjunto de todos los elementos de $E$ que son equivalentes a $x$. Las clases de equivalencia se las nota de la forma $x/\C{R}$.}
+\end{definition}
+
+\begin{definition}[Conjunto Cociente]
+{\em Si $\C{R}$ es una relación de equivalencia en un espacio vectorial $E$, entonces el conjunto de las clases de equivalencia de $\C{R}$, se denomina {\bf conjunto cociente} de $E$ por $\C{R}$ y se nota como $E/\C{R}$.}
+\end{definition}
 
 {\bf Ejemplo:}
 \begin{enumerate}
@@ -192,7 +202,9 @@ Puede en consecuencia afirmarse que a toda equivalencia en un conjunto le corres
 
 \section{Conjunto cociente}
 
-\defi {\em Dado un conjunto $E$ y una relación de equivalencia $\thicksim$ en él, se llama conjunto cociente de $E$ por $\thicksim$, y se le representa por $E/\thicksim$, al conjunto cuyos elementos son las clases de equivalencia definidas en $E$ por $\thicksim$; es decir, el conjunto cociente es la partición de $E$ subordinada por la equivalencia $\thicksim$.}
+\begin{definition}
+{\em Dado un conjunto $E$ y una relación de equivalencia $\thicksim$ en él, se llama conjunto cociente de $E$ por $\thicksim$, y se le representa por $E/\thicksim$, al conjunto cuyos elementos son las clases de equivalencia definidas en $E$ por $\thicksim$; es decir, el conjunto cociente es la partición de $E$ subordinada por la equivalencia $\thicksim$.}
+\end{definition}
 
 {\bf Ejemplo:}
 {\em 
