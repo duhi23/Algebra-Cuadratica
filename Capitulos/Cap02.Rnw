@@ -225,8 +225,10 @@ Puede en consecuencia afirmarse que a toda equivalencia en un conjunto le corres
 
 \section{Relación de equivalencia en un espacio vectorial}
 
-\defi {\em Sea $E$ un espacio vectorial, y $F$ un subespacio vectorial de $E$, la relación de equivalencia de $x\in E$ se define como:
+\begin{definition}
+{\em Sea $E$ un espacio vectorial, y $F$ un subespacio vectorial de $E$, la relación de equivalencia de $x\in E$ se define como:
 \[x\thicksim y \quad \Leftrightarrow \quad x-y\in F\]}
+\end{definition}
 
 \obs {\em La relación $\thicksim$ es una relación de equivalencia.}\\[2mm]
 {\bf Demostración:}
@@ -313,8 +315,10 @@ $\blacktriangle$
 
 \section{Co - conjunto\qquad \emph{(coset)}}
 
-\defi {\em Sea $E$ un espacio vectorial, y $F$ un subespacio vectorial de $E$, además si $x\in E$, se define el {\bf co - conjunto} como:
-\[x+F=\{z\in E~/~z=x+f,~f\in F\}\]
+\begin{definition}
+{\em Sea $E$ un espacio vectorial, y $F$ un subespacio vectorial de $E$, además si $x\in E$, se define el {\bf co - conjunto} como:
+\[x+F=\{z\in E~/~z=x+f,~f\in F\}\]}
+\end{definition}
 
 \begin{itemize}
 	\item {\bf Observaciones}
@@ -355,7 +359,7 @@ $\qquad \displaystyle \Rightarrow\quad \left\{ {y=x+f_1,~f_1\in F\atop z=y+f_2,~
 \end{itemize}
 \begin{flushright}
 $\blacksquare$
-\end{flushright}}
+\end{flushright}%}
 
 \teo {\em Sea $E$ un espacio vectorial, y $F$ un subespacio vectorial de $E$.\\ Sea $\{w_1,w_2,\ldots,w_s\}$ base de $F$ y $\{\dot{u_1},\dot{u_2},\ldots,\dot{u_r}\}$ base de $E/F$, donde $\dot{u_j}=u_j+F$.\\[2mm] 
 Entonces $\{w_1,w_2,\ldots,w_s,u_1,u_2,\ldots,u_r\}$ es base de $E$.\\[2mm] 
@@ -410,10 +414,13 @@ $\blacksquare$
 \end{enumerate}
 }
 
-\defi {\em Sea $E$ un espacio vectorial, y $F$ un subespacio vectorial de $E$, entonces llamaremos {\bf espacio vectorial cociente} al espacio $E/F$ definido como:
+\begin{definition}
+{\em Sea $E$ un espacio vectorial, y $F$ un subespacio vectorial de $E$, entonces llamaremos {\bf espacio vectorial cociente} al espacio $E/F$ definido como:
 \[E/F=\{\{\dot{x}\},\quad x\in E\}\]
 donde:
-\[\{\dot{x}\}=\{y\in E~/~x\thicksim y\}=\{y\in E~/~x-y\in F\}\]
+\[\{\dot{x}\}=\{y\in E~/~x\thicksim y\}=\{y\in E~/~x-y\in F\}\]}
+\end{definition}
+
 Por tanto $E/F$ es un espacio vectorial, para esto definimos las siguientes operaciones:\\[2mm]
 
 Se define para $\dot{x}\in E/F$, $\dot{y}\in E/F$,\quad  $\lambda\in \m{R}$
@@ -454,7 +461,7 @@ $\blacksquare$
 pues \[\dot{x}\oplus\dot{0}=\dot{\overline{x+0}}=\dot{x}\]
 \begin{flushright}
 $\blacksquare$
-\end{flushright}}
+\end{flushright}%}
 
 
 \newpage
