@@ -9,10 +9,13 @@ En este capítulo vamos a considerar un espacio que es muy importante para traba
 \end{center}
 
 \section{Espacio dual de un espacio vectorial}
-\defi {\em Dado un espacio vectorial $E$ sobre $\m{K}$. Llamaremos espacio dual de $E$ y lo notaremos por $E^*$, al espacio vectorial
+
+\begin{definition}
+{\em Dado un espacio vectorial $E$ sobre $\m{K}$. Llamaremos espacio dual de $E$ y lo notaremos por $E^*$, al espacio vectorial
 \[E^*=\C{L}(E,\m{K})=\{f:E\to \m{K}~/~\text{ $f$ es aplicación lineal.}\}\]
 
-A los vectores $f\in E^*$, los denominaremos formas lineales sobre $\m{K}$.}\\[2mm]
+A los vectores $f\in E^*$, los denominaremos formas lineales sobre $\m{K}$.}
+\end{definition}
 
 \pro {\em Dado un espacio vectorial $E$ sobre $\m{K}$. Entonces se cumple que:
 \begin{itemize}
@@ -249,8 +252,10 @@ es decir, la base dual de $B^*$ es $B=\{e_1,e_2,\ldots,e_n\}$, por este motivo s
 
 {\em En lo que sigue vamos a relacionar los subespacios de $E$ con ciertos subespacios de $E^*$. Esencialmente, dado un subespacio $S$ de $E$ consideramos el conjunto de todas las ecuaciones lineales que se anulan en $E$ y veremos que tiene una estructura de subespacio vectorial.}
 
-\defi {\em Sea $E$ un espacio vectorial definido sobre $\m{K}$ y sea $S$ un subespacio de $E$, se define el \emph{aniquilador} de $S$ como el siguiente subespacio vectorial de $E^*$.
+\begin{definition}
+{\em Sea $E$ un espacio vectorial definido sobre $\m{K}$ y sea $S$ un subespacio de $E$, se define el \emph{aniquilador} de $S$ como el siguiente subespacio vectorial de $E^*$.
 \[S^{\circ}=\{f\in E^*~/~f(v)=0,\quad \mbox{para todo } v\in S\}=\{f\in E^*~/~S\subseteq \mathcal{N}(f)\}.\]}
+\end{definition}
 
 \obs {\em Sea $E$ un espacio vectorial definido sobre $\m{K}$. Si $T$ es un subespacio de $E^*$, según la definición anterior, el aniquilador de $T$, es el siguiente subespacio vectorial de $E^{**}$.
 \[T^{\circ}=\{w\in E^{**}~/~w(f)=0,\quad\mbox{para todo } f\in T\}\]
