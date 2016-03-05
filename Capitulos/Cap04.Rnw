@@ -31,14 +31,17 @@ Sea $\m{E}$ un espacio vectorial, se define $S$ como subespacio vectorial si y s
 \section{Intersección de subespacios}
 
 {\em La primera operación que vamos a considerar es la intersección de dos subespacios vectoriales.}
-\defi[\bf Intersección de subespacios vectoriales] {\em Sean $S$ y $T$ subespacios vectoriales de $E$. La intersección de $S$ y $T$, $S\cap T$, es el conjunto:
-\[S\cap T=\{v\in E, \mbox{ tal que } v\in S \mbox{ y } v\in T\}\] 
-\begin{itemize}
-	\item {\bf Propiedades:}
+
+
+\begin{definition}[Intersección de subespacios vectoriales]
+{\em Sean $S$ y $T$ subespacios vectoriales de $E$. La intersección de $S$ y $T$, $S\cap T$, es el conjunto:
+\[S\cap T=\{v\in E, \mbox{ tal que } v\in S \mbox{ y } v\in T\}\]}
+\end{definition}
+
+{\em {\bf Propiedades:}
 \begin{itemize}
 	\item [1.] $S\cap T$ es un subespacio vectorial de $E$. En general, tendremos que la intersección de cualquier familia de subespacios vectoriales de $E$, $\displaystyle \bigcap_{i\in I} S_i$, es un subespacio vectorial de $E$.
 	\item [2.] Si $S$ y $T$ son espacios vectoriales de $E$, las ecuaciones de $S\cap T$ serán las ecuaciones resultantes de unir las de $S$ y las de $T$.
-\end{itemize}
 \end{itemize}
 
 Ahora generalicemos la intersección para un número finito de subespacios vectoriales.\\[2mm]
