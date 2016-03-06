@@ -153,11 +153,11 @@ innertopmargin=4pt,
 % Contenidos
 \tableofcontents
 
-<<child-cap01, child='Capitulos/Cap01.Rnw'>>=
-@
+%<<child-cap01, child='Capitulos/Cap01.Rnw'>>=
+%@
 
-<<child-cap02, child='Capitulos/Cap02.Rnw'>>=
-@
+%<<child-cap02, child='Capitulos/Cap02.Rnw'>>=
+%@
 
 %<<child-cap03, child='Capitulos/Cap03.Rnw'>>=
 %@
@@ -167,5 +167,8 @@ innertopmargin=4pt,
 
 %<<child-cap05, child='Capitulos/Cap05.Rnw'>>=
 %@
+
+<<child-cap06, child='Capitulos/Cap06.Rnw'>>=
+@
 
 \end{document}
