@@ -1,0 +1,27 @@
+\chapter{Geometría Afín}
+
+\section{Introducción}
+
+%El objetivo 
+
+
+\section{Espacio Afín}
+
+\begin{definition}
+Sean $\C{E}$ un conjunto no vacío y $E$ un $\m{K}-$espacio vectorial, además sea $\varphi$ una aplicación definida por:
+
+\[\fu{\varphi}{\C{E}\times\C{E}}{E}{(P,Q)}{\varphi(P,Q)=\overrightarrow{PQ}=\overrightarrow{x}}\]
+
+se dice que la terna $(\C{E}, E, \varphi)$ es un espacio afín sobre $\m{K}$ con espacio vectorial director $E$ si verifica las propiedades:
+\begin{itemize}
+      \item [a)] $\forall P\in \C{E}$
+      \[\fu{\varphi_p}{\C{E}}{E}{Q}{\varphi_p(Q)=\varphi(P,Q)}\]
+      es biyectiva. Es decir, si fijamos $P_1$, $\forall Q\in \C{E}$ existe un único $\overrightarrow{x}\in E$ tal que $\varphi(P_1, Q)=\overrightarrow{x}$ o equivalentemente, $\forall P\in \C{E}$, $\forall \overrightarrow{x}\in E$ existe un único $Q\in \C{E}$ para el cual se verifica que $\overrightarrow{x}=\overrightarrow{PQ}$.
+      \item [b)] $\forall P, Q, R\in \C{E}$
+      \[\varphi(P,Q)=\varphi(Q,R)=\varphi(P,R)\]
+      empleando una notación equivalente tenemos: $\overrightarrow{PQ}+\overrightarrow{QR}=\overrightarrow{PR}$ (Ley de Charles).
+\end{itemize}
+\end{definition}
+
+En ocasiones, se suele considerar el espacio afín como un conjunto de puntos de $\C{E}$, lo cual no es correcto, pero si permisible para simplificar la notación, bajo esta justificación
+
