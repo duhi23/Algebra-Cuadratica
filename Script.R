@@ -10,8 +10,10 @@ dir.cap <- "/Users/Diego/Dropbox/EPN/Algebra Cuadratica/Capitulos"
 
 #### Capitulos ####
 setwd(dir.cap)
-file.create("Cap7.Rnw")
-file.edit("Cap7.Rnw")
+file.create("Cap06.Rnw")
+file.edit("Cap06.Rnw")
+
+setwd(dir.main)
 
 #### Execution ####
 setwd(dir.main)
