@@ -23,5 +23,5 @@ se dice que la terna $(\C{E}, E, \varphi)$ es un espacio afín sobre $\m{K}$ con
 \end{itemize}
 \end{definition}
 
-En ocasiones, se suele considerar el espacio afín como un conjunto de puntos de $\C{E}$, lo cual no es correcto, pero si permisible para simplificar la notación, bajo esta justificación
+En ocasiones, se suele considerar el espacio afín como un conjunto de puntos de $\C{E}$, lo cual no es correcto, pero si permisible para simplificar la notación, bajo esta justificación a lo largo del capítulo por facilidad de escritura a la terna $(\C{E}, E, \varphi)$ se lo notará como $\C{E}$, obviamente esto no producirá confusión para el estudiante observador.
 
