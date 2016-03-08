@@ -4,7 +4,7 @@
 
 El objetivo fundamenta de estos estudios es poder desarrollar una estructura formal para estudiar la geometría desde la potencia del álgebra lineal, ya hemos estudiado geometría en álgebra lineal I pero con restricciones muy notorias; es decir, hemos tenido que dejar fijo el origen de coordenadas al estudiar isometrías, semejanzas, etc., así pues, estamos relacionados con conceptos propios de la geometría como rectas, planos, puntos, etc. los cuales nos han aparecido como subespacios vectoriales en el estudio del álgebra, geometría vectorial, recalcando de ese modo siempre hemos estado restringidos al origen de coordenadas, pues no tendría sentido en el estudio de espacios vectoriales sino consideramos a lo mencionado, es decir, no hemos podido realizar un estudio completo de la geometría desde la geometría vectorial, nos gustaría estudiar todas las rectas, planos, etc. que no pasan por el origen, de este modo, nos despierta la inquietud de definir una estructura que de algún modo implante ``algo así como un \emph{espacio vectorial con el origen fijado donde más nos convenga}''.\newline % Citar texto Girondo
 
-Para realizar lo mencionado, sigamos a la siguiente idea, consideremos el vector $\overrightarrow{AB}$, así, observamos sus coordenadas $(x_B-x_A, y_B-y_A)$, dicho de otra forma, determinamos el vector, $\overrightarrow{AB}$ como la diferencia de los puntos $A$ y $B$, es decir, el punto $B$ se obtiene al sumar el vector $\overrightarrow{AB}$ al punto $A$. Esta idea la formalizaremos con la nueva estructura que definiremos luego, en el estudio del Álgebra Afín Euclidea debemos tener en cuenta de que a $\m{R}^3$ debemos considerarle como un espacio de vectores (Espacio Vectorial Real) y como un espacio de puntos (Espacio Afín Real). Pero antes consideramos importante mencionar las siguientes ideas.\newline
+Para realizar lo mencionado, sigamos a la siguiente idea, consideremos el vector $\ora{AB}$, así, observamos sus coordenadas $(x_B-x_A, y_B-y_A)$, dicho de otra forma, determinamos el vector, $\ora{AB}$ como la diferencia de los puntos $A$ y $B$, es decir, el punto $B$ se obtiene al sumar el vector $\ora{AB}$ al punto $A$. Esta idea la formalizaremos con la nueva estructura que definiremos luego, en el estudio del Álgebra Afín Euclidea debemos tener en cuenta de que a $\m{R}^3$ debemos considerarle como un espacio de vectores (Espacio Vectorial Real) y como un espacio de puntos (Espacio Afín Real). Pero antes consideramos importante mencionar las siguientes ideas.\newline
 
 El juicio es estudiar geometría de manera formal, pero en la enseñanza de esta a nivel intermedio presenta un problema muy fino, nos referimos al método utilizado en la enseñanza de esta, pues es confusa (métodos), dado que los axiomas se inspiran en la geometría Euclidea (tradicional), ``sin tener en cuenta la evolución de la matemática en este dominio''. En consecuencia esta confusión contrasta con el rigor de las estructuras algebraicas y uno puede preguntarse sobre el poder formativo de tal enseñanza.\newline % Citar Guyot
 
@@ -15,18 +15,33 @@ Por esto, estimamos se debe cambiar completamente el método en la enseñanza de
 \begin{definition}
 Sean $\C{E}$ un conjunto no vacío y $E$ un $\m{K}-$espacio vectorial, además sea $\varphi$ una aplicación definida por:
 
-\[\fu{\varphi}{\C{E}\times\C{E}}{E}{(P,Q)}{\varphi(P,Q)=\overrightarrow{PQ}=\overrightarrow{x}}\]
+\[\fu{\varphi}{\C{E}\times\C{E}}{E}{(P,Q)}{\varphi(P,Q)=\ora{PQ}=\ora{x}}\]
 
 se dice que la terna $(\C{E}, E, \varphi)$ es un espacio afín sobre $\m{K}$ con espacio vectorial director $E$ si verifica las propiedades:
 \begin{itemize}
       \item [a)] $\forall P\in \C{E}$
       \[\fu{\varphi_p}{\C{E}}{E}{Q}{\varphi_p(Q)=\varphi(P,Q)}\]
-      es biyectiva. Es decir, si fijamos $P_1$, $\forall Q\in \C{E}$ existe un único $\overrightarrow{x}\in E$ tal que $\varphi(P_1, Q)=\overrightarrow{x}$ o equivalentemente, $\forall P\in \C{E}$, $\forall \overrightarrow{x}\in E$ existe un único $Q\in \C{E}$ para el cual se verifica que $\overrightarrow{x}=\overrightarrow{PQ}$.
+      es biyectiva. Es decir, si fijamos $P_1$, $\forall Q\in \C{E}$ existe un único $\ora{x}\in E$ tal que $\varphi(P_1, Q)=\ora{x}$ o equivalentemente, $\forall P\in \C{E}$, $\forall \ora{x}\in E$ existe un único $Q\in \C{E}$ para el cual se verifica que $\ora{x}=\ora{PQ}$.
       \item [b)] $\forall P, Q, R\in \C{E}$
       \[\varphi(P,Q)=\varphi(Q,R)=\varphi(P,R)\]
-      empleando una notación equivalente tenemos: $\overrightarrow{PQ}+\overrightarrow{QR}=\overrightarrow{PR}$ (Ley de Charles).
+      empleando una notación equivalente tenemos: $\ora{PQ}+\ora{QR}=\ora{PR}$ (Ley de Charles).
 \end{itemize}
 \end{definition}
 
-En ocasiones, se suele considerar el espacio afín como un conjunto de puntos de $\C{E}$, lo cual no es correcto, pero si permisible para simplificar la notación, bajo esta justificación a lo largo del capítulo por facilidad de escritura a la terna $(\C{E}, E, \varphi)$ se lo notará como $\C{E}$, obviamente esto no producirá confusión para el estudiante observador.
+En ocasiones, se suele considerar el espacio afín como un conjunto de puntos de $\C{E}$, lo cual no es correcto, pero si permisible para simplificar la notación, bajo esta justificación a lo largo del capítulo por facilidad de escritura a la terna $(\C{E}, E, \varphi)$ se lo notará como $\C{E}$, obviamente esto no producirá confusión para el estudiante observador. Cabe mencionar que $\C{E}$ es considerado espacio afín euclídeo si $E$ es un espacio vectorial Euclideo, este caso particular lo estudiaremos ampliamente en apartados posteriores del presente texto.\newline
+
+Por la propiedad $a)$, dado un punto $P\in \C{E}$ y un vector $\ora{x}\in E$ es factible definir el punto $Q:= P+\ora{x}$, obviamente desde el punto de vista matemático no tiene significado, $Q\in \C{E}$ es único, verificando $\ora{PQ}=\ora{x}$. Una interpretación geométrica seria, el punto $Q$ se halla trasladando el punto $P$ en la magnitud, dirección y sentido que muestra el vector $\ora{x}$. 
+
+\begin{definition}
+Un espacio afín $\C{E}$ de dirección el $\m{K}$-espacio vectorial $E$ es un conjunto no vacío dotado de una operación externa:
+
+\[\fu{\wt{+}}{\C{E}\times E}{\C{E}}{(P,\ora{x})}{\wt{+}(P, \ora{x})=Q:=P\wt{+} \ora{x}}\]
+
+tal que satisface:
+\begin{itemize}
+      \item [i)] Para todo $P, Q\in \C{E}$, existe un único $\ora{x}\in E$ tal que $Q=P\wt{+} \ora{x}$.
+      \item [ii)] Para todo $P\in \C{E}$, y para todo $\ora{x}, \ora{y}\in E$ se verifica que:
+      \[P\wt{+}(\ora{x}+\ora{y}) = \]
+\end{itemize}
+\end{definition}
 
