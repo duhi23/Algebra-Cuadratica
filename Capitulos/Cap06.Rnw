@@ -41,7 +41,29 @@ tal que satisface:
 \begin{itemize}
       \item [i)] Para todo $P, Q\in \C{E}$, existe un único $\ora{x}\in E$ tal que $Q=P\wt{+} \ora{x}$.
       \item [ii)] Para todo $P\in \C{E}$, y para todo $\ora{x}, \ora{y}\in E$ se verifica que:
-      \[P\wt{+}(\ora{x}+\ora{y}) = \]
+      \[P\wt{+}(\ora{x}+\ora{y}) = (P\wt{+}\ora{x}) + (P\wt{+}\ora{y})\]
 \end{itemize}
 \end{definition}
+
+Así pues, debemos recordar de manera correcta lo siguiente:
+
+\begin{center}
+Punto $+$ Vector $=$ Punto (aplicación afín)\\
+Vector $+$ Vector $=$ Vector (suma vectorial)
+\end{center}
+
+\begin{definition}
+La dimensión de un espacio afín es la dimensión de su espacio vectorial director, es decir:\newline
+Sea $\C{E}$ un $\m{K}$-espacio afín con $E$ un $\m{K}$-espacio vectorial director; así:
+\[\dim (\C{E})=\dim (E)\]
+\end{definition}
+
+Es importante comprender en manera profunda la definición del espacio afín explicitemos entonces, el sumar de toda esta estructura se encuentra en la aplicación $\varphi$ definida, la idea es que esta asociada a cada par de puntos $(P,Q)$ un vector $\ora{PQ}$ el espacio vectorial director $E$, lo que comprendemos como ``el vector de origen en $P$ y extremo en $Q$'', obviamente, la estructura debe ser consistente al relacionar los vectores que tienen origen en puntos diferentes del espacio afín $\C{E}$, para esto nos servimos de la condición $b)$ de la definición, en estas expresiones tenemos: $\ora{PQ}+\ora{QR}=\ora{PR}$, veamos gráficamente, es obvio que los vectores son libres.
+
+% Gráfico
+
+
+
+
+
 
