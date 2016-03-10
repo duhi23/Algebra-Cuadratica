@@ -60,9 +60,36 @@ Sea $\C{E}$ un $\m{K}$-espacio afín con $E$ un $\m{K}$-espacio vectorial direct
 
 Es importante comprender en manera profunda la definición del espacio afín explicitemos entonces, el sumar de toda esta estructura se encuentra en la aplicación $\varphi$ definida, la idea es que esta asociada a cada par de puntos $(P,Q)$ un vector $\ora{PQ}$ el espacio vectorial director $E$, lo que comprendemos como ``el vector de origen en $P$ y extremo en $Q$'', obviamente, la estructura debe ser consistente al relacionar los vectores que tienen origen en puntos diferentes del espacio afín $\C{E}$, para esto nos servimos de la condición $b)$ de la definición, en estas expresiones tenemos: $\ora{PQ}+\ora{QR}=\ora{PR}$, veamos gráficamente, es obvio que los vectores son libres.
 
-% Gráfico
+\begin{figure}[H]
+\centering
+\begin{pspicture}[showgrid=false](10,6)
+\psaxes[subticks=5,ticksize=0 4pt,subticksize=0.5, labels=none]{<->}(1,3)(0.5,0.0)(4,5.5)
+\psline[linecolor=green, linewidth=1.7pt]{->}(1,3)(3,4.5)
+\psline[linecolor=blue, linewidth=1.7pt]{->}(1,3)(3.3,1.5)
+\psline[linecolor=red, linewidth=1.7pt]{->}(1,3)(1,0.5)
+\rput(0.8,2.8){\small $0$}
+\rput(1.7,4.1){\small $\ora{PQ}$}
+\rput(1.8,2){\small $\ora{PR}$}
+\rput(0.5,2.2){\small $\ora{QR}$}
+% Traslacion
+\psline[linecolor=green, linewidth=1.7pt]{->}(7,3)(9,4.5)
+\psline[linecolor=blue, linewidth=1.7pt]{->}(7,3)(9.3,1.5)
+\psline[linecolor=red, linewidth=1.7pt]{->}(9,4.5)(9.3,1.5)
+\rput(7.8,4.1){\small $\ora{PQ}$}
+\rput(7.8,2){\small $\ora{PR}$}
+\rput(9.5,3){\small $\ora{QR}$}
+% Puntos
+\rput(6.7,3){\small $\ora{P}$}
+\rput(9.5,1){\small $\ora{R}$}
+\rput(9,4.8){\small $\ora{Q}$}
+% Flecha
+\psline[linearc=0.7, doubleline=true]{->}(4.7,4)(5.5,4.3)(6.3,4)
+\end{pspicture}
+\end{figure}
 
+En forma aún más profunda, se puede notar que la estructura afín depende propiamente de la estructura vectorial y de la apliación $\varphi$, y más no de otra construcción adicional.\newline
 
+De este modo, en un caso particular para la física, el espacio afín es sumamente relevante, para la mecánica clásica como para la relatividad de Einstein dado que el tiempo es un espacio afín real de dimensión $1$, donde un instante es un punto del espacio afín y un lapso de tiempo es un vector de su espacio vectorial director, ahora en el espacio afín de dimensión cuatro tiene lugar un fenómeno espectacular, la emisión de un fotón por un átomo. % Citar Girondo
 
 
 
