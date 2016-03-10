@@ -89,8 +89,16 @@ Es importante comprender en manera profunda la definición del espacio afín exp
 
 En forma aún más profunda, se puede notar que la estructura afín depende propiamente de la estructura vectorial y de la apliación $\varphi$, y más no de otra construcción adicional.\newline
 
-De este modo, en un caso particular para la física, el espacio afín es sumamente relevante, para la mecánica clásica como para la relatividad de Einstein dado que el tiempo es un espacio afín real de dimensión $1$, donde un instante es un punto del espacio afín y un lapso de tiempo es un vector de su espacio vectorial director, ahora en el espacio afín de dimensión cuatro tiene lugar un fenómeno espectacular, la emisión de un fotón por un átomo. % Citar Girondo
+De este modo, en un caso particular para la física, el espacio afín es sumamente relevante, para la mecánica clásica como para la relatividad de Einstein dado que el tiempo es un espacio afín real de dimensión $1$, donde un instante es un punto del espacio afín y un lapso de tiempo es un vector de su espacio vectorial director, ahora en el espacio afín de dimensión cuatro tiene lugar un fenómeno espectacular, la emisión de un fotón por un átomo.\newline % Citar Girondo
 
+En estos estudios no debe haber confusión, por ello dejaremos clara la nomenclatura a usarse, por consiguiente adoptaremos por comodidad $\varphi(A,B)=\ora{AB}$ salvo se necesite explicitar $\varphi$.\newline
 
+Ahora, la siguiente definición que nos será de suma utilidad es próximos postulados.
+
+\begin{definition}
+Los puntos $P,Q,R,S\in \C{E}$ se dicen linealmente independientes (\emph{linealmente dependientes}) si los vectores $\ora{PQ}$, $\ora{PR}$, $\ora{PS}\in E$ son linealmente independientes (\emph{linealmente dependientes}).
+\end{definition}
+
+A continuación, revisamos algunos ejemplos:
 
 
