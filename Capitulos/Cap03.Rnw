@@ -402,146 +402,145 @@ $\blacksquare$
 \section{Ejercicios Resueltos}
 {\em
 \begin{enumerate}
-
-  \item Sea el espacio vectorial $E=\rn{2}$ y 
+  \item Sea el espacio vectorial $E=\rn{2}$ y
   \[B=\{\underbrace{(1,-5)}_{u_1},\underbrace{(-3,4)}_{u_2}\}\]
   base de $E$.\\[2mm]
-  
+
   Encuentre una base $B^*$ de $E^*$.\\[2mm]
-  
+
   Sabemos que \[E^*=\{f:\m{R}^2\to \m{R}~|~ f\quad\mbox{es aplicación lineal.}\}\]
   Ahora sea \[B^*=\{v_1^*,v_2^*\}\]
   base de $E^*$, donde
   \[\fu{v_1^*}{\rn{2}}{\m{R}}{(x_1,x_2)}{v_1^*(x_1,x_2)=a_1x_1+a_2x_2}\]
   \[\fu{v_2^*}{\rn{2}}{\m{R}}{(x_1,x_2)}{v_2^*(x_1,x_2)=b_1x_1+b_2x_2}\]
-  
-  y por tanto 
+
+  y por tanto
   \[\left.\begin{array}{l}
   v_1^*(u_1)=1\quad \to \quad v_1^*(1,-5)=a_1-5a_2=1\\
   v_1^*(u_2)=0\quad \to \quad v_1^*(-3,4)=-3a_1+4a_2=0
   \end{array}\right\}\quad \Rightarrow \quad \left\{\begin{array}{l} a_1=\displaystyle-\frac{4}{11}\\ a_2=\displaystyle-\frac{3}{11}\end{array}\right.\]
-  
+
   \[\left.\begin{array}{l}
   v_2^*(u_1)=0\quad \to \quad v_2^*(1,-5)=b_1-5b_2=0\\
   v_2^*(u_2)=1\quad \to \quad v_2^*(-3,4)=-3b_1+4b_2=1
   \end{array}\right\}\quad \Rightarrow \quad \left\{\begin{array}{l} a_1=\displaystyle-\frac{5}{11}\\ a_2=\displaystyle-\frac{1}{11}\end{array}\right.\]
-  
+
   de donde reemplazando, los coeficientes obtenidos se sigue que
-  
+
   \[\fu{v_1^*}{\rn{2}}{\m{R}}{(x_1,x_2)}{v_1^*(x_1,x_2)=-\frac{4}{11}x_1-\frac{3}{11}x_2}\]
   \[\fu{v_2^*}{\rn{2}}{\m{R}}{(x_1,x_2)}{v_2^*(x_1,x_2)=-\frac{5}{11}x_1-\frac{1}{11}x_2}\]
-  
-  y estas a su vez forman la base buscada $B^*$ de $E^*$.  
+
+  y estas a su vez forman la base buscada $B^*$ de $E^*$.
 \begin{flushright}
 $\blacktriangle$
 \end{flushright}
-  
+
   \item Sea el espacio vectorial $E=\wp_1[t]=\{p(t)=a_0+a_1t~|~ a_0,a_1\in \m{R}\}$, además su dual $E^*$ tiene dimensión $2$.
-  \begin{enumerate}
-	  \item Pruebe que 
-	  \[B^*=\Big\{\underbrace{\int_0^1p(t)dt}_{e_1^*}~,~\underbrace{\int_0^2p(t)dt}_{e_2^*}\Big\}\]
-	  es base de $E^*$.\\[2mm]
-	  Primero probemos que $B^*$ es libre.\\[2mm]
-	  Sea 
-	  \[c_1e^*_1+c_2e^*_2=0^*,\qquad c_1,c_2\in \m{R}\]
-	  de donde
-	  \[c_1e^*_1(p)+c_2e^*_2(p)=0^*(p)\]
-	  es decir
-	  \[c_1(a_0+\frac{a_1}{2})+c_2(2a_0+2a_1)=0\]
-	  Ahora si hacemos $a_0=a_1=2$ tenemos
-	  \begin{equation}{
-	  \label{ek1}
-	  3c_1+8c_2=0}
-	  \end{equation}
-	  y además, si hacemos $a_0=1$, $a_2=3$ tenemos
-	  \begin{equation}{
-	  \label{ek2}
-	  \frac{5}{2}c_1+8c_2=0}
-	  \end{equation}
-	  Resolviendo $(\ref{ek1})$ y $(\ref{ek2})$ simultáneamente se tiene que
-	  \[c_1=c_2=0\]
-	  
-	  Entonces $B^*=\{e^*_1,e^*_2\}$ es libre, por tanto es base de $E^*$.\\[3mm]
-	  
-	  \item Hallar una base de $E$, $B=\{u_1,u_2\}$ asociada a $B^*$.\\[2mm]
-	  
-	  Sea 
-	  \[B=\{\underbrace{a_0+a_1t}_{u_1},\underbrace{b_0+b_1t}_{u_2}\}\]
-	  por tanto
-	  \begin{equation}{
-	  \label{ek3}
-	  e^*_1(u_1)=1\quad \to \quad e^*_1(a_0+a_1t)=a_0+\frac{a_1}{2}=1}
-	  \end{equation}
-	  \begin{equation}{
-	  \label{ek4}
-	  e^*_1(u_2)=0\quad \to \quad e^*_1(b_0+b_1t)=b_0+\frac{b_1}{2}=0}
-	  \end{equation}
-	  \begin{equation}{
-	  \label{ek5}
-	  e^*_2(u_1)=0\quad \to \quad e^*_2(a_0+a_1t)=2a_0+2a_1=0}
-	  \end{equation}
-	  \begin{equation}{
-	  \label{ek6}
-	  e^*_2(u_2)=1\quad \to \quad e^*_2(b_0+b_1t)=2b_0+2b_1=1}
-	  \end{equation}
-	  
-	  Resolviendo simultáneamente las ecuaciones $(\ref{ek3})$, $(\ref{ek4})$, $(\ref{ek5})$ y $(\ref{ek6})$, se tiene que
-	  \[a_0=2,\quad a_1=-2,\quad b_0=1,\quad b_1=-\frac{1}{2}\]
-	  reemplazando los valores obtenidos anteriormente se tiene que
-	  \[B=\Big\{2-2t, 1-\frac{t}{2}\Big\}\]
-	  es la base buscada.\\[3mm]
-  \end{enumerate}
-  
-	\item Sea el espacio vectorial real $E=\rn{4}$ y el subespacio
-	\[F=gen\{\underbrace{(1,2,-3,4)}_{v_1},\underbrace{(0,1,4,-1)}_{v_2}\}\]
-	Hallar $\an{F}$ y dar una base.\\[3mm]
-	
-	Por definición se tiene
-	\[\an{F}=\{\phi\in E^*~|~ \phi(x)=0,\quad \forall x\in F\}\]
-	es decir
-	\[\an{F}=\{\phi\in E^*~|~ \phi(\alpha_1 v_1+\alpha_2 v_2)=0,\quad \alpha_1,\alpha_2\in \m{R}\}\]
-	
-	\begin{eqnarray*}
-	\phi(\alpha_1v_1+\alpha_2v_2)&=&c_1(\alpha_1)+c_2(2\alpha_1+\alpha_2)+c_3(-3\alpha_1+4\alpha_2)+c_4(4\alpha_1-\alpha_2)\\
-	&=&\alpha_1(c_1+2c_2-3c_3+4c_4)+\alpha_2(c_2+4c_3-c_4)\\
-	&=&0
-	\end{eqnarray*}
-	Ahora haciendo $\alpha_1=1$ y $\alpha_2=0$, tenemos
-	\begin{equation}{
-	\label{ec1}
-	c_1+2c_2-3c_3+4c_4=0}
-	\end{equation}
-	
-	además, haciendo $\alpha_1=0$ y $\alpha_2=1$, tenemos
-	\begin{equation}{
-	\label{ec2}
-	c_2-4c_3-c_4=0}
-	\end{equation}
-	
-	Desarrollando $(\ref{ec1})$ y $(\ref{ec2})$ obtenemos
-	\[\mdc{1\quad 2\quad-3\quad~4}{|~0}{0\quad 1\quad ~4\quad -1}{|~0}\quad \Rightarrow\quad \left\{\begin{array}{l} c_2=-4c_3+c_4\\ c_1=11c_3-6c_4 \end{array}\right.\]
-	
-	Por tanto
-	\begin{eqnarray*}
-	\phi(\alpha_1v_1+\alpha_2v_2)&=&(11c_3-6c_4)(\alpha_1)+(-4c_3+c_4)(2\alpha_1+\alpha_2)+(c_3)(-3\alpha_1+4\alpha_2)+(c_4)(4\alpha_1-\alpha_2)\\
-	&=&c_3(11\alpha_1-8\alpha_1-4\alpha_2-3\alpha_1+4\alpha_2)+c_4(-6\alpha_1+2\alpha_1+\alpha_2+4\alpha_2-\alpha_2)\\
-	&=&c_3(0)+c_4(0)\\
-	&=&0
-	\end{eqnarray*}
-	
-	Ahora sea $u\in E$, entonces
-	\begin{eqnarray*}
-	\phi(u)&=&(11c_3-6c_4)u_1+(-4c_3+c_4)u_2+c_3u_3+c_4u_4\\
-	&=&c_3\underbrace{(11u_1-4u_2+u_3)}_{\phi_1(u)}+c_4\underbrace{(-6u_1+u_2+u_4)}_{\phi_2(u)}
-	\end{eqnarray*}
-	de donde
-	\[\an{F}=gen\{\phi_1,\phi_2\}\]
-	es decir 
-	\[\{\phi_1,\phi_2\}\quad \mbox{es base de}\quad \an{F}\]	
-\begin{flushright}
-$\blacktriangle$
-\end{flushright}
-	
+%   \begin{enumerate}
+% 	  \item Pruebe que
+% 	  \[B^*=\Big\{\underbrace{\int_0^1p(t)dt}_{e_1^*}~,~\underbrace{\int_0^2p(t)dt}_{e_2^*}\Big\}\]
+% 	  es base de $E^*$.\\[2mm]
+% 	  Primero probemos que $B^*$ es libre.\\[2mm]
+% 	  Sea
+% 	  \[c_1e^*_1+c_2e^*_2=0^*,\qquad c_1,c_2\in \m{R}\]
+% 	  de donde
+% 	  \[c_1e^*_1(p)+c_2e^*_2(p)=0^*(p)\]
+% 	  es decir
+% 	  \[c_1(a_0+\frac{a_1}{2})+c_2(2a_0+2a_1)=0\]
+% 	  Ahora si hacemos $a_0=a_1=2$ tenemos
+% 	  \begin{equation}{
+% 	  \label{ek1}
+% 	  3c_1+8c_2=0}
+% 	  \end{equation}
+% 	  y además, si hacemos $a_0=1$, $a_2=3$ tenemos
+% 	  \begin{equation}{
+% 	  \label{ek2}
+% 	  \frac{5}{2}c_1+8c_2=0}
+% 	  \end{equation}
+% 	  Resolviendo $(\ref{ek1})$ y $(\ref{ek2})$ simultáneamente se tiene que
+% 	  \[c_1=c_2=0\]
+% 
+% 	  Entonces $B^*=\{e^*_1,e^*_2\}$ es libre, por tanto es base de $E^*$.\\[3mm]
+% 
+% 	  \item Hallar una base de $E$, $B=\{u_1,u_2\}$ asociada a $B^*$.\\[2mm]
+% 
+% 	  Sea
+% 	  \[B=\{\underbrace{a_0+a_1t}_{u_1},\underbrace{b_0+b_1t}_{u_2}\}\]
+% 	  por tanto
+% 	  \begin{equation}{
+% 	  \label{ek3}
+% 	  e^*_1(u_1)=1\quad \to \quad e^*_1(a_0+a_1t)=a_0+\frac{a_1}{2}=1}
+% 	  \end{equation}
+% 	  \begin{equation}{
+% 	  \label{ek4}
+% 	  e^*_1(u_2)=0\quad \to \quad e^*_1(b_0+b_1t)=b_0+\frac{b_1}{2}=0}
+% 	  \end{equation}
+% 	  \begin{equation}{
+% 	  \label{ek5}
+% 	  e^*_2(u_1)=0\quad \to \quad e^*_2(a_0+a_1t)=2a_0+2a_1=0}
+% 	  \end{equation}
+% 	  \begin{equation}{
+% 	  \label{ek6}
+% 	  e^*_2(u_2)=1\quad \to \quad e^*_2(b_0+b_1t)=2b_0+2b_1=1}
+% 	  \end{equation}
+% 
+% 	  Resolviendo simultáneamente las ecuaciones $(\ref{ek3})$, $(\ref{ek4})$, $(\ref{ek5})$ y $(\ref{ek6})$, se tiene que
+% 	  \[a_0=2,\quad a_1=-2,\quad b_0=1,\quad b_1=-\frac{1}{2}\]
+% 	  reemplazando los valores obtenidos anteriormente se tiene que
+% 	  \[B=\Big\{2-2t, 1-\frac{t}{2}\Big\}\]
+% 	  es la base buscada.\\[3mm]
+%   \end{enumerate}
+
+% 	\item Sea el espacio vectorial real $E=\rn{4}$ y el subespacio
+% 	\[F=gen\{\underbrace{(1,2,-3,4)}_{v_1},\underbrace{(0,1,4,-1)}_{v_2}\}\]
+% 	Hallar $\an{F}$ y dar una base.\\[3mm]
+% 
+% 	Por definición se tiene
+% 	\[\an{F}=\{\phi\in E^*~|~ \phi(x)=0,\quad \forall x\in F\}\]
+% 	es decir
+% 	\[\an{F}=\{\phi\in E^*~|~ \phi(\alpha_1 v_1+\alpha_2 v_2)=0,\quad \alpha_1,\alpha_2\in \m{R}\}\]
+% 
+% 	\begin{eqnarray*}
+% 	\phi(\alpha_1v_1+\alpha_2v_2)&=&c_1(\alpha_1)+c_2(2\alpha_1+\alpha_2)+c_3(-3\alpha_1+4\alpha_2)+c_4(4\alpha_1-\alpha_2)\\
+% 	&=&\alpha_1(c_1+2c_2-3c_3+4c_4)+\alpha_2(c_2+4c_3-c_4)\\
+% 	&=&0
+% 	\end{eqnarray*}
+% 	Ahora haciendo $\alpha_1=1$ y $\alpha_2=0$, tenemos
+% 	\begin{equation}{
+% 	\label{ec1}
+% 	c_1+2c_2-3c_3+4c_4=0}
+% 	\end{equation}
+% 
+% 	además, haciendo $\alpha_1=0$ y $\alpha_2=1$, tenemos
+% 	\begin{equation}{
+% 	\label{ec2}
+% 	c_2-4c_3-c_4=0}
+% 	\end{equation}
+% 
+% 	Desarrollando $(\ref{ec1})$ y $(\ref{ec2})$ obtenemos
+% 	\[\mdc{1\quad 2\quad-3\quad~4}{|~0}{0\quad 1\quad ~4\quad -1}{|~0}\quad \Rightarrow\quad \left\{\begin{array}{l} c_2=-4c_3+c_4\\ c_1=11c_3-6c_4 \end{array}\right.\]
+% 
+% 	Por tanto
+% 	\begin{eqnarray*}
+% 	\phi(\alpha_1v_1+\alpha_2v_2)&=&(11c_3-6c_4)(\alpha_1)+(-4c_3+c_4)(2\alpha_1+\alpha_2)+(c_3)(-3\alpha_1+4\alpha_2)+(c_4)(4\alpha_1-\alpha_2)\\
+% 	&=&c_3(11\alpha_1-8\alpha_1-4\alpha_2-3\alpha_1+4\alpha_2)+c_4(-6\alpha_1+2\alpha_1+\alpha_2+4\alpha_2-\alpha_2)\\
+% 	&=&c_3(0)+c_4(0)\\
+% 	&=&0
+% 	\end{eqnarray*}
+% 
+% 	Ahora sea $u\in E$, entonces
+% 	\begin{eqnarray*}
+% 	\phi(u)&=&(11c_3-6c_4)u_1+(-4c_3+c_4)u_2+c_3u_3+c_4u_4\\
+% 	&=&c_3\underbrace{(11u_1-4u_2+u_3)}_{\phi_1(u)}+c_4\underbrace{(-6u_1+u_2+u_4)}_{\phi_2(u)}
+% 	\end{eqnarray*}
+% 	de donde
+% 	\[\an{F}=gen\{\phi_1,\phi_2\}\]
+% 	es decir
+% 	\[\{\phi_1,\phi_2\}\quad \mbox{es base de}\quad \an{F}\]
+% \begin{flushright}
+% $\blacktriangle$
+% \end{flushright}
+
 
 \end{enumerate}}
 
@@ -553,7 +552,7 @@ $\blacktriangle$
 \begin{enumerate}
   \item En $\rn{2}$ se considera la base $\C{B}=\{x_1,x_2\}$, donde $x_1=(1,1)$, $x_2=(2,-1)$.\\[2mm]
   Calcular la base dual de $\C{B}$.\\[2mm]
-  
+
   \item En $\rn{3}$ se consideran las formas lineales
   \[\varphi_1(x,y,z)=2x-y+3z.\]
   \[\varphi_2(x,y,z)=3x-3y+z.\]
@@ -561,46 +560,46 @@ $\blacktriangle$
   Probar que $\{\varphi_1,\varphi_2,\varphi_3\}$ forman una base de $(\rn{3})^*$. En la base $\C{B}^*=\{\varphi_1,\varphi_2,\varphi_3\}$, calcular las    coordenadas de la forma lineal $\varphi\in (\rn{3})^*$ dada por
   \[\varphi(x,y,z)=x+y+z,\qquad \forall (x,y,z)\in \rn{3}\]
   Encontrar la base $\C{B}$ de $\rn{3}$ cuya base dual es $\C{B}^*$.\\[2mm]
-  
+
 	\item  Sea $E=\m{R}^3$ un espacio vectorial y $S$ un subespacio de $E$.
 	\[S=\{\varphi\in E^*~/~\varphi(1,-1,2)=0\}\]
 	Encontrar una base de $S$.\\[2mm]
-	
+
 	\item Sea $\wp_2[\m{R}]$ el espacio vectorial de los polinomios de grado menor ó igual que $2$, con coeficientes reales. Se consideran las siguientes bases de $\wp_2[\m{R}]$.
 	\[\C{B}=\{1,x,x^2\},\qquad \C{B}'=\{1,1+x,1+x+x^2\}.\]
-	Encontrar las ecuaciones de cambio de base entre $\C{B}^*$ y $\C{B}^{'*}$. Si $\varphi\in \wp_2[\m{R}]$ viene dada por 
+	Encontrar las ecuaciones de cambio de base entre $\C{B}^*$ y $\C{B}^{'*}$. Si $\varphi\in \wp_2[\m{R}]$ viene dada por
 	\[\varphi(p(x))=p(-1).\]
 	encontrar las coordenadas de $\varphi$ en la base $\C{B}^{'*}$.\\[2mm]
-	
+
 	\item Sea $\C{M}_2(\m{R})$ el espacio vectorial de las matrices reales de $2\times 2$. Consideremos la aplicación lineal
 	\[\fu{tr}{\C{M}_2(\m{R})}{\m{R}}{A}{tr(A).}\]
-	Encontrar una base $\C{B}'$ de $\C{M}_2(\m{R})^*$ en la que esté esta forma lineal. Encontrar también una base $\C{B}$ de $\C{M}_2(\m{R})$ tal que $\C{B}^*=\C{B}'$.\\[2mm] 
-	
+	Encontrar una base $\C{B}'$ de $\C{M}_2(\m{R})^*$ en la que esté esta forma lineal. Encontrar también una base $\C{B}$ de $\C{M}_2(\m{R})$ tal que $\C{B}^*=\C{B}'$.\\[2mm]
+
 	\item  Sean $f_1,f_2,f_3\in (\wp_2[\m{R}])^*$ las siguientes formas lineales
 	\[f_1(p)=\int_0^1 p(x)dx\qquad f_2(p)=\int_0^2 p(x)dx\qquad f_3(p)=\int_{-1}^0 p(x)dx\]
   \begin{enumerate}
 	  \item Pruebe que $\{f_1,f_2,f_3\}$ es una base de $(\wp_2[\m{R}])^*$.
-	  \item Halle una base $B$ de $\wp_2[\m{R}]$ tal que $B^*=\{f_1,f_2,f_3\}$.\\[2mm]  
+	  \item Halle una base $B$ de $\wp_2[\m{R}]$ tal que $B^*=\{f_1,f_2,f_3\}$.\\[2mm]
   \end{enumerate}
-  
+
   \item En $\C{M}_2(\m{R})$ se consideran las formas lineales
   \[\varphi_1:\C{M}_2(\m{R})\to \m{R};\qquad \mdc{a}{b}{c}{d}=a+d.\]
   \[\varphi_2:\C{M}_2(\m{R})\to \m{R};\qquad \mdc{a}{b}{c}{d}=b-c.\]
   \begin{enumerate}
 	  \item Probar que $\varphi_1$ y $\varphi_2$ son linealmente independientes.
-	  \item Ampliar $\{\varphi_1,\varphi_2\}$ a una base de $\C{M}_2(\m{R})^*$. Y calcular en dicha base las coordenadas de la forma $\varphi\in \C{M}_2(\m{R})$ dada por 
+	  \item Ampliar $\{\varphi_1,\varphi_2\}$ a una base de $\C{M}_2(\m{R})^*$. Y calcular en dicha base las coordenadas de la forma $\varphi\in \C{M}_2(\m{R})$ dada por
 	  \[\varphi\mdc{a}{b}{c}{d}=a+b+c+d.\]
-	  \item Calcular el subespacio aniquilador de $\{\varphi_1,\varphi_2\}$.\\[2mm] 
+	  \item Calcular el subespacio aniquilador de $\{\varphi_1,\varphi_2\}$.\\[2mm]
   \end{enumerate}
-  
+
   \item Calcular el aniquilador del subespacio vectorial $S$ de $\rn{4}$ dado por
   \[S=\{(x,y,z,t)\in \rn{4}~/~x+y-z=0\}.\]
-  
+
   \item Se definen las aplicaciones
   \[\fu{\varphi}{\rn{3}}{\m{R}}{(x,y,z)}{\varphi(x,y,z)=2x+y-z}\]
   \[\fu{\phi}{\rn{3}}{\m{R}}{(x,y,z)}{\phi(x,y,z)=x+y+z}\]
   Demostrar que $\varphi$ y $\phi$ son formas lineales sobre $\rn{3}$ y que son linealmente independientes. Encontrar una tercera forma lineal $\psi\in (\rn{3})^*$ de modo que $\{\varphi, \phi, \psi\}$ sea una base de $(\rn{3})^*$. Encontrar también una base de $\rn{3}$ cuya base dual sea $\{\varphi, \phi, \psi\}$.\\[2mm]
-  
+
   \item Sea $\wp_2[\m{R}]$ el espacio vectorial de los polinomios con coeficientes reales de grado menor ó igual que $2$. Sean
   \[\C{B}=\{1,x,x^2\},\qquad \C{B}^*=\{\varphi_1,\varphi_2,\varphi_3\}\]
   la base usual de $\wp_2[\m{R}]$ y su base dual, respectivamente. Se definen las siguientes aplicaciones de $\wp_2[\m{R}]$ en $\m{R}$
@@ -609,14 +608,14 @@ $\blacktriangle$
 	  \item $\displaystyle \psi_1(p(x))=\int_0^1 p(x)dx$,\qquad $\displaystyle \psi_2(p(x))=\int_0^1 xp(x)dx$,\qquad $\displaystyle \psi_3(p(x))=\int_0^1 x^2 p(x)dx$,\\[2mm] $\forall~p(x)\in \wp_2[\m{R}]$
   \end{enumerate}
   Demostrar que tanto $\{\varphi_1,\varphi_2,\varphi_3\}$ como $\{\psi_1,\psi_2,\psi_3\}$ son bases de $\wp_2[\m{R}]^*$. Calcular las coordenadas de los elementos de tales bases en $\C{B}^*$, y hallar las bases de $\wp_2[\m{R}]$ de las cuales son bases duales.\\[2mm]
-  
-  \item Se considera el espacio vectorial 
+
+  \item Se considera el espacio vectorial
   \[E=\{p(x)\in \wp[\m{R}]~/~grado(p(x))\leq n-1\}.\]
   Probar que para cada forma lineal $\varphi\in E^*$, existe un único polinomio $q(x)\in E$ tal que
   \[\varphi(p(x))=\int_0^1 p(x) q(x)dx,\qquad \forall~p(x)\in E.\]
-  
+
   \item  Sea $E$ un espacio vectorial sobre $\m{K}$ de dimensión finita y sean $S$ y $T$ subespacios tales que \[E=S\oplus T\]
   Pruebe que \[E^*=S^{\circ}\oplus T^{\circ}\]
-  
-  
+
+
 \end{enumerate}}
