@@ -139,6 +139,8 @@ innertopmargin=4pt,
 %<<child-cap03, child='Capitulos/Cap03.Rnw'>>=
 %@
 
+% Revisar codigo ejercicios resueltos Capitulo 3
+
 %<<child-cap04, child='Capitulos/Cap04.Rnw'>>=
 %@
 
