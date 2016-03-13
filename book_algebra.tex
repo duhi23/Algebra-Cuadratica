@@ -1,0 +1,356 @@
+\documentclass[11pt,a4paper,twoside]{book}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{pst-eucl,pstricks,pstricks-add}
+%\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{url}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{lmodern}
+\usepackage{amsmath,amscd,fancybox,fancyhdr,fancyvrb}
+
+\usepackage[framemethod=default]{mdframed} % default setting
+%\usepackage[framemethod=tikz]{mdframed}
+%\usepackage[framemethod=pstricks]{mdframed}
+\parindent=0mm
+
+% Definiciones
+
+
+% Definiciones empleadas en el libro
+
+\newtheorem{teo}{Teorema}[chapter]
+\newtheorem{defi}{Definición}[chapter]
+\newtheorem{eje}{Ejemplo}[chapter]
+\newtheorem{ejr}{Ejercicio}[chapter]
+\newtheorem{lem}{Lema}[section]
+\newtheorem{pro}{Proposición}[chapter]
+\newtheorem{obs}{Observación}[chapter]
+\newtheorem{cor}[teo]{Corolario}
+
+
+\newcommand{\p}[1]{\partial{#1}}
+\newcommand{\m}[1]{\mathbb{#1}}
+\newcommand{\n}[1]{\left\|#1\right\|}
+\newcommand{\V}[1]{\nabla{#1}}
+\newcommand{\C}[1]{\mathcal{#1}}
+\newcommand{\e}[1]{\langle #1\rangle}
+\newcommand{\s}[1]{({#1}_1,{#1}_2,\ldots,{#1}_n)}
+\newcommand{\ba}[1]{\{{#1}_1,{#1}_2,\ldots,{#1}_n\}}
+\newcommand{\rn}[1]{\mathbb{R}^{#1}}
+\newcommand{\mtr}[9]{\left(\begin{array}{rrr} #1&#2&#3\\ #4&#5&#6\\ #7&#8&#9\end{array}\right)}
+\newcommand{\mtc}[9]{\left(\begin{array}{ccc} #1&#2&#3\\ #4&#5&#6\\ #7&#8&#9\end{array}\right)}
+\newcommand{\dt}[9]{\left|\begin{array}{rrr} #1&#2&#3\\ #4&#5&#6\\ #7&#8&#9\end{array}\right|}
+\newcommand{\mdr}[4]{\left(\begin{array}{rr} #1&#2\\ #3&#4\end{array}\right)}
+\newcommand{\mdc}[4]{\left(\begin{array}{cc} #1&#2\\ #3&#4\end{array}\right)}
+\newcommand{\dd}[4]{\left|\begin{array}{rr} #1&#2\\ #3&#4\end{array}\right|}
+\newcommand{\su}[1]{\left({#1}_{n}\right)}
+\newcommand{\fu}[5]{\begin{array}{rccl} #1:&#2&\to&#3\\ &#4&\mapsto&#5\end{array}}
+\newcommand{\an}[1]{{#1}^{\circ}}
+\newcommand{\ora}[1]{\overrightarrow{#1}}
+\newcommand{\wt}[1]{\widetilde{#1}}
+
+
+% Ambiente definiciones
+\mdfdefinestyle{theoremstyle}{% 
+linecolor=red!40!black,linewidth=1.5pt,% 
+frametitlerule=true,%
+frametitlebackgroundcolor=red!70!black,
+backgroundcolor=brown!15,
+frametitlefont={\normalfont\scshape\color{white}},
+frametitleaboveskip=1pt,
+frametitlebelowskip=1pt,
+innertopmargin=4pt,
+}
+
+\mdtheorem[style=theoremstyle]{definition}{Definición}
+
+% Ambiente ejemplos
+\mdfdefinestyle{examplestyle}{%
+linecolor=white,linewidth=1.5pt,%
+frametitlerule=true,%
+frametitlebackgroundcolor=blue!40!black,
+backgroundcolor=blue!5!white,
+frametitlefont={\normalfont\scshape\color{white}},
+frametitleaboveskip=1pt,
+frametitlebelowskip=1pt,
+innertopmargin=4pt,
+}
+
+\mdtheorem[style=examplestyle]{example}{Ejemplo}
+
+% Ambiente teoremas
+\mdfdefinestyle{teoremastyle}{%
+linecolor=white,linewidth=1.5pt,%
+frametitlerule=true,%
+frametitlebackgroundcolor=green!40!black,
+backgroundcolor=green!5!white,
+frametitlefont={\normalfont\scshape\color{white}},
+frametitleaboveskip=1pt,
+frametitlebelowskip=1pt,
+innertopmargin=4pt,
+}
+
+\mdtheorem[style=teoremastyle]{teorema}{Teorema}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\thispagestyle{empty}
+
+%%% modificacion preambulo
+\makeatletter
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1ex \hfill \kern \z@}
+\def\@makechapterhead#1{%
+  \reset@font
+  \vspace*{10\p@}%
+  {\parindent \z@ 
+    \begin{flushleft}
+      \reset@font \scshape \bfseries \Huge \thechapter \par
+    \end{flushleft}
+    \hrule
+    \begin{flushleft}
+      \reset@font \LARGE \strut #1\strut \par
+    \end{flushleft}
+    \vskip 80\p@
+  }}
+\def\@makeschapterhead#1{%
+  \reset@font
+  \vspace*{10\p@}%
+  {\parindent \z@ 
+    \begin{flushleft}
+      \reset@font \scshape \bfseries \Huge \vphantom{\thechapter} \par
+    \end{flushleft}
+    \hrule
+    \begin{flushleft}
+      \reset@font \LARGE \strut #1\strut \par
+    \end{flushleft}
+    \vskip 80\p@
+  }}
+%%%
+
+% Portada
+
+
+% Portada
+
+\newcommand*{\BOOKALG}{\begingroup
+\raggedleft
+%\centering
+\vspace*{\baselineskip}
+{\Huge\scshape Álgebra Lineal II \\[6mm]
+y Cuadrática}\\ [\baselineskip]
+{\itshape Con ejemplos e ilustraciones}\\[40mm]
+{\Large\bfseries Segunda Edición}\\[0.3 \textheight]
+{\Large Diego Huaraca}\\[3mm]
+{\Large Jaime Toaquiza}\\[4mm]
+{\large\scshape EPN, Ecuador.}\par
+\vfill
+\rule{\textwidth}{0.5pt}
+\vspace*{\baselineskip}
+\endgroup}
+
+% practicando, practicando! 
+% otra práctica! 
+% sigo con la práctica! 
+\BOOKALG
+
+%Derechos
+
+% Dedicatoria
+\setcounter{page}{0}
+\cleardoublepage
+\vspace*{\stretch{1}}
+\hfill
+\begin{minipage}[t]{0.66\textwidth}
+\raggedleft
+\thispagestyle{empty}
+\textit{Un aporte a la sociedad.}
+\end{minipage}
+\vspace*{\stretch{3}}
+\clearpage
+
+% Contenidos
+\tableofcontents
+
+%<<child-cap01, child='Capitulos/Cap01.Rnw'>>=
+%@
+
+%<<child-cap02, child='Capitulos/Cap02.Rnw'>>=
+%@
+
+%<<child-cap03, child='Capitulos/Cap03.Rnw'>>=
+%@
+
+% Revisar codigo ejercicios resueltos Capitulo 3
+
+%<<child-cap04, child='Capitulos/Cap04.Rnw'>>=
+%@
+
+%<<child-cap05, child='Capitulos/Cap05.Rnw'>>=
+%@
+
+
+\chapter{Geometría Afín}
+
+\section{Introducción}
+
+El objetivo fundamenta de estos estudios es poder desarrollar una estructura formal para estudiar la geometría desde la potencia del álgebra lineal, ya hemos estudiado geometría en álgebra lineal I pero con restricciones muy notorias; es decir, hemos tenido que dejar fijo el origen de coordenadas al estudiar isometrías, semejanzas, etc., así pues, estamos relacionados con conceptos propios de la geometría como rectas, planos, puntos, etc. los cuales nos han aparecido como subespacios vectoriales en el estudio del álgebra, geometría vectorial, recalcando de ese modo siempre hemos estado restringidos al origen de coordenadas, pues no tendría sentido en el estudio de espacios vectoriales sino consideramos a lo mencionado, es decir, no hemos podido realizar un estudio completo de la geometría desde la geometría vectorial, nos gustaría estudiar todas las rectas, planos, etc. que no pasan por el origen, de este modo, nos despierta la inquietud de definir una estructura que de algún modo implante ``algo así como un \emph{espacio vectorial con el origen fijado donde más nos convenga}''.\newline % Citar texto Girondo
+
+Para realizar lo mencionado, sigamos a la siguiente idea, consideremos el vector $\ora{AB}$, así, observamos sus coordenadas $(x_B-x_A, y_B-y_A)$, dicho de otra forma, determinamos el vector, $\ora{AB}$ como la diferencia de los puntos $A$ y $B$, es decir, el punto $B$ se obtiene al sumar el vector $\ora{AB}$ al punto $A$. Esta idea la formalizaremos con la nueva estructura que definiremos luego, en el estudio del Álgebra Afín Euclidea debemos tener en cuenta de que a $\m{R}^3$ debemos considerarle como un espacio de vectores (Espacio Vectorial Real) y como un espacio de puntos (Espacio Afín Real). Pero antes consideramos importante mencionar las siguientes ideas.\newline
+
+El juicio es estudiar geometría de manera formal, pero en la enseñanza de esta a nivel intermedio presenta un problema muy fino, nos referimos al método utilizado en la enseñanza de esta, pues es confusa (métodos), dado que los axiomas se inspiran en la geometría Euclidea (tradicional), ``sin tener en cuenta la evolución de la matemática en este dominio''. En consecuencia esta confusión contrasta con el rigor de las estructuras algebraicas y uno puede preguntarse sobre el poder formativo de tal enseñanza.\newline % Citar Guyot
+
+Por esto, estimamos se debe cambiar completamente el método en la enseñanza de la mencionada. Apreciamos es conveniente introducir la geometría desde los principios del álgebra, lo cual a breves rasgos lo hemos estudiado en el álgebra vectorial, y esta noción de espacio vectorial no es difícil llegar desde los conceptos intuitivos de la geometría clásica, es decir, la última (Espacios Vectoriales) ya ha sido definida axiomáticamente cuando hicimos el estudio de álgebra lineal I, por esto no nos detendremos en esta, y no dirigimos en manera rauda a definir la nueva estructura que tanto lo hemos mencionado, a esta lo conoceremos como Álgebra Geometría Afín.
+
+\section{Espacio Afín}
+
+\begin{definition}
+Sean $\C{E}$ un conjunto no vacío y $E$ un $\m{K}-$espacio vectorial, además sea $\varphi$ una aplicación definida por:
+
+\[\fu{\varphi}{\C{E}\times\C{E}}{E}{(P,Q)}{\varphi(P,Q)=\ora{PQ}=\ora{x}}\]
+
+se dice que la terna $(\C{E}, E, \varphi)$ es un espacio afín sobre $\m{K}$ con espacio vectorial director $E$ si verifica las propiedades:
+\begin{itemize}
+      \item [a)] $\forall P\in \C{E}$
+      \[\fu{\varphi_p}{\C{E}}{E}{Q}{\varphi_p(Q)=\varphi(P,Q)}\]
+      es biyectiva. Es decir, si fijamos $P_1$, $\forall Q\in \C{E}$ existe un único $\ora{x}\in E$ tal que $\varphi(P_1, Q)=\ora{x}$ o equivalentemente, $\forall P\in \C{E}$, $\forall \ora{x}\in E$ existe un único $Q\in \C{E}$ para el cual se verifica que $\ora{x}=\ora{PQ}$.
+      \item [b)] $\forall P, Q, R\in \C{E}$
+      \[\varphi(P,Q)=\varphi(Q,R)=\varphi(P,R)\]
+      empleando una notación equivalente tenemos: $\ora{PQ}+\ora{QR}=\ora{PR}$ (Ley de Charles).
+\end{itemize}
+\end{definition}
+
+En ocasiones, se suele considerar el espacio afín como un conjunto de puntos de $\C{E}$, lo cual no es correcto, pero si permisible para simplificar la notación, bajo esta justificación a lo largo del capítulo por facilidad de escritura a la terna $(\C{E}, E, \varphi)$ se lo notará como $\C{E}$, obviamente esto no producirá confusión para el estudiante observador. Cabe mencionar que $\C{E}$ es considerado espacio afín euclídeo si $E$ es un espacio vectorial Euclideo, este caso particular lo estudiaremos ampliamente en apartados posteriores del presente texto.\newline
+
+Por la propiedad $a)$, dado un punto $P\in \C{E}$ y un vector $\ora{x}\in E$ es factible definir el punto $Q:= P+\ora{x}$, obviamente desde el punto de vista matemático no tiene significado, $Q\in \C{E}$ es único, verificando $\ora{PQ}=\ora{x}$. Una interpretación geométrica seria, el punto $Q$ se halla trasladando el punto $P$ en la magnitud, dirección y sentido que muestra el vector $\ora{x}$. 
+
+\begin{definition}
+Un espacio afín $\C{E}$ de dirección el $\m{K}$-espacio vectorial $E$ es un conjunto no vacío dotado de una operación externa:
+
+\[\fu{\wt{+}}{\C{E}\times E}{\C{E}}{(P,\ora{x})}{\wt{+}(P, \ora{x})=Q:=P\wt{+} \ora{x}}\]
+
+tal que satisface:
+\begin{itemize}
+      \item [i)] Para todo $P, Q\in \C{E}$, existe un único $\ora{x}\in E$ tal que $Q=P\wt{+} \ora{x}$.
+      \item [ii)] Para todo $P\in \C{E}$, y para todo $\ora{x}, \ora{y}\in E$ se verifica que:
+      \[P\wt{+}(\ora{x}+\ora{y}) = (P\wt{+}\ora{x}) + (P\wt{+}\ora{y})\]
+\end{itemize}
+\end{definition}
+
+Así pues, debemos recordar de manera correcta lo siguiente:
+
+\begin{center}
+Punto $+$ Vector $=$ Punto (aplicación afín)\\
+Vector $+$ Vector $=$ Vector (suma vectorial)
+\end{center}
+
+\begin{definition}
+La dimensión de un espacio afín es la dimensión de su espacio vectorial director, es decir:\newline
+Sea $\C{E}$ un $\m{K}$-espacio afín con $E$ un $\m{K}$-espacio vectorial director; así:
+\[\dim (\C{E})=\dim (E)\]
+\end{definition}
+
+Es importante comprender en manera profunda la definición del espacio afín explicitemos entonces, el sumar de toda esta estructura se encuentra en la aplicación $\varphi$ definida, la idea es que esta asociada a cada par de puntos $(P,Q)$ un vector $\ora{PQ}$ el espacio vectorial director $E$, lo que comprendemos como ``el vector de origen en $P$ y extremo en $Q$'', obviamente, la estructura debe ser consistente al relacionar los vectores que tienen origen en puntos diferentes del espacio afín $\C{E}$, para esto nos servimos de la condición $b)$ de la definición, en estas expresiones tenemos: $\ora{PQ}+\ora{QR}=\ora{PR}$, veamos gráficamente, es obvio que los vectores son libres.
+
+\begin{figure}[H]
+\centering
+\begin{pspicture}[showgrid=false](10,6)
+\psaxes[subticks=5,ticksize=0 4pt,subticksize=0.5, labels=none]{<->}(1,3)(0.5,0.0)(4,5.5)
+\psline[linecolor=green, linewidth=1.7pt]{->}(1,3)(3,4.5)
+\psline[linecolor=blue, linewidth=1.7pt]{->}(1,3)(3.3,1.5)
+\psline[linecolor=red, linewidth=1.7pt]{->}(1,3)(1,0.5)
+\rput(0.8,2.8){\small $0$}
+\rput(1.7,4.1){\small $\ora{PQ}$}
+\rput(1.8,2){\small $\ora{PR}$}
+\rput(0.5,2.2){\small $\ora{QR}$}
+% Traslacion
+\psline[linecolor=green, linewidth=1.7pt]{->}(7,3)(9,4.5)
+\psline[linecolor=blue, linewidth=1.7pt]{->}(7,3)(9.3,1.5)
+\psline[linecolor=red, linewidth=1.7pt]{->}(9,4.5)(9.3,1.5)
+\rput(7.8,4.1){\small $\ora{PQ}$}
+\rput(7.8,2){\small $\ora{PR}$}
+\rput(9.5,3){\small $\ora{QR}$}
+% Puntos
+\rput(6.7,3){\small $\ora{P}$}
+\rput(9.5,1){\small $\ora{R}$}
+\rput(9,4.8){\small $\ora{Q}$}
+% Flecha
+\psline[linearc=0.7, doubleline=true]{->}(4.7,4)(5.5,4.3)(6.3,4)
+\end{pspicture}
+\end{figure}
+
+En forma aún más profunda, se puede notar que la estructura afín depende propiamente de la estructura vectorial y de la apliación $\varphi$, y más no de otra construcción adicional.\newline
+
+De este modo, en un caso particular para la física, el espacio afín es sumamente relevante, para la mecánica clásica como para la relatividad de Einstein dado que el tiempo es un espacio afín real de dimensión $1$, donde un instante es un punto del espacio afín y un lapso de tiempo es un vector de su espacio vectorial director, ahora en el espacio afín de dimensión cuatro tiene lugar un fenómeno espectacular, la emisión de un fotón por un átomo.\newline % Citar Girondo
+
+En estos estudios no debe haber confusión, por ello dejaremos clara la nomenclatura a usarse, por consiguiente adoptaremos por comodidad $\varphi(A,B)=\ora{AB}$ salvo se necesite explicitar $\varphi$.\newline
+
+Ahora, la siguiente definición que nos será de suma utilidad es próximos postulados.
+
+\begin{definition}
+Los puntos $P,Q,R,S\in \C{E}$ se dicen linealmente independientes (\emph{linealmente dependientes}) si los vectores $\ora{PQ}$, $\ora{PR}$, $\ora{PS}\in E$ son linealmente independientes (\emph{linealmente dependientes}).
+\end{definition}
+
+A continuación, revisamos algunos ejemplos:
+
+
+
+\end{document}
