@@ -102,7 +102,29 @@ Los puntos $P,Q,R,S\in \C{E}$ se dicen linealmente independientes (\emph{linealm
 A continuación, revisamos algunos ejemplos:
 
 \begin{enumerate}
-      \item Dado $E=\{p\in \C{P}_n[\m{R}] / \int_{0}^{1} p(t) dt =0\}$ y $\varphi$ determinar $\C{E}$ y su dimensión.
+      \item Dado $E=\{P\in \C{P}_n[\m{R}] / \int_{0}^{1} p(t) dt =0\}$ y la aplicación:
+      \[\fu{\varphi}{\C{E}\times \C{E}}{E}{(P,Q)}{\varphi(P,Q)=Q-P}\]
+      con $\C{E}=\{p\in \C{P}_n[\m{R}] / \int_{0}^{1} p(t) dt=1\}$.\newline
+      
+      Pruebe que $\C{E}$ es un espacio afín asociado a $E$ y halle su dimensión.
+      \begin{itemize}
+      % Para verificar que $\C{E}$ es un espacio afín, iniciemos probando que $E$ es un espacio vectorial, o de manera equivalente verifiquemos que $E$ es un subespacio vectorial de algún espacio vectorial.
+            \item ?`$E$ es un subespacio vectorial de $\C{P}_n[\m{R}]$ ?
+            
+            De manera trivial se verifica lo siguiente:
+            \[\int_{0}^{1} 0 dt =0\]
+            \[\int_{0}^{1} [P(t)+Q(t)] dt = \int_{0}^{1} P(t) dt + \int_{0}^{1} Q(t) dt\]
+            \[\int_{0}^{1} \alpha P(t) dt = \alpha \int_{0}^{1} P(t) dt\]
 
+            \item ?`$\varphi$ está bien definido?, o su equivalente ?` $Q-P\in E$?
+            \begin{align*}
+            \int_{0}^{1} (P-Q)(t) dt &= \int_{0}^{1} [P(t)-Q(t)] dt\\
+                                     &= \int_{0}^{1} P(t) dt - \int_{0}^{1} Q(t) dt\\
+                                     &= 1-1\\
+                                     &= 0
+            \end{align*}
+            
+      \end{itemize}
+      
 \end{enumerate}
 
