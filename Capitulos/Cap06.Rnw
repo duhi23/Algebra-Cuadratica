@@ -99,32 +99,73 @@ Ahora, la siguiente definición que nos será de suma utilidad es próximos post
 Los puntos $P,Q,R,S\in \C{E}$ se dicen linealmente independientes (\emph{linealmente dependientes}) si los vectores $\ora{PQ}$, $\ora{PR}$, $\ora{PS}\in E$ son linealmente independientes (\emph{linealmente dependientes}).
 \end{definition}
 
-A continuación, revisamos algunos ejemplos:
+% Ejemplos
 
-\begin{enumerate}
-      \item Dado $E=\{P\in \C{P}_n[\m{R}] / \int_{0}^{1} p(t) dt =0\}$ y la aplicación:
-      \[\fu{\varphi}{\C{E}\times \C{E}}{E}{(P,Q)}{\varphi(P,Q)=Q-P}\]
-      con $\C{E}=\{p\in \C{P}_n[\m{R}] / \int_{0}^{1} p(t) dt=1\}$.\newline
-      
-      Pruebe que $\C{E}$ es un espacio afín asociado a $E$ y halle su dimensión.
-      \begin{itemize}
-      % Para verificar que $\C{E}$ es un espacio afín, iniciemos probando que $E$ es un espacio vectorial, o de manera equivalente verifiquemos que $E$ es un subespacio vectorial de algún espacio vectorial.
-            \item ?`$E$ es un subespacio vectorial de $\C{P}_n[\m{R}]$ ?
-            
-            De manera trivial se verifica lo siguiente:
-            \[\int_{0}^{1} 0 dt =0\]
-            \[\int_{0}^{1} [P(t)+Q(t)] dt = \int_{0}^{1} P(t) dt + \int_{0}^{1} Q(t) dt\]
-            \[\int_{0}^{1} \alpha P(t) dt = \alpha \int_{0}^{1} P(t) dt\]
+% A continuación, revisamos algunos ejemplos:
+% 
+% \begin{enumerate}
+%       \item Dado $E=\{P\in \C{P}_n[\m{R}] / \int_{0}^{1} p(t) dt =0\}$ y la aplicación:
+%       \[\fu{\varphi}{\C{E}\times \C{E}}{E}{(P,Q)}{\varphi(P,Q)=Q-P}\]
+%       con $\C{E}=\{p\in \C{P}_n[\m{R}] / \int_{0}^{1} p(t) dt=1\}$.\newline
+%       
+%       Pruebe que $\C{E}$ es un espacio afín asociado a $E$ y halle su dimensión.
+%       \begin{itemize}
+%       % Para verificar que $\C{E}$ es un espacio afín, iniciemos probando que $E$ es un espacio vectorial, o de manera equivalente verifiquemos que $E$ es un subespacio vectorial de algún espacio vectorial.
+%             \item ?`$E$ es un subespacio vectorial de $\C{P}_n[\m{R}]$ ?
+%             
+%             De manera trivial se verifica lo siguiente:
+%             \[\int_{0}^{1} 0 dt =0\]
+%             \[\int_{0}^{1} [P(t)+Q(t)] dt = \int_{0}^{1} P(t) dt + \int_{0}^{1} Q(t) dt\]
+%             \[\int_{0}^{1} \alpha P(t) dt = \alpha \int_{0}^{1} P(t) dt\]
+% 
+%             \item ?`$\varphi$ está bien definido?, o su equivalente ?` $Q-P\in E$?
+%             \begin{align*}
+%             \int_{0}^{1} (P-Q)(t) dt &= \int_{0}^{1} [P(t)-Q(t)] dt\\
+%                                      &= \int_{0}^{1} P(t) dt - \int_{0}^{1} Q(t) dt\\
+%                                      &= 1-1\\
+%                                      &= 0
+%             \end{align*}
+%             
+%       \end{itemize}
+%       
+% \end{enumerate}
 
-            \item ?`$\varphi$ está bien definido?, o su equivalente ?` $Q-P\in E$?
-            \begin{align*}
-            \int_{0}^{1} (P-Q)(t) dt &= \int_{0}^{1} [P(t)-Q(t)] dt\\
-                                     &= \int_{0}^{1} P(t) dt - \int_{0}^{1} Q(t) dt\\
-                                     &= 1-1\\
-                                     &= 0
-            \end{align*}
-            
-      \end{itemize}
-      
-\end{enumerate}
+\section{Propiedades}
 
+Cuando definimos el objeto matemático denominado espacio afín elegimos las propiedades (a) y (b) (en la definición 2 las propiedades (i) e (ii) ) para caracterizar este concepto. Inherentemente estas no son las únicas propiedades que verifican los espacios afines, si hemos comprendido acertivamente la relación entre puntos y vectores las siguientes propiedades no deben de asombrarnos dado que son consecuencia inmediata de la definición del susodicho objetivo matemático en definición.
+
+\begin{itemize}
+      \item [i)] $\forall P, Q\in \C{E}$: $\ora{PQ}=0 \Leftrightarrow P=Q$.
+      \item [ii)] $\forall P, Q\in \C{E}$: $\ora{QP}=-\ora{PQ}$.
+      \item [iii)] $\forall P, Q, C\in \C{E}$: $\ora{PQ}=\ora{CQ}-\ora{CP}$.
+      \item [iv)] $\forall P, Q, P^{'}, Q^{'}\in \C{E}$: $\ora{PQ}=\ora{P^{'} Q^{'}} \Leftrightarrow \ora{PP^{'}}=\ora{QQ^{'}}$ (Ley del Paralelogramo).
+\end{itemize}
+
+%% Demostraciones
+
+\section{Variedades afines o Subespacios Afines}
+
+Antes de presentar la definición de subespacio afín desarrollemos una idea bajo un ejemplo.\newline
+
+Consideremos $\C{E}=\rn{n}$ y $E=\rn{n}$. Si $P=(p_1,p_2, \ldots, p_n)$ es un punto y $\ora{u}=(u_1, u_2, \ldots , u_n)$ es un vector, definimos $P+\ora{u}$ como el punto de coordenadas $(p_1+u_1, p_2+u_2, \ldots, p_n+u_n)$, es decir la suma usual en $\rn{n}$.\newline
+
+{\bf Nota}: Se puede evidenciar que $\rn{n}$ es un espacio afín con espacio vectorial director $\rn{n}$.\newline
+
+Ahora consideremos una recta que pasa por $P$ y tiene la dirección de $\ora{u}$, y obtenemos los puntos de la forma $P+\lambda \ora{u}$, es decir, los puntos que resultan de sumar a $P$ los vectores de $\langle\{(\ora{u})\} \rangle = \text{gen}\{\ora{u}\}$ %% Revisar simbolos
+
+\begin{figure}[H]
+\centering
+\begin{pspicture}[showgrid=TRUE]
+
+
+\end{pspicture}
+\end{figure}
+
+Generalizamos esta idea en $\m{K}^{n}$ en la definición del subespacio afín.
+
+\begin{definition}
+Consideremos el espacio afín $\C{E}$ asociada a un espacio vectorial $E$. Sea $\C{L}$ un subconjunto de $\C{E}$. Sea $S$ un subespacio vectorial de $E$.
+
+$\C{L}$ es un subespacio afín o variedad afín si existe un punto $p_o\in \C{E}$ y un subespacio vectorial $S$ de $E$ tal que
+\[\C{L}=\{Q\in \C{E} / Q=P_0+\ora{u}, \ora{u}\in S\} = \{Q\in \C{E} / \ora{P_0Q}\in S\}\]
+\end{definition}
