@@ -29,48 +29,6 @@
 @
 
 
-% Ambiente definiciones
-\mdfdefinestyle{theoremstyle}{% 
-linecolor=red!40!black,linewidth=1.5pt,% 
-frametitlerule=true,%
-frametitlebackgroundcolor=red!70!black,
-backgroundcolor=brown!15,
-frametitlefont={\normalfont\scshape\color{white}},
-frametitleaboveskip=1pt,
-frametitlebelowskip=1pt,
-innertopmargin=4pt,
-}
-
-\mdtheorem[style=theoremstyle]{definition}{Definición}
-
-% Ambiente ejemplos
-\mdfdefinestyle{examplestyle}{%
-linecolor=white,linewidth=1.5pt,%
-frametitlerule=true,%
-frametitlebackgroundcolor=blue!40!black,
-backgroundcolor=blue!5!white,
-frametitlefont={\normalfont\scshape\color{white}},
-frametitleaboveskip=1pt,
-frametitlebelowskip=1pt,
-innertopmargin=4pt,
-}
-
-\mdtheorem[style=examplestyle]{example}{Ejemplo}
-
-% Ambiente teoremas
-\mdfdefinestyle{teoremastyle}{%
-linecolor=white,linewidth=1.5pt,%
-frametitlerule=true,%
-frametitlebackgroundcolor=green!40!black,
-backgroundcolor=green!5!white,
-frametitlefont={\normalfont\scshape\color{white}},
-frametitleaboveskip=1pt,
-frametitlebelowskip=1pt,
-innertopmargin=4pt,
-}
-
-\mdtheorem[style=teoremastyle]{teorema}{Teorema}
-
 \begin{document}
 
 \thispagestyle{empty}
