@@ -168,4 +168,16 @@ Consideremos el espacio afín $\C{E}$ asociada a un espacio vectorial $E$. Sea $
 
 $\C{L}$ es un subespacio afín o variedad afín si existe un punto $p_o\in \C{E}$ y un subespacio vectorial $S$ de $E$ tal que
 \[\C{L}=\{Q\in \C{E} / Q=P_0+\ora{u}, \ora{u}\in S\} = \{Q\in \C{E} / \ora{P_0Q}\in S\}\]
+
+{\bf Notación}: $\C{L}=P_0+S$
 \end{definition}
+
+Debemos comprender con rigor; $\C{L}$ es una subvariedad afín que pasa por $P_0$ y tiene la dirección $S$, formalmente debemos tener claro que el subespacio afín en sí mismo es un espacio afín, es decir, es la terna $(\C{L}, S, \varphi)$; por lo cual adviene la pregunta cuál es su dimensión, para esto la siguiente definición.
+
+\begin{definition}
+La dimesión de la variedad afín es la dimensión del subespacio vectorial que define su dirección:
+\[\dim (P_0+\C{L}) = \dim (S)\]
+\end{definition}
+
+He aquí la siguiente observación.
+
